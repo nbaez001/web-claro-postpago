@@ -32,7 +32,7 @@
             "stylePreprocessorOptions": {
               "includePaths": ["src/assets/scss"]
             },
-            "scripts": []
+            "scripts": ["./node_modules/bootstrap/dist/js/bootstrap.js"]
           },
           "configurations": {
             "production": {
@@ -98,7 +98,7 @@
             "stylePreprocessorOptions": {
               "includePaths": ["src/assets/scss"]
             },
-            "scripts": []
+            "scripts": ["./node_modules/bootstrap/dist/js/bootstrap.js"]
           }
         },
         "lint": {

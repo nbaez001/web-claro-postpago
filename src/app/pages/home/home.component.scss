@@ -1,0 +1,9 @@
+.main-content {
+  display: grid;
+  grid-template-columns: 15% auto;
+
+  @media screen and (max-width: 1279px) {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+}
