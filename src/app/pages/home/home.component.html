@@ -3,8 +3,17 @@
 <!-- End NavBar -->
 
 <div class="main-content">
+  <!-- Filter List Mobile -->
+  <section class="md-filter" (click)="toggleFilterList()">
+    <i class="fas fa-sort-amount-down"></i>
+    <span class="filter-label">
+      Filtros
+    </span>
+  </section>
+  <!-- End Filter List Mobile -->
+
   <!-- Sidebar -->
-  <aside>
+  <aside *ngIf="showFilterList">
     <div class="filter-list" *ngFor="let list of filterList">
       <h2>{{ list.listName }}</h2>
       <ul class="menu-list">

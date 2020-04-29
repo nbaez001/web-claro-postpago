@@ -93,12 +93,17 @@ video {
 }
 
 a {
-  color: #0fbddf;
+  color: #0fbddf !important;
   text-decoration: none;
   font-size: 16px;
   font-weight: 400;
 
   &:hover {
+    color: #0fbddf !important;
     text-decoration: none !important;
   }
+}
+
+strong {
+  font-weight: 500;
 }

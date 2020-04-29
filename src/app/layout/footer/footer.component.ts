@@ -6,7 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent implements OnInit {
-  constructor() {}
+  public showTermsDetail: boolean;
+
+  constructor() {
+    this.showTermsDetail = false;
+  }
 
   ngOnInit(): void {}
+
+  public toggleTermsDetail() {
+    this.showTermsDetail = !this.showTermsDetail;
+  }
 }

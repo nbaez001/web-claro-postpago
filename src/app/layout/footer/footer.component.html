@@ -1,9 +1,9 @@
 <footer>
-  <div class="terms" id="titulo_legal">
-    <i class="fas fa-file-alt"> </i>
+  <div class="terms" (click)="toggleTermsDetail()">
+    <i class="fas fa-file-alt"></i>
     Ver términos y condiciones
   </div>
-  <div class="titulo_legal_detalles" id="titulo_legal_detalles" style="display: none;">
+  <div class="terms-detail" *ngIf="showTermsDetail">
     <p>
       DURANTE EL ESTADO DE EMERGENCIA DECRETADO POR EL GOBIERNO PERUANO, NUESTRA TIENDA VIRTUAL REGISTRARÁ TUS SOLICITUDES DE COMPRA PARA
       QUE PUEDAN SER ATENDIDAS TAN PRONTO TERMINE LA EMERGENCIA #YoMeQuedoEnCasa
@@ -102,14 +102,14 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
   </div>
-  <div class="barra_negra">
+  <div class="footer-nav">
     <ul>
       <li>
         <img alt="Tienda Claro Online" src="https://catalogo.claro.com.pe/img/logo-claro-blanco.png" />
       </li>
       <li>
-        <a href="http://www.claro.com.pe/wps/portal/pe/sc/personas/contactanos/libro-reclamaciones" class="">
-          <img alt="Libro de Reclamaciones" class="ldr" src="https://static.claro.com.pe/apps/menu_claro/img/ico_libro.png" />
+        <a href="http://www.claro.com.pe/wps/portal/pe/sc/personas/contactanos/libro-reclamaciones">
+          <img alt="Libro de Reclamaciones" class="claim-book" src="https://static.claro.com.pe/apps/menu_claro/img/ico_libro.png" />
           Libro de Reclamaciones
         </a>
       </li>

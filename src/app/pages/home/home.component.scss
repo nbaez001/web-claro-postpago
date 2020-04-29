@@ -7,6 +7,34 @@
     grid-template-columns: 100%;
   }
 
+  /* ---------- Filter List Mobile  ---------- */
+
+  .md-filter {
+    width: 100%;
+    display: flex;
+    background: #ffffff;
+    height: 60px;
+    align-items: center;
+    box-shadow: 0px 3px 6px rgb(0, 0, 0, 0.16);
+
+    @media only screen and (min-width: 1280px) {
+      display: none;
+    }
+
+    .filter-label {
+      font-size: 18px;
+      margin-left: 10px;
+    }
+
+    i {
+      margin-left: 10px;
+      font-size: 22px;
+      color: #222;
+    }
+  }
+
+  /* ---------- End Filter List Mobile  ---------- */
+
   /* ---------- Sidebar ---------- */
   .filter-list {
     margin: 20px 0 0 30px;
@@ -92,6 +120,7 @@
   .category-title {
     margin: 20px auto;
     text-align: center;
+    width: 80%;
 
     h1 {
       font-weight: 500;
