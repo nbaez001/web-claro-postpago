@@ -1,3 +1,34 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$webapp-scriptportlettvpostpago-angular-primary: mat-palette($mat-indigo);
+$webapp-scriptportlettvpostpago-angular-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$webapp-scriptportlettvpostpago-angular-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$webapp-scriptportlettvpostpago-angular-theme: mat-light-theme(
+  $webapp-scriptportlettvpostpago-angular-primary,
+  $webapp-scriptportlettvpostpago-angular-accent,
+  $webapp-scriptportlettvpostpago-angular-warn
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($webapp-scriptportlettvpostpago-angular-theme);
+
 @import 'fonts';
 @import 'variables';
 
@@ -92,6 +123,11 @@ video {
   color: #222222;
 }
 
+body {
+  font-family: $primary_font !important;
+  background-color: #fafafa !important;
+}
+
 a {
   color: #0fbddf !important;
   text-decoration: none;
@@ -104,6 +140,56 @@ a {
   }
 }
 
+input {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #222222;
+  height: 46px;
+  width: 95%;
+  text-transform: uppercase;
+  padding-left: 10px;
+}
+
 strong {
-  font-weight: 500;
+  font-weight: 500 !important;
+}
+
+i {
+  font-size: 22px;
+  color: #ee122c;
+}
+
+.tag-online {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  z-index: 2;
+
+  img {
+    border-radius: 0 5px 0 0;
+    width: 60px;
+  }
+}
+
+.tag-new {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 60px;
+  z-index: 2;
+
+  img {
+    width: 60px;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }

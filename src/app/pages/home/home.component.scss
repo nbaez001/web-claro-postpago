@@ -1,3 +1,5 @@
+@import 'variables';
+
 .main-content {
   display: grid;
   grid-template-columns: 15% auto;
@@ -15,7 +17,7 @@
     background: #ffffff;
     height: 60px;
     align-items: center;
-    box-shadow: 0px 3px 6px rgb(0, 0, 0, 0.16);
+    box-shadow: 0 3px 6px rgb(0, 0, 0, 0.16);
 
     @media only screen and (min-width: 1280px) {
       display: none;
@@ -37,10 +39,14 @@
 
   /* ---------- Sidebar ---------- */
   .filter-list {
-    margin: 20px 0 0 30px;
-    padding: 20px 0 0 6px;
-    border-radius: 5px;
-    background: #f4f4f4;
+    margin: 0;
+    padding: 20px 0 20px 6px;
+
+    @media only screen and (min-width: 1280px) {
+      margin: 20px 0 0 30px;
+      border-radius: 5px;
+      background: #f4f4f4;
+    }
 
     h2 {
       font-size: 16px;
@@ -70,30 +76,9 @@
       height: 40px;
     }
 
-    input[type='radio'] {
-      display: none;
-
-      &:checked + label:before {
-        font-family: 'Font Awesome 5 Free';
-        content: '\f058';
-        font-weight: 900;
-        border: none;
-        font-size: 16px;
-        top: 12px;
-        left: 12px;
-      }
-
-      &:checked + label {
-        padding: 15px 10px 10px 40px;
-        border-radius: 2px;
-        color: #ee122c;
-      }
-    }
-
     label {
       display: inline-block;
       cursor: pointer;
-      color: #222222;
       position: relative;
       padding: 15px 10px 10px 40px;
       border-radius: 5px;
@@ -106,9 +91,28 @@
         position: absolute;
         left: 15px;
         background: none;
-        font-family: 'Font Awesome 5 Free';
+        font-family: $fa_font;
         content: '\f111';
-        top: 14px;
+      }
+    }
+
+    input[type='radio'] {
+      display: none;
+
+      &:checked + label:before {
+        font-family: $fa_font;
+        content: '\f058';
+        font-weight: 900;
+        border: none;
+        font-size: 16px;
+        top: 12px;
+        left: 12px;
+      }
+
+      &:checked + label {
+        padding: 15px 10px 10px 40px;
+        border-radius: 2px;
+        color: #ee122c;
       }
     }
   }
@@ -307,19 +311,6 @@
         }
       }
     }
-  }
-
-  .tag-soloonline {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 60px;
-    z-index: 2;
-  }
-
-  .tag-soloonline img {
-    border-radius: 0 5px 0 0;
-    width: 60px;
   }
 
   /* ---------- End Catalog ---------- */

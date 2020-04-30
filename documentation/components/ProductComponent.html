@@ -1,0 +1,1739 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>webapp-scriptportlettvpostpago-angular documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">webapp-scriptportlettvpostpago-angular documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ProductComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/product/product.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-product</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./product.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./product.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#otherProductsList">otherProductsList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#showModalityDropdown">showModalityDropdown</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#showMoreProductsDropdown">showMoreProductsDropdown</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#showPaymentTypeDropdown">showPaymentTypeDropdown</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#showPlanDropdown">showPlanDropdown</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#toggleModalityDropdown">toggleModalityDropdown</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#togglePaymentTypeDropdown">togglePaymentTypeDropdown</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#togglePlanDropdown">togglePlanDropdown</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#toggleProductsDropdown">toggleProductsDropdown</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(constants: <a href="../injectables/ConstantsService.html">ConstantsService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/pages/product/product.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>constants</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConstantsService.html" target="_self" >ConstantsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/app/pages/product/product.component.ts:30</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleModalityDropdown"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            toggleModalityDropdown
+                        </b>
+                        <a href="#toggleModalityDropdown"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>toggleModalityDropdown()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/app/pages/product/product.component.ts:37</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="togglePaymentTypeDropdown"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            togglePaymentTypeDropdown
+                        </b>
+                        <a href="#togglePaymentTypeDropdown"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>togglePaymentTypeDropdown()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/app/pages/product/product.component.ts:41</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="togglePlanDropdown"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            togglePlanDropdown
+                        </b>
+                        <a href="#togglePlanDropdown"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>togglePlanDropdown()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/app/pages/product/product.component.ts:45</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleProductsDropdown"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            toggleProductsDropdown
+                        </b>
+                        <a href="#toggleProductsDropdown"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>toggleProductsDropdown()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">src/app/pages/product/product.component.ts:33</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="otherProductsList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            otherProductsList</b>
+                            <a href="#otherProductsList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/OtherProductListModel.html" target="_self" >OtherProductListModel[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/pages/product/product.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showModalityDropdown"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            showModalityDropdown</b>
+                            <a href="#showModalityDropdown"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/pages/product/product.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showMoreProductsDropdown"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            showMoreProductsDropdown</b>
+                            <a href="#showMoreProductsDropdown"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/pages/product/product.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showPaymentTypeDropdown"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            showPaymentTypeDropdown</b>
+                            <a href="#showPaymentTypeDropdown"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/pages/product/product.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showPlanDropdown"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            showPlanDropdown</b>
+                            <a href="#showPlanDropdown"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/pages/product/product.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { OtherProductListModel } from &#x27;../../models/other-product-list.model&#x27;;
+import { ConstantsService } from &#x27;../../services/constants.service&#x27;;
+
+@Component({
+  selector: &#x27;app-product&#x27;,
+  templateUrl: &#x27;./product.component.html&#x27;,
+  styleUrls: [&#x27;./product.component.scss&#x27;]
+})
+export class ProductComponent implements OnInit {
+  public otherProductsList: OtherProductListModel[];
+
+  public showMoreProductsDropdown: boolean;
+
+  public showModalityDropdown: boolean;
+  public showPaymentTypeDropdown: boolean;
+  public showPlanDropdown: boolean;
+
+  constructor(private constants: ConstantsService) {
+    this.otherProductsList &#x3D;
+      window.innerWidth &gt;&#x3D; 1280 ? constants.PRODUCT_OTHER_PRODUCTS_LIST_DATA : constants.PRODUCT_OTHER_PRODUCTS_LIST_DATA.slice(0, 3);
+
+    this.showMoreProductsDropdown &#x3D; false;
+
+    this.showModalityDropdown &#x3D; false;
+    this.showPaymentTypeDropdown &#x3D; false;
+    this.showPlanDropdown &#x3D; false;
+  }
+
+  ngOnInit(): void {
+  }
+
+  public toggleProductsDropdown() {
+    this.showMoreProductsDropdown &#x3D; !this.showMoreProductsDropdown;
+  }
+
+  public toggleModalityDropdown() {
+    this.showModalityDropdown &#x3D; !this.showModalityDropdown;
+  }
+
+  public togglePaymentTypeDropdown() {
+    this.showPaymentTypeDropdown &#x3D; !this.showPaymentTypeDropdown;
+  }
+
+  public togglePlanDropdown() {
+    this.showPlanDropdown &#x3D; !this.showPlanDropdown;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;main&gt;
+  &lt;!--  Dropdown--&gt;
+  &lt;div class&#x3D;&quot;dropdown-product&quot;&gt;
+    &lt;div class&#x3D;&quot;dropdown-product-name&quot; (click)&#x3D;&quot;toggleProductsDropdown()&quot; [ngClass]&#x3D;&quot;{ &#x27;dropdown-product-dark&#x27;: showMoreProductsDropdown }&quot;&gt;
+      &lt;p&gt;Galaxy S20 Ultra + Galaxy Buds+&lt;/p&gt;
+      &lt;i class&#x3D;&quot;fas fa-chevron-down&quot; [ngClass]&#x3D;&quot;{ &#x27;fa-rotate-180&#x27;: showMoreProductsDropdown }&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;dropdown-product-opts&quot; *ngIf&#x3D;&quot;showMoreProductsDropdown&quot;&gt;
+      &lt;div class&#x3D;&quot;dropdown-product-opts_list&quot;&gt;
+        &lt;p&gt;Los más pedidos&lt;/p&gt;
+        &lt;div class&#x3D;&quot;box-other-products&quot;&gt;
+          &lt;div class&#x3D;&quot;product-info-detail&quot; *ngFor&#x3D;&quot;let product of otherProductsList&quot;&gt;
+            &lt;a href&#x3D;&quot;{{ product.productUrl }}&quot;&gt;
+              &lt;img src&#x3D;&quot;{{ product.productImgSrc }}&quot; alt&#x3D;&quot;&quot; /&gt;
+              &lt;p&gt;{{ product.productName }}&lt;/p&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!--  &amp;lt;!&amp;ndash;  Detalle Equipo&amp;ndash;&amp;gt;--&gt;
+  &lt;!--  &lt;section class&#x3D;&quot;detalle-equipo&quot;&gt;--&gt;
+  &lt;!--    &lt;div class&#x3D;&quot;galeria&quot;&gt;--&gt;
+  &lt;!--      &lt;div class&#x3D;&quot;tag-soloonline&quot;&gt;--&gt;
+  &lt;!--        &lt;img alt&#x3D;&quot;Etiqueta Solo Online Tienda Claro&quot; src&#x3D;&quot;https://static.claro.com.pe/img/ribbons/ribbon-promo.png&quot; width&#x3D;&quot;72&quot;&gt;--&gt;
+  &lt;!--      &lt;/div&gt;--&gt;
+  &lt;!--      &lt;div class&#x3D;&quot;tag-nuevo&quot;&gt;--&gt;
+  &lt;!--        &lt;img alt&#x3D;&quot;Etiqueta Nuevo Tienda Claro&quot; src&#x3D;&quot;https://static.claro.com.pe/img/ribbons/ribbon-new.png&quot; width&#x3D;&quot;72&quot; title&#x3D;&quot;&quot; style&#x3D;&quot;&quot;&gt;--&gt;
+  &lt;!--      &lt;/div&gt;--&gt;
+  &lt;!--      &lt;div class&#x3D;&quot;owl-carousel owl-theme owl-loaded owl-drag&quot;&gt;--&gt;
+  &lt;!--        &lt;div class&#x3D;&quot;owl-stage-outer&quot;&gt;--&gt;
+  &lt;!--          &lt;div class&#x3D;&quot;owl-stage&quot; style&#x3D;&quot;transform: translate3d(-1779px, 0px, 0px); transition: all 0.25s ease 0s; width: 6228px;&quot;&gt;--&gt;
+  &lt;!--            &lt;div class&#x3D;&quot;owl-item cloned&quot; style&#x3D;&quot;width: 879.583px; margin-right: 10px;&quot;&gt;--&gt;
+  &lt;!--              &lt;div class&#x3D;&quot;item&quot;&gt;&lt;img alt&#x3D;&quot;&quot; src&#x3D;&quot;https://static.claro.com.pe/img/ceq/s20ultra_lateral 220x386.png&quot;&gt;&lt;/div&gt;--&gt;
+  &lt;!--            &lt;/div&gt;--&gt;
+  &lt;!--            &lt;div class&#x3D;&quot;owl-item cloned&quot; style&#x3D;&quot;width: 879.583px; margin-right: 10px;&quot;&gt;--&gt;
+  &lt;!--              &lt;div class&#x3D;&quot;item&quot;&gt;&lt;img alt&#x3D;&quot;&quot; src&#x3D;&quot;https://static.claro.com.pe/img/ceq/s20ultra_trasera 220x386.png&quot;&gt;&lt;/div&gt;--&gt;
+  &lt;!--            &lt;/div&gt;--&gt;
+  &lt;!--            &lt;div class&#x3D;&quot;owl-item active&quot; style&#x3D;&quot;width: 879.583px; margin-right: 10px;&quot;&gt;--&gt;
+  &lt;!--              &lt;div class&#x3D;&quot;item&quot;&gt;&lt;img alt&#x3D;&quot;&quot; src&#x3D;&quot;https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png&quot;&gt;&lt;/div&gt;--&gt;
+  &lt;!--            &lt;/div&gt;--&gt;
+  &lt;!--            &lt;div class&#x3D;&quot;owl-item&quot; style&#x3D;&quot;width: 879.583px; margin-right: 10px;&quot;&gt;--&gt;
+  &lt;!--              &lt;div class&#x3D;&quot;item&quot;&gt;&lt;img alt&#x3D;&quot;&quot; src&#x3D;&quot;https://static.claro.com.pe/img/ceq/s20ultra_lateral 220x386.png&quot;&gt;&lt;/div&gt;--&gt;
+  &lt;!--            &lt;/div&gt;--&gt;
+  &lt;!--            &lt;div class&#x3D;&quot;owl-item&quot; style&#x3D;&quot;width: 879.583px; margin-right: 10px;&quot;&gt;--&gt;
+  &lt;!--              &lt;div class&#x3D;&quot;item&quot;&gt;&lt;img alt&#x3D;&quot;&quot; src&#x3D;&quot;https://static.claro.com.pe/img/ceq/s20ultra_trasera 220x386.png&quot;&gt;&lt;/div&gt;--&gt;
+  &lt;!--            &lt;/div&gt;--&gt;
+  &lt;!--            &lt;div class&#x3D;&quot;owl-item cloned&quot; style&#x3D;&quot;width: 879.583px; margin-right: 10px;&quot;&gt;--&gt;
+  &lt;!--              &lt;div class&#x3D;&quot;item&quot;&gt;&lt;img alt&#x3D;&quot;&quot; src&#x3D;&quot;https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png&quot;&gt;&lt;/div&gt;--&gt;
+  &lt;!--            &lt;/div&gt;--&gt;
+  &lt;!--            &lt;div class&#x3D;&quot;owl-item cloned&quot; style&#x3D;&quot;width: 879.583px; margin-right: 10px;&quot;&gt;--&gt;
+  &lt;!--              &lt;div class&#x3D;&quot;item&quot;&gt;&lt;img alt&#x3D;&quot;&quot; src&#x3D;&quot;https://static.claro.com.pe/img/ceq/s20ultra_lateral 220x386.png&quot;&gt;&lt;/div&gt;--&gt;
+  &lt;!--            &lt;/div&gt;--&gt;
+  &lt;!--          &lt;/div&gt;--&gt;
+  &lt;!--        &lt;/div&gt;--&gt;
+  &lt;!--        &lt;div class&#x3D;&quot;owl-nav disabled&quot;&gt;--&gt;
+  &lt;!--          &lt;button type&#x3D;&quot;button&quot; role&#x3D;&quot;presentation&quot; class&#x3D;&quot;owl-prev&quot;&gt;&lt;span aria-label&#x3D;&quot;Previous&quot;&gt;‹&lt;/span&gt;&lt;/button&gt;--&gt;
+  &lt;!--          &lt;button type&#x3D;&quot;button&quot; role&#x3D;&quot;presentation&quot; class&#x3D;&quot;owl-next&quot;&gt;&lt;span aria-label&#x3D;&quot;Next&quot;&gt;›&lt;/span&gt;&lt;/button&gt;--&gt;
+  &lt;!--        &lt;/div&gt;--&gt;
+  &lt;!--        &lt;div class&#x3D;&quot;owl-dots&quot;&gt;--&gt;
+  &lt;!--          &lt;button role&#x3D;&quot;button&quot; class&#x3D;&quot;owl-dot active&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/button&gt;--&gt;
+  &lt;!--          &lt;button role&#x3D;&quot;button&quot; class&#x3D;&quot;owl-dot&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/button&gt;--&gt;
+  &lt;!--          &lt;button role&#x3D;&quot;button&quot; class&#x3D;&quot;owl-dot&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/button&gt;--&gt;
+  &lt;!--        &lt;/div&gt;--&gt;
+  &lt;!--      &lt;/div&gt;--&gt;
+  &lt;!--    &lt;/div&gt;--&gt;
+  &lt;!--  &lt;/section&gt;--&gt;
+
+  &lt;!-- Product Info --&gt;
+  &lt;section class&#x3D;&quot;product-info&quot;&gt;
+    &lt;h2&gt;
+      Arma tu Postpago
+      &lt;a href&#x3D;&quot;#&quot;&gt;Llévalo en prepago&lt;/a&gt;
+    &lt;/h2&gt;
+    &lt;div class&#x3D;&quot;dropdown-list dropdown-two-cols&quot;&gt;
+      &lt;div class&#x3D;&quot;dropdown-list-content&quot; (click)&#x3D;&quot;toggleModalityDropdown()&quot;&gt;
+        &lt;div class&#x3D;&quot;dropdown-list-info&quot;&gt;
+          &lt;span class&#x3D;&quot;dropdown-list-info_description&quot;&gt;Modalidad&lt;/span&gt;
+          &lt;span class&#x3D;&quot;dropdown-list-info_option&quot;&gt;Renovación&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;i class&#x3D;&quot;fas fa-chevron-down&quot;&gt;&lt;/i&gt;
+      &lt;/div&gt;
+      &lt;div *ngIf&#x3D;&quot;showModalityDropdown&quot;&gt;
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;input type&#x3D;&quot;radio&quot; id&#x3D;&quot;lista1&quot; name&#x3D;&quot;lista&quot; value&#x3D;&quot;1&quot; /&gt;
+            &lt;label for&#x3D;&quot;lista1&quot;&gt; Línea nueva &lt;/label&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;input type&#x3D;&quot;radio&quot; id&#x3D;&quot;lista3&quot; name&#x3D;&quot;lista&quot; value&#x3D;&quot;3&quot; /&gt;
+            &lt;label for&#x3D;&quot;lista3&quot;&gt; Portabilidad &lt;/label&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;input type&#x3D;&quot;radio&quot; id&#x3D;&quot;lista4&quot; name&#x3D;&quot;lista&quot; checked&#x3D;&quot;checked&quot; value&#x3D;&quot;4&quot; /&gt;
+            &lt;label for&#x3D;&quot;lista4&quot;&gt; Renovación &lt;/label&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;dropdown-list dropdown-two-cols dropdown-two-cols_right&quot;&gt;
+      &lt;div class&#x3D;&quot;dropdown-list-content&quot; (click)&#x3D;&quot;togglePaymentTypeDropdown()&quot;&gt;
+        &lt;div class&#x3D;&quot;dropdown-list-info&quot;&gt;
+          &lt;span class&#x3D;&quot;dropdown-list-info_description&quot;&gt;¿Cómo lo pago?&lt;/span&gt;
+          &lt;span class&#x3D;&quot;dropdown-list-info_option&quot;&gt; Al contado &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;i class&#x3D;&quot;fas fa-chevron-down&quot;&gt; &lt;/i&gt;
+      &lt;/div&gt;
+      &lt;div *ngIf&#x3D;&quot;showPaymentTypeDropdown&quot;&gt;
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;input type&#x3D;&quot;radio&quot; id&#x3D;&quot;cuotas1&quot; name&#x3D;&quot;cuotas&quot; checked&#x3D;&quot;checked&quot; value&#x3D;&quot;1&quot; /&gt;
+            &lt;label for&#x3D;&quot;cuotas1&quot;&gt; Al contado &lt;/label&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;dropdown-list dropdown-one-col&quot;&gt;
+      &lt;div class&#x3D;&quot;dropdown-list-content&quot; (click)&#x3D;&quot;togglePlanDropdown()&quot;&gt;
+        &lt;div class&#x3D;&quot;dropdown-list-info&quot;&gt;
+          &lt;span class&#x3D;&quot;dropdown-list-info_description&quot;&gt;Plan&lt;/span&gt;
+          &lt;span class&#x3D;&quot;dropdown-list-info_option&quot;&gt; Max Ilimitado 189.90 &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;i class&#x3D;&quot;fas fa-chevron-down&quot;&gt; &lt;/i&gt;
+      &lt;/div&gt;
+      &lt;div *ngIf&#x3D;&quot;showPlanDropdown&quot;&gt;
+        &lt;ul&gt;
+          &lt;li class&#x3D;&quot;dropdown-list_two-cols&quot;&gt;
+            &lt;input type&#x3D;&quot;radio&quot; id&#x3D;&quot;plan1&quot; name&#x3D;&quot;plan&quot; value&#x3D;&quot;1&quot; /&gt;
+            &lt;label for&#x3D;&quot;plan1&quot;&gt; Max 29.90 &lt;/label&gt;
+          &lt;/li&gt;
+          &lt;li class&#x3D;&quot;dropdown-list_two-cols&quot;&gt;
+            &lt;input type&#x3D;&quot;radio&quot; id&#x3D;&quot;plan2&quot; name&#x3D;&quot;plan&quot; value&#x3D;&quot;2&quot; /&gt;
+            &lt;label for&#x3D;&quot;plan2&quot;&gt; Max 39.90 &lt;/label&gt;
+          &lt;/li&gt;
+          &lt;li class&#x3D;&quot;dropdown-list_two-cols&quot;&gt;
+            &lt;input type&#x3D;&quot;radio&quot; id&#x3D;&quot;plan9&quot; name&#x3D;&quot;plan&quot; checked&#x3D;&quot;checked&quot; value&#x3D;&quot;9&quot; /&gt;
+            &lt;label for&#x3D;&quot;plan9&quot;&gt; Max Ilimitado 189.90 &lt;/label&gt;
+          &lt;/li&gt;
+          &lt;li class&#x3D;&quot;dropdown-list_two-cols&quot;&gt;
+            &lt;input type&#x3D;&quot;radio&quot; id&#x3D;&quot;plan67&quot; name&#x3D;&quot;plan&quot; value&#x3D;&quot;67&quot; /&gt;
+            &lt;label for&#x3D;&quot;plan67&quot;&gt; Max Ilimitado 289.90 &lt;/label&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;product-plan-detail&quot;&gt;
+      &lt;div class&#x3D;&quot;product-plan-detail_info&quot;&gt;
+        &lt;span&gt; Con los gigas de tu plan &lt;/span&gt;
+        &lt;br /&gt;
+        &lt;span&gt;
+          &lt;img src&#x3D;&quot;https://static.claro.com.pe/landings/havas/claromaxV5/assets/pg2_social_facebook.svg&quot; alt&#x3D;&quot;&quot; /&gt;
+          &lt;img src&#x3D;&quot;https://static.claro.com.pe/landings/havas/claromaxV5/assets/pg2_social_messenger.svg&quot; alt&#x3D;&quot;&quot; /&gt;
+          &lt;img src&#x3D;&quot;https://static.claro.com.pe/landings/havas/claromaxV5/assets/pg2_social_twitter.svg&quot; alt&#x3D;&quot;&quot; /&gt;
+          &lt;img src&#x3D;&quot;https://static.claro.com.pe/landings/havas/claromaxV5/assets/pg2_social_waze.svg&quot; alt&#x3D;&quot;&quot; /&gt;
+          &lt;img src&#x3D;&quot;https://static.claro.com.pe/landings/havas/claromaxV5/assets/pg2_social_whatsapp.svg&quot; alt&#x3D;&quot;&quot; /&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;product-plan-detail_info&quot;&gt;
+        &lt;span&gt; Internet &lt;/span&gt;
+        &lt;br /&gt;
+        &lt;span&gt; &lt;strong&gt; ilimitado &lt;/strong&gt; &lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;product-plan-detail_info&quot;&gt;
+        &lt;span&gt; LLamadas &lt;/span&gt;
+        &lt;br /&gt;
+        &lt;span&gt; &lt;strong&gt; Ilimitados &lt;/strong&gt; &lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;product-plan-detail_info&quot;&gt;
+        &lt;span&gt; SMS &lt;/span&gt;
+        &lt;br /&gt;
+        &lt;span&gt; &lt;strong&gt; ilimitados &lt;/strong&gt; &lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;section class&#x3D;&quot;product-price&quot;&gt;
+      &lt;div class&#x3D;&quot;product-price-content&quot;&gt;
+        &lt;div class&#x3D;&quot;product-price-info&quot;&gt;
+          &lt;span class&#x3D;&quot;product-price-info_payment-value&quot;&gt; S/ 4689 &lt;/span&gt;
+          &lt;span class&#x3D;&quot;product-price-info_payment-type&quot;&gt; Al Contado &lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class&#x3D;&quot;product-buy-content&quot;&gt;
+      &lt;button type&#x3D;&quot;submit&quot;&gt;&lt;i class&#x3D;&quot;fas fa-shopping-cart&quot;&gt;&lt;/i&gt; COMPRAR&lt;/button&gt;
+      &lt;span&gt;Precios sujetos a evaluación crediticia&lt;/span&gt;
+    &lt;/section&gt;
+  &lt;/section&gt;
+  &lt;!-- End Product Info --&gt;
+
+  &lt;!-- Delivery Desktop --&gt;
+  &lt;section class&#x3D;&quot;delivery-desktop&quot;&gt;
+    &lt;div class&#x3D;&quot;delivery-desktop-box&quot;&gt;
+      &lt;div class&#x3D;&quot;delivery-desktop-info&quot;&gt;
+        &lt;span&gt;&lt;i class&#x3D;&quot;fas fa-clock&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;span&gt;Delivery Regular gratis*&lt;/span&gt;
+        &lt;br /&gt;
+        &lt;span class&#x3D;&quot;legal&quot;&gt;Coordinamos la fecha y hora de entrega.&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;!-- End Delivery Desktop --&gt;
+
+  &lt;!-- Delivery Mobile --&gt;
+  &lt;section class&#x3D;&quot;delivery-mobile&quot;&gt;
+    &lt;div class&#x3D;&quot;delivery-mobile-box&quot;&gt;
+      &lt;span class&#x3D;&quot;black&quot;&gt;Despacho a domicilio&lt;/span&gt;
+      &lt;div class&#x3D;&quot;delivery-mobile-info&quot;&gt;
+        &lt;i class&#x3D;&quot;fas fa-truck&quot;&gt;&lt;/i&gt;
+        &lt;div class&#x3D;&quot;ml-2&quot;&gt;
+          &lt;span&gt; Disponible&lt;/span&gt;
+          &lt;p&gt;es gratis&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;!-- End Delivery Mobile --&gt;
+
+  &lt;!-- Product Detail --&gt;
+  &lt;section class&#x3D;&quot;product-detail&quot;&gt;
+    &lt;h2&gt;Samsung Galaxy S20 Ultra + Galaxy Buds+&lt;/h2&gt;
+    &lt;h3&gt;
+      ¡Rendimiento profesional!
+      &lt;br /&gt;
+      Conoce el Samsung Galaxy S20 Ultra y su pantalla de 6.9&quot; que te brindará mayor comodidad. Además, con su cámara de 108MP consigue
+      fotos que nunca creíste posibles y en alta resolución. ¡Es momento de disfrutar como se debe!
+    &lt;/h3&gt;
+    &lt;div class&#x3D;&quot;product-detail-features justify-content-center align-items-center&quot;&gt;
+      &lt;div class&#x3D;&quot;product-detail-features_list&quot;&gt;
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;i class&#x3D;&quot;fas fa-desktop&quot;&gt;&lt;/i&gt;
+            &lt;span&gt;
+              &lt;strong&gt;Pantalla &lt;/strong&gt;
+              &lt;br /&gt;
+              6.9 &quot;
+            &lt;/span&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;i class&#x3D;&quot;fab fa-android&quot;&gt;&lt;/i&gt;
+            &lt;span&gt;
+              &lt;strong&gt;Sistema operativo &lt;/strong&gt;
+              &lt;br /&gt;
+              Android Q - Versión 10
+            &lt;/span&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;i class&#x3D;&quot;fas fa-microchip&quot;&gt;&lt;/i&gt;
+            &lt;span&gt;
+              &lt;strong&gt;Procesador &lt;/strong&gt;
+              &lt;br /&gt;
+              Octa core 2.73GHz,2.6GHz,2GHz
+            &lt;/span&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;i class&#x3D;&quot;fas fa-battery-three-quarters&quot;&gt;&lt;/i&gt;
+            &lt;span&gt;
+              &lt;strong&gt;Baterí­a &lt;/strong&gt;
+              &lt;br /&gt;
+              5000 mAh
+            &lt;/span&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;i class&#x3D;&quot;fas fa-microchip&quot;&gt;&lt;/i&gt;
+            &lt;span&gt;
+              &lt;strong&gt;Memoria RAM &lt;/strong&gt;
+              &lt;br /&gt;
+              12GB
+            &lt;/span&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;i class&#x3D;&quot;fas fa-camera&quot;&gt;&lt;/i&gt;
+            &lt;span&gt;
+              &lt;strong&gt;Cámara de fotos frontal &lt;/strong&gt;
+              &lt;br /&gt;
+              40 MP
+            &lt;/span&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;product-detail-extended justify-content-center align-items-center&quot;&gt;
+      &lt;article&gt;
+        &lt;span class&#x3D;&quot;title&quot;&gt; ¡Ten el control de tus fotos! &lt;/span&gt;
+        &lt;img alt&#x3D;&quot;&quot; src&#x3D;&quot; https://static.claro.com.pe/img/ceq/Cama11ra_PostPago-650x350.png&quot; /&gt;
+        &lt;span class&#x3D;&quot;description text-center&quot;&gt;
+          ¡Edita tus fotos sin problemas! La cámara de alta resolución de 108 megapíxeles del Galaxy S20+ ofrece una resolución más nítida
+          que mantiene la claridad, incluso cuando recorta las imágenes.
+        &lt;/span&gt;
+      &lt;/article&gt;
+      &lt;article&gt;
+        &lt;span class&#x3D;&quot;title&quot;&gt; ¡Encuentra tomas que antes no podías! &lt;/span&gt;
+        &lt;img alt&#x3D;&quot;&quot; src&#x3D;&quot; https://static.claro.com.pe/img/ceq/Zoom_PostPago-650x350.png&quot; /&gt;
+        &lt;span class&#x3D;&quot;description text-center&quot;&gt;
+          ¡Ni una hormiga se escapará de tus fotos! Acércate a la acción como nunca con el zoom óptico híbrido 10x y el zoom de súper
+          resolución reforzado por IA. ¡Ahora no te perderás ningún detalle!
+        &lt;/span&gt;
+      &lt;/article&gt;
+      &lt;article&gt;
+        &lt;span class&#x3D;&quot;title&quot;&gt; ¡No te quedes a medias! &lt;/span&gt;
+        &lt;img alt&#x3D;&quot;&quot; src&#x3D;&quot;https://static.claro.com.pe/img/ceq/Bateria-650x350.png&quot; /&gt;
+        &lt;span class&#x3D;&quot;description text-center&quot;&gt;
+          Utiliza tu celular todo el día y sin preocupaciones. Ahora con la batería de 5000 mAh no tengas miedo de quedarte a medias y
+          disfruta sin preocupaciones.
+        &lt;/span&gt;
+      &lt;/article&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;!-- End Product Detail --&gt;
+&lt;/main&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./product.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &#x27;variables&#x27;;
+
+/* ---------- Dropdown Product ---------- */
+
+.dropdown-product {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  height: auto;
+  margin: auto;
+  user-select: none;
+  width: 100%;
+
+  .dropdown-product-name {
+    background: #ffffff;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+
+    @media only screen and (min-width: 1280px) {
+      height: 68px;
+      display: flex;
+      align-items: center;
+      font-size: 26px;
+      justify-content: center;
+
+      i {
+        margin-left: 20px;
+        font-size: 24px;
+      }
+    }
+
+    i {
+      font-size: 16px;
+      margin-left: 10px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    &amp;.dropdown-product-dark {
+      background: #212121 0 0 no-repeat padding-box;
+      color: #ffffff;
+
+      p {
+        color: #fff;
+      }
+    }
+  }
+
+  .dropdown-product-opts {
+    background: #f4f4f4 0 0 no-repeat padding-box;
+    box-shadow: 0 3px 6px #000029;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media only screen and (min-width: 1280px) {
+      background: #f4f4f4 0 0 no-repeat padding-box;
+      box-shadow: 0 3px 6px #00000029;
+      opacity: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .dropdown-product-opts_list {
+      width: 100%;
+
+      p {
+        margin-left: 20px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-weight: 500;
+      }
+
+      .box-other-products {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 20px;
+
+        @media only screen and (min-width: 1280px) {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: center;
+          margin: 20px;
+        }
+
+        .product-info-detail {
+          width: 30%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+
+          @media only screen and (min-width: 1280px) {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+          }
+
+          a {
+            font-size: 12px;
+            margin-top: 10px;
+
+            @media only screen and (min-width: 1280px) {
+              font-size: 12px;
+              margin-top: 10px;
+              color: #212121;
+            }
+
+            img {
+              width: auto;
+              height: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ---------- End Dropdown Product ---------- */
+
+/* ---------- Product Carousel ---------- */
+
+/* ---------- End Product Carousel ---------- */
+
+/* ---------- Product Info ---------- */
+
+.product-info {
+  width: 90%;
+  margin: 10px auto;
+  height: auto;
+
+  @media only screen and (min-width: 1280px) {
+    width: 30%;
+    margin: 50px 0;
+    float: left;
+    min-height: 430px;
+    padding: 2%;
+    align-items: center;
+  }
+
+  h2 {
+    margin: 0 0 10px 0;
+    font-weight: 300;
+    font-size: 16px;
+
+    a {
+      float: right;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  .dropdown-list {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    height: auto;
+    margin: auto;
+    user-select: none;
+    width: 100%;
+
+    &amp;.dropdown-two-cols {
+      width: 48%;
+      float: left;
+    }
+
+    &amp;.dropdown-two-cols_right {
+      margin-right: 0;
+      float: right;
+    }
+
+    &amp;.dropdown-one-col {
+      margin: 14px 0 0 0;
+      float: left;
+    }
+
+    .dropdown-list-content {
+      height: 65px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+
+      .dropdown-list-info {
+        display: flex;
+        flex-direction: column;
+        line-height: 20px;
+        width: 100%;
+
+        .dropdown-list-info_description {
+          font-size: 12px;
+        }
+
+        .dropdown-list-info_option {
+          font-size: 16px;
+          font-weight: 400;
+          margin-left: 0;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          width: 77%;
+
+          @media only screen and (min-width: 1280px) {
+            font-size: 16px;
+            font-weight: 300;
+          }
+        }
+      }
+
+      i {
+        margin-left: 10px;
+        position: absolute;
+        right: 12px;
+        font-size: 16px;
+
+        @media only screen and (min-width: 1280px) {
+          top: 15px;
+        }
+      }
+    }
+
+    ul {
+      margin-left: 0;
+      margin-bottom: 20px;
+
+      @media only screen and (min-width: 1280px) {
+        margin: 0;
+        font-size: 13px;
+        width: 100%;
+      }
+
+      .dropdown-list_two-cols {
+        @media only screen and (min-width: 1280px) {
+          display: inline-block;
+          width: 48%;
+        }
+      }
+
+      li {
+        list-style-type: none;
+
+        label {
+          display: inline-block;
+          cursor: pointer;
+          position: relative;
+          padding: 15px 10px 10px 40px;
+          border-radius: 5px;
+          font-size: 13px;
+          margin: 0;
+
+          &amp;:hover {
+            color: #222222;
+          }
+
+          &amp;:before {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            left: 15px;
+            background: none;
+            font-family: $fa_font;
+            content: &#x27;\f111&#x27;;
+            top: 14px;
+          }
+        }
+
+        input[type&#x3D;&#x27;radio&#x27;] {
+          display: none;
+
+          &amp;:checked + label:before {
+            font-family: $fa_font;
+            content: &#x27;\f058&#x27;;
+            font-weight: 900;
+            border: none;
+            font-size: 16px;
+            top: 12px;
+            left: 12px;
+          }
+
+          &amp;:checked + label {
+            padding: 15px 10px 10px 40px;
+            border-radius: 2px;
+            color: #ee122c;
+          }
+        }
+      }
+    }
+  }
+
+  .product-plan-detail {
+    width: 98%;
+    margin: auto;
+    display: flex;
+    padding: 5px 5px 10px 5px;
+    background: #f4f4f4;
+    border-radius: 0 0 10px 10px;
+
+    .product-plan-detail_info {
+      max-width: 50%;
+      margin: auto;
+      text-align: center;
+
+      span {
+        font-size: 12px;
+      }
+
+      img {
+        width: 20px;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .product-price {
+    width: 100%;
+    margin: 0 auto 10px;
+
+    .product-price-content {
+      align-items: center;
+      border-radius: 10px;
+      height: auto;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-top: 35px;
+      padding-bottom: 20px;
+
+      .product-price-info {
+        align-items: center;
+        display: inline-grid;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 48%;
+        border-right: 2px solid #cccccc;
+        border-left: 2px solid #cccccc;
+        padding: 0 8px;
+
+        .product-price-info_payment-value {
+          color: #222222;
+          font-size: 22px;
+          font-weight: 500;
+          text-align: center;
+        }
+
+        .product-price-info_payment-value {
+          font-size: 13px;
+          font-weight: 300;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .product-buy-content {
+    width: 95%;
+    margin: 10px auto;
+
+    button {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      background: #f5821f;
+      border-radius: 10px;
+      border: 1px solid #c66613;
+      height: 50px;
+      align-items: center;
+      width: 100%;
+      font-size: 18px;
+      font-weight: 500;
+      color: #ffffff;
+
+      &amp;:hover {
+        background: #c66613;
+        cursor: pointer;
+      }
+
+      i {
+        color: #ffffff;
+        font-size: 18px;
+      }
+    }
+
+    span {
+      font-size: 13px;
+      margin: 10px auto;
+      display: table;
+      color: #f5821f;
+    }
+  }
+}
+
+/* ---------- End Product Info ---------- */
+
+/* ---------- Delivery Desktop ---------- */
+
+.delivery-desktop {
+  display: none;
+  width: 85%;
+  margin: auto;
+
+  @media only screen and (min-width: 1280px) {
+    display: block;
+  }
+
+  .delivery-desktop-box {
+    border: 1px dotted #cccccc;
+    display: flex;
+    border-radius: 10px;
+    height: 70px;
+    width: 100%;
+    background: #ffffff;
+
+    .delivery-desktop-info {
+      display: flex;
+      flex-wrap: wrap;
+      width: 20%;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      height: 40px;
+
+      i {
+        font-size: 12px;
+        margin-right: 5px;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      .legal {
+        font-size: 12px;
+        color: #222222;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+/* ---------- End Delivery Desktop ---------- */
+
+/* ---------- Delivery Mobile ---------- */
+
+.delivery-mobile {
+  border-top: 15px solid #f4f4f4;
+  border-bottom: 15px solid #f4f4f4;
+  display: flex;
+  font-size: 12px;
+  width: 100%;
+  align-items: center;
+  margin: 20px auto;
+  padding: 14px 0;
+  justify-content: space-evenly;
+  background: #ffffff;
+
+  @media only screen and (min-width: 1280px) {
+    display: none;
+  }
+
+  .delivery-mobile-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .black {
+      color: #212121;
+    }
+
+    span {
+      color: #70c473;
+      font-weight: 400;
+    }
+
+    .delivery-mobile-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+
+      i {
+        width: 30px;
+        height: 30px;
+        border-radius: 35px;
+        background: #70c473;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: #ffffff;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+/* ---------- Delivery Mobile ---------- */
+
+/* ---------- Product Detail ---------- */
+
+.product-detail {
+  width: 85%;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px dotted #cccccc;
+
+  h2 {
+    font-size: 22px;
+    font-weight: 300;
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  h3 {
+    text-align: center;
+    margin: 10px auto 20px;
+    font-size: 14px;
+    font-weight: 300;
+
+    @media only screen and (min-width: 1280px) {
+      font-size: 16px;
+      font-weight: 300;
+      width: 85%;
+      line-height: 28px;
+    }
+  }
+
+  .product-detail-features {
+    background: #ffffff;
+    margin: 0 0 1rem;
+    height: auto;
+    display: flex;
+
+    @media only screen and (min-width: 1280px) {
+      background: #ffffff;
+      margin: 0 0 1rem;
+      height: auto;
+      display: flex;
+    }
+
+    .product-detail-features_list {
+      width: 85%;
+      padding: 0 10px 0 10px;
+
+      ul li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        font-size: 12px;
+        border-bottom: 1px solid #cccccc;
+        padding-bottom: 20px;
+
+        &amp;:first-child {
+          padding-top: 20px;
+          border-top: 1px solid #cccccc;
+        }
+
+        i {
+          font-size: 20px;
+          margin-right: 10px;
+          color: #212121;
+          padding-right: 15px;
+
+          @media only screen and (min-width: 1280px) {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .product-detail-extended {
+    @media only screen and (min-width: 1280px) {
+      display: flex;
+    }
+
+    article {
+      margin: 30px auto;
+      padding: 25px 10px 20px 10px;
+      background-color: #f4f4f4;
+      box-shadow: 0 3px 6px #00000029;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      min-height: 364px;
+      align-items: center;
+      justify-content: center;
+
+      @media only screen and (min-width: 1280px) {
+        width: 28%;
+      }
+
+      span {
+        padding: 10px;
+      }
+
+      img {
+        width: 260px;
+        height: 140px;
+
+        @media only screen and (min-width: 1280px) {
+          margin-top: 30px;
+        }
+      }
+
+      .title {
+        font-size: 18px;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 10px;
+        font-weight: 400;
+
+        @media only screen and (min-width: 1280px) {
+          font-size: 20px;
+          margin: 15px 0;
+        }
+      }
+
+      .description {
+        font-size: 14px;
+        text-align: left;
+        display: inline-block;
+        margin: 10px;
+
+        @media only screen and (min-width: 1280px) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+/* ---------- End Product Detail ---------- */
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><main>  <!--  Dropdown-->  <div class="dropdown-product">    <div class="dropdown-product-name" (click)="toggleProductsDropdown()" [ngClass]="{ \'dropdown-product-dark\': showMoreProductsDropdown }">      <p>Galaxy S20 Ultra + Galaxy Buds+</p>      <i class="fas fa-chevron-down" [ngClass]="{ \'fa-rotate-180\': showMoreProductsDropdown }"></i>    </div>    <div class="dropdown-product-opts" *ngIf="showMoreProductsDropdown">      <div class="dropdown-product-opts_list">        <p>Los más pedidos</p>        <div class="box-other-products">          <div class="product-info-detail" *ngFor="let product of otherProductsList">            <a href="{{ product.productUrl }}">              <img src="{{ product.productImgSrc }}" alt="" />              <p>{{ product.productName }}</p>            </a>          </div>        </div>      </div>    </div>  </div>  <!--  &lt;!&ndash;  Detalle Equipo&ndash;&gt;-->  <!--  <section class="detalle-equipo">-->  <!--    <div class="galeria">-->  <!--      <div class="tag-soloonline">-->  <!--        <img alt="Etiqueta Solo Online Tienda Claro" src="https://static.claro.com.pe/img/ribbons/ribbon-promo.png" width="72">-->  <!--      </div>-->  <!--      <div class="tag-nuevo">-->  <!--        <img alt="Etiqueta Nuevo Tienda Claro" src="https://static.claro.com.pe/img/ribbons/ribbon-new.png" width="72" title="" style="">-->  <!--      </div>-->  <!--      <div class="owl-carousel owl-theme owl-loaded owl-drag">-->  <!--        <div class="owl-stage-outer">-->  <!--          <div class="owl-stage" style="transform: translate3d(-1779px, 0px, 0px); transition: all 0.25s ease 0s; width: 6228px;">-->  <!--            <div class="owl-item cloned" style="width: 879.583px; margin-right: 10px;">-->  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/s20ultra_lateral 220x386.png"></div>-->  <!--            </div>-->  <!--            <div class="owl-item cloned" style="width: 879.583px; margin-right: 10px;">-->  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/s20ultra_trasera 220x386.png"></div>-->  <!--            </div>-->  <!--            <div class="owl-item active" style="width: 879.583px; margin-right: 10px;">-->  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png"></div>-->  <!--            </div>-->  <!--            <div class="owl-item" style="width: 879.583px; margin-right: 10px;">-->  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/s20ultra_lateral 220x386.png"></div>-->  <!--            </div>-->  <!--            <div class="owl-item" style="width: 879.583px; margin-right: 10px;">-->  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/s20ultra_trasera 220x386.png"></div>-->  <!--            </div>-->  <!--            <div class="owl-item cloned" style="width: 879.583px; margin-right: 10px;">-->  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png"></div>-->  <!--            </div>-->  <!--            <div class="owl-item cloned" style="width: 879.583px; margin-right: 10px;">-->  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/s20ultra_lateral 220x386.png"></div>-->  <!--            </div>-->  <!--          </div>-->  <!--        </div>-->  <!--        <div class="owl-nav disabled">-->  <!--          <button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button>-->  <!--          <button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>-->  <!--        </div>-->  <!--        <div class="owl-dots">-->  <!--          <button role="button" class="owl-dot active"><span></span></button>-->  <!--          <button role="button" class="owl-dot"><span></span></button>-->  <!--          <button role="button" class="owl-dot"><span></span></button>-->  <!--        </div>-->  <!--      </div>-->  <!--    </div>-->  <!--  </section>-->  <!-- Product Info -->  <section class="product-info">    <h2>      Arma tu Postpago      <a href="#">Llévalo en prepago</a>    </h2>    <div class="dropdown-list dropdown-two-cols">      <div class="dropdown-list-content" (click)="toggleModalityDropdown()">        <div class="dropdown-list-info">          <span class="dropdown-list-info_description">Modalidad</span>          <span class="dropdown-list-info_option">Renovación</span>        </div>        <i class="fas fa-chevron-down"></i>      </div>      <div *ngIf="showModalityDropdown">        <ul>          <li>            <input type="radio" id="lista1" name="lista" value="1" />            <label for="lista1"> Línea nueva </label>          </li>          <li>            <input type="radio" id="lista3" name="lista" value="3" />            <label for="lista3"> Portabilidad </label>          </li>          <li>            <input type="radio" id="lista4" name="lista" checked="checked" value="4" />            <label for="lista4"> Renovación </label>          </li>        </ul>      </div>    </div>    <div class="dropdown-list dropdown-two-cols dropdown-two-cols_right">      <div class="dropdown-list-content" (click)="togglePaymentTypeDropdown()">        <div class="dropdown-list-info">          <span class="dropdown-list-info_description">¿Cómo lo pago?</span>          <span class="dropdown-list-info_option"> Al contado </span>        </div>        <i class="fas fa-chevron-down"> </i>      </div>      <div *ngIf="showPaymentTypeDropdown">        <ul>          <li>            <input type="radio" id="cuotas1" name="cuotas" checked="checked" value="1" />            <label for="cuotas1"> Al contado </label>          </li>        </ul>      </div>    </div>    <div class="dropdown-list dropdown-one-col">      <div class="dropdown-list-content" (click)="togglePlanDropdown()">        <div class="dropdown-list-info">          <span class="dropdown-list-info_description">Plan</span>          <span class="dropdown-list-info_option"> Max Ilimitado 189.90 </span>        </div>        <i class="fas fa-chevron-down"> </i>      </div>      <div *ngIf="showPlanDropdown">        <ul>          <li class="dropdown-list_two-cols">            <input type="radio" id="plan1" name="plan" value="1" />            <label for="plan1"> Max 29.90 </label>          </li>          <li class="dropdown-list_two-cols">            <input type="radio" id="plan2" name="plan" value="2" />            <label for="plan2"> Max 39.90 </label>          </li>          <li class="dropdown-list_two-cols">            <input type="radio" id="plan9" name="plan" checked="checked" value="9" />            <label for="plan9"> Max Ilimitado 189.90 </label>          </li>          <li class="dropdown-list_two-cols">            <input type="radio" id="plan67" name="plan" value="67" />            <label for="plan67"> Max Ilimitado 289.90 </label>          </li>        </ul>      </div>    </div>    <div class="product-plan-detail">      <div class="product-plan-detail_info">        <span> Con los gigas de tu plan </span>        <br />        <span>          <img src="https://static.claro.com.pe/landings/havas/claromaxV5/assets/pg2_social_facebook.svg" alt="" />          <img src="https://static.claro.com.pe/landings/havas/claromaxV5/assets/pg2_social_messenger.svg" alt="" />          <img src="https://static.claro.com.pe/landings/havas/claromaxV5/assets/pg2_social_twitter.svg" alt="" />          <img src="https://static.claro.com.pe/landings/havas/claromaxV5/assets/pg2_social_waze.svg" alt="" />          <img src="https://static.claro.com.pe/landings/havas/claromaxV5/assets/pg2_social_whatsapp.svg" alt="" />        </span>      </div>      <div class="product-plan-detail_info">        <span> Internet </span>        <br />        <span> <strong> ilimitado </strong> </span>      </div>      <div class="product-plan-detail_info">        <span> LLamadas </span>        <br />        <span> <strong> Ilimitados </strong> </span>      </div>      <div class="product-plan-detail_info">        <span> SMS </span>        <br />        <span> <strong> ilimitados </strong> </span>      </div>    </div>    <section class="product-price">      <div class="product-price-content">        <div class="product-price-info">          <span class="product-price-info_payment-value"> S/ 4689 </span>          <span class="product-price-info_payment-type"> Al Contado </span>        </div>      </div>    </section>    <section class="product-buy-content">      <button type="submit"><i class="fas fa-shopping-cart"></i> COMPRAR</button>      <span>Precios sujetos a evaluación crediticia</span>    </section>  </section>  <!-- End Product Info -->  <!-- Delivery Desktop -->  <section class="delivery-desktop">    <div class="delivery-desktop-box">      <div class="delivery-desktop-info">        <span><i class="fas fa-clock"></i></span><span>Delivery Regular gratis*</span>        <br />        <span class="legal">Coordinamos la fecha y hora de entrega.</span>      </div>    </div>  </section>  <!-- End Delivery Desktop -->  <!-- Delivery Mobile -->  <section class="delivery-mobile">    <div class="delivery-mobile-box">      <span class="black">Despacho a domicilio</span>      <div class="delivery-mobile-info">        <i class="fas fa-truck"></i>        <div class="ml-2">          <span> Disponible</span>          <p>es gratis</p>        </div>      </div>    </div>  </section>  <!-- End Delivery Mobile -->  <!-- Product Detail -->  <section class="product-detail">    <h2>Samsung Galaxy S20 Ultra + Galaxy Buds+</h2>    <h3>      ¡Rendimiento profesional!      <br />      Conoce el Samsung Galaxy S20 Ultra y su pantalla de 6.9" que te brindará mayor comodidad. Además, con su cámara de 108MP consigue      fotos que nunca creíste posibles y en alta resolución. ¡Es momento de disfrutar como se debe!    </h3>    <div class="product-detail-features justify-content-center align-items-center">      <div class="product-detail-features_list">        <ul>          <li>            <i class="fas fa-desktop"></i>            <span>              <strong>Pantalla </strong>              <br />              6.9 "            </span>          </li>          <li>            <i class="fab fa-android"></i>            <span>              <strong>Sistema operativo </strong>              <br />              Android Q - Versión 10            </span>          </li>          <li>            <i class="fas fa-microchip"></i>            <span>              <strong>Procesador </strong>              <br />              Octa core 2.73GHz,2.6GHz,2GHz            </span>          </li>          <li>            <i class="fas fa-battery-three-quarters"></i>            <span>              <strong>Baterí­a </strong>              <br />              5000 mAh            </span>          </li>          <li>            <i class="fas fa-microchip"></i>            <span>              <strong>Memoria RAM </strong>              <br />              12GB            </span>          </li>          <li>            <i class="fas fa-camera"></i>            <span>              <strong>Cámara de fotos frontal </strong>              <br />              40 MP            </span>          </li>        </ul>      </div>    </div>    <div class="product-detail-extended justify-content-center align-items-center">      <article>        <span class="title"> ¡Ten el control de tus fotos! </span>        <img alt="" src=" https://static.claro.com.pe/img/ceq/Cama11ra_PostPago-650x350.png" />        <span class="description text-center">          ¡Edita tus fotos sin problemas! La cámara de alta resolución de 108 megapíxeles del Galaxy S20+ ofrece una resolución más nítida          que mantiene la claridad, incluso cuando recorta las imágenes.        </span>      </article>      <article>        <span class="title"> ¡Encuentra tomas que antes no podías! </span>        <img alt="" src=" https://static.claro.com.pe/img/ceq/Zoom_PostPago-650x350.png" />        <span class="description text-center">          ¡Ni una hormiga se escapará de tus fotos! Acércate a la acción como nunca con el zoom óptico híbrido 10x y el zoom de súper          resolución reforzado por IA. ¡Ahora no te perderás ningún detalle!        </span>      </article>      <article>        <span class="title"> ¡No te quedes a medias! </span>        <img alt="" src="https://static.claro.com.pe/img/ceq/Bateria-650x350.png" />        <span class="description text-center">          Utiliza tu celular todo el día y sin preocupaciones. Ahora con la batería de 5000 mAh no tengas miedo de quedarte a medias y          disfruta sin preocupaciones.        </span>      </article>    </div>  </section>  <!-- End Product Detail --></main></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'ProductComponent', 'selector': 'app-product'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ProductComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ProductComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

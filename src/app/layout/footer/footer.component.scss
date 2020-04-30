@@ -1,6 +1,8 @@
 footer {
+  position: static;
+  bottom: 0;
   width: 100%;
-  margin: 20px auto 0px;
+  margin: 20px auto 0;
   float: left;
 
   .terms {
@@ -50,6 +52,7 @@ footer {
     ul {
       width: 100%;
       display: flex;
+      margin: 0;
 
       li {
         list-style-type: none;

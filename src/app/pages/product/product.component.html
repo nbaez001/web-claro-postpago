@@ -1,1 +1,310 @@
-<p>product works!</p>
+<main>
+  <!--  Dropdown-->
+  <div class="dropdown-product">
+    <div class="dropdown-product-name" (click)="toggleProductsDropdown()" [ngClass]="{ 'dropdown-product-dark': showMoreProductsDropdown }">
+      <p>Galaxy S20 Ultra + Galaxy Buds+</p>
+      <i class="fas fa-chevron-down" [ngClass]="{ 'fa-rotate-180': showMoreProductsDropdown }"></i>
+    </div>
+    <div class="dropdown-product-opts" *ngIf="showMoreProductsDropdown">
+      <div class="dropdown-product-opts_list">
+        <p>Los más pedidos</p>
+        <div class="box-other-products">
+          <div class="product-info-detail" *ngFor="let product of otherProductsList">
+            <a href="{{ product.productUrl }}">
+              <img src="{{ product.productImgSrc }}" alt="" />
+              <p>{{ product.productName }}</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  &lt;!&ndash;  Detalle Equipo&ndash;&gt;-->
+  <!--  <section class="detalle-equipo">-->
+  <!--    <div class="galeria">-->
+  <!--      <div class="tag-soloonline">-->
+  <!--        <img alt="Etiqueta Solo Online Tienda Claro" src="https://static.claro.com.pe/img/ribbons/ribbon-promo.png" width="72">-->
+  <!--      </div>-->
+  <!--      <div class="tag-nuevo">-->
+  <!--        <img alt="Etiqueta Nuevo Tienda Claro" src="https://static.claro.com.pe/img/ribbons/ribbon-new.png" width="72" title="" style="">-->
+  <!--      </div>-->
+  <!--      <div class="owl-carousel owl-theme owl-loaded owl-drag">-->
+  <!--        <div class="owl-stage-outer">-->
+  <!--          <div class="owl-stage" style="transform: translate3d(-1779px, 0px, 0px); transition: all 0.25s ease 0s; width: 6228px;">-->
+  <!--            <div class="owl-item cloned" style="width: 879.583px; margin-right: 10px;">-->
+  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/s20ultra_lateral 220x386.png"></div>-->
+  <!--            </div>-->
+  <!--            <div class="owl-item cloned" style="width: 879.583px; margin-right: 10px;">-->
+  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/s20ultra_trasera 220x386.png"></div>-->
+  <!--            </div>-->
+  <!--            <div class="owl-item active" style="width: 879.583px; margin-right: 10px;">-->
+  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png"></div>-->
+  <!--            </div>-->
+  <!--            <div class="owl-item" style="width: 879.583px; margin-right: 10px;">-->
+  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/s20ultra_lateral 220x386.png"></div>-->
+  <!--            </div>-->
+  <!--            <div class="owl-item" style="width: 879.583px; margin-right: 10px;">-->
+  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/s20ultra_trasera 220x386.png"></div>-->
+  <!--            </div>-->
+  <!--            <div class="owl-item cloned" style="width: 879.583px; margin-right: 10px;">-->
+  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png"></div>-->
+  <!--            </div>-->
+  <!--            <div class="owl-item cloned" style="width: 879.583px; margin-right: 10px;">-->
+  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/s20ultra_lateral 220x386.png"></div>-->
+  <!--            </div>-->
+  <!--          </div>-->
+  <!--        </div>-->
+  <!--        <div class="owl-nav disabled">-->
+  <!--          <button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button>-->
+  <!--          <button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>-->
+  <!--        </div>-->
+  <!--        <div class="owl-dots">-->
+  <!--          <button role="button" class="owl-dot active"><span></span></button>-->
+  <!--          <button role="button" class="owl-dot"><span></span></button>-->
+  <!--          <button role="button" class="owl-dot"><span></span></button>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </section>-->
+
+  <!-- Product Info -->
+  <section class="product-info">
+    <h2>
+      Arma tu Postpago
+      <a href="#">Llévalo en prepago</a>
+    </h2>
+    <div class="dropdown-list dropdown-two-cols">
+      <div class="dropdown-list-content" (click)="toggleModalityDropdown()">
+        <div class="dropdown-list-info">
+          <span class="dropdown-list-info_description">Modalidad</span>
+          <span class="dropdown-list-info_option">Renovación</span>
+        </div>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div *ngIf="showModalityDropdown">
+        <ul>
+          <li>
+            <input type="radio" id="lista1" name="lista" value="1" />
+            <label for="lista1"> Línea nueva </label>
+          </li>
+          <li>
+            <input type="radio" id="lista3" name="lista" value="3" />
+            <label for="lista3"> Portabilidad </label>
+          </li>
+          <li>
+            <input type="radio" id="lista4" name="lista" checked="checked" value="4" />
+            <label for="lista4"> Renovación </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="dropdown-list dropdown-two-cols dropdown-two-cols_right">
+      <div class="dropdown-list-content" (click)="togglePaymentTypeDropdown()">
+        <div class="dropdown-list-info">
+          <span class="dropdown-list-info_description">¿Cómo lo pago?</span>
+          <span class="dropdown-list-info_option"> Al contado </span>
+        </div>
+        <i class="fas fa-chevron-down"> </i>
+      </div>
+      <div *ngIf="showPaymentTypeDropdown">
+        <ul>
+          <li>
+            <input type="radio" id="cuotas1" name="cuotas" checked="checked" value="1" />
+            <label for="cuotas1"> Al contado </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="dropdown-list dropdown-one-col">
+      <div class="dropdown-list-content" (click)="togglePlanDropdown()">
+        <div class="dropdown-list-info">
+          <span class="dropdown-list-info_description">Plan</span>
+          <span class="dropdown-list-info_option"> Max Ilimitado 189.90 </span>
+        </div>
+        <i class="fas fa-chevron-down"> </i>
+      </div>
+      <div *ngIf="showPlanDropdown">
+        <ul>
+          <li class="dropdown-list_two-cols">
+            <input type="radio" id="plan1" name="plan" value="1" />
+            <label for="plan1"> Max 29.90 </label>
+          </li>
+          <li class="dropdown-list_two-cols">
+            <input type="radio" id="plan2" name="plan" value="2" />
+            <label for="plan2"> Max 39.90 </label>
+          </li>
+          <li class="dropdown-list_two-cols">
+            <input type="radio" id="plan9" name="plan" checked="checked" value="9" />
+            <label for="plan9"> Max Ilimitado 189.90 </label>
+          </li>
+          <li class="dropdown-list_two-cols">
+            <input type="radio" id="plan67" name="plan" value="67" />
+            <label for="plan67"> Max Ilimitado 289.90 </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="product-plan-detail">
+      <div class="product-plan-detail_info">
+        <span> Con los gigas de tu plan </span>
+        <br />
+        <span>
+          <img src="https://static.claro.com.pe/landings/havas/claromaxV5/assets/pg2_social_facebook.svg" alt="" />
+          <img src="https://static.claro.com.pe/landings/havas/claromaxV5/assets/pg2_social_messenger.svg" alt="" />
+          <img src="https://static.claro.com.pe/landings/havas/claromaxV5/assets/pg2_social_twitter.svg" alt="" />
+          <img src="https://static.claro.com.pe/landings/havas/claromaxV5/assets/pg2_social_waze.svg" alt="" />
+          <img src="https://static.claro.com.pe/landings/havas/claromaxV5/assets/pg2_social_whatsapp.svg" alt="" />
+        </span>
+      </div>
+      <div class="product-plan-detail_info">
+        <span> Internet </span>
+        <br />
+        <span> <strong> ilimitado </strong> </span>
+      </div>
+      <div class="product-plan-detail_info">
+        <span> LLamadas </span>
+        <br />
+        <span> <strong> Ilimitados </strong> </span>
+      </div>
+      <div class="product-plan-detail_info">
+        <span> SMS </span>
+        <br />
+        <span> <strong> ilimitados </strong> </span>
+      </div>
+    </div>
+    <section class="product-price">
+      <div class="product-price-content">
+        <div class="product-price-info">
+          <span class="product-price-info_payment-value"> S/ 4689 </span>
+          <span class="product-price-info_payment-type"> Al Contado </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-buy-content">
+      <button type="submit"><i class="fas fa-shopping-cart"></i> COMPRAR</button>
+      <span>Precios sujetos a evaluación crediticia</span>
+    </section>
+  </section>
+  <!-- End Product Info -->
+
+  <!-- Delivery Desktop -->
+  <section class="delivery-desktop">
+    <div class="delivery-desktop-box">
+      <div class="delivery-desktop-info">
+        <span><i class="fas fa-clock"></i></span><span>Delivery Regular gratis*</span>
+        <br />
+        <span class="legal">Coordinamos la fecha y hora de entrega.</span>
+      </div>
+    </div>
+  </section>
+  <!-- End Delivery Desktop -->
+
+  <!-- Delivery Mobile -->
+  <section class="delivery-mobile">
+    <div class="delivery-mobile-box">
+      <span class="black">Despacho a domicilio</span>
+      <div class="delivery-mobile-info">
+        <i class="fas fa-truck"></i>
+        <div class="ml-2">
+          <span> Disponible</span>
+          <p>es gratis</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Delivery Mobile -->
+
+  <!-- Product Detail -->
+  <section class="product-detail">
+    <h2>Samsung Galaxy S20 Ultra + Galaxy Buds+</h2>
+    <h3>
+      ¡Rendimiento profesional!
+      <br />
+      Conoce el Samsung Galaxy S20 Ultra y su pantalla de 6.9" que te brindará mayor comodidad. Además, con su cámara de 108MP consigue
+      fotos que nunca creíste posibles y en alta resolución. ¡Es momento de disfrutar como se debe!
+    </h3>
+    <div class="product-detail-features justify-content-center align-items-center">
+      <div class="product-detail-features_list">
+        <ul>
+          <li>
+            <i class="fas fa-desktop"></i>
+            <span>
+              <strong>Pantalla </strong>
+              <br />
+              6.9 "
+            </span>
+          </li>
+          <li>
+            <i class="fab fa-android"></i>
+            <span>
+              <strong>Sistema operativo </strong>
+              <br />
+              Android Q - Versión 10
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-microchip"></i>
+            <span>
+              <strong>Procesador </strong>
+              <br />
+              Octa core 2.73GHz,2.6GHz,2GHz
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-battery-three-quarters"></i>
+            <span>
+              <strong>Baterí­a </strong>
+              <br />
+              5000 mAh
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-microchip"></i>
+            <span>
+              <strong>Memoria RAM </strong>
+              <br />
+              12GB
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-camera"></i>
+            <span>
+              <strong>Cámara de fotos frontal </strong>
+              <br />
+              40 MP
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="product-detail-extended justify-content-center align-items-center">
+      <article>
+        <span class="title"> ¡Ten el control de tus fotos! </span>
+        <img alt="" src=" https://static.claro.com.pe/img/ceq/Cama11ra_PostPago-650x350.png" />
+        <span class="description text-center">
+          ¡Edita tus fotos sin problemas! La cámara de alta resolución de 108 megapíxeles del Galaxy S20+ ofrece una resolución más nítida
+          que mantiene la claridad, incluso cuando recorta las imágenes.
+        </span>
+      </article>
+      <article>
+        <span class="title"> ¡Encuentra tomas que antes no podías! </span>
+        <img alt="" src=" https://static.claro.com.pe/img/ceq/Zoom_PostPago-650x350.png" />
+        <span class="description text-center">
+          ¡Ni una hormiga se escapará de tus fotos! Acércate a la acción como nunca con el zoom óptico híbrido 10x y el zoom de súper
+          resolución reforzado por IA. ¡Ahora no te perderás ningún detalle!
+        </span>
+      </article>
+      <article>
+        <span class="title"> ¡No te quedes a medias! </span>
+        <img alt="" src="https://static.claro.com.pe/img/ceq/Bateria-650x350.png" />
+        <span class="description text-center">
+          Utiliza tu celular todo el día y sin preocupaciones. Ahora con la batería de 5000 mAh no tengas miedo de quedarte a medias y
+          disfruta sin preocupaciones.
+        </span>
+      </article>
+    </div>
+  </section>
+  <!-- End Product Detail -->
+</main>

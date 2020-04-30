@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { DeviceListModel } from '../models/device-list.model';
+import { FilterListModel } from '../models/filter-list.model';
+import { OtherProductListModel } from '../models/other-product-list.model';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +12,7 @@ export class ConstantsService {
   // Footer Component
 
   // Home Component
-  public HOME_FILTER_LIST_DATA = [
+  public HOME_FILTER_LIST_DATA: FilterListModel[] = [
     {
       listId: 'lista',
       listName: 'MODALIDAD',
@@ -119,12 +122,12 @@ export class ConstantsService {
       ],
     },
   ];
-  public HOME_DEVICE_LIST_DATA = [
+  public HOME_DEVICE_LIST_DATA: DeviceListModel[] = [
     {
       brand: 'Samsung',
       deviceName: 'Galaxy S20 Ultra + Galaxy Buds+',
       deviceImgSrc: 'https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png',
-      productUrl: '#',
+      productUrl: '/product',
       modality: 'Portabilidad',
       price: {
         paymentValue: 'S/ 4689',
@@ -279,6 +282,38 @@ export class ConstantsService {
   ];
 
   // Product Component
+  public PRODUCT_OTHER_PRODUCTS_LIST_DATA: OtherProductListModel[] = [
+    {
+      productName: 'IFI 20Mbps | Internet Fijo Inalámbrico',
+      productImgSrc: 'https://static.claro.com.pe/img/otros/vista01_IFI_vEE22804.png',
+      productUrl: '#',
+    },
+    {
+      productName: 'IFI 20Mbps UP |Internet Fijo Inalámbrico',
+      productImgSrc: 'https://static.claro.com.pe/img/otros/vista01_IFI_vEE22804.png',
+      productUrl: '#',
+    },
+    {
+      productName: 'Router OLO Portatil MF920V',
+      productImgSrc: 'https://static.claro.com.pe/img/otros/vista1_ZTE_RouterMF920V_BONO_2804.png',
+      productUrl: '#',
+    },
+    {
+      productName: 'Moto G8 Plus 64GB',
+      productImgSrc: 'https://static.claro.com.pe/img/ceq/img_front_moto_G8Plus_postpago_220x38602220212.png',
+      productUrl: '#',
+    },
+    {
+      productName: 'IFI 15Mbps UP |Internet Fijo Inalámbrico',
+      productImgSrc: 'https://static.claro.com.pe/img/otros/vista01_IFI_vEE22804.png',
+      productUrl: '#',
+    },
+    {
+      productName: 'MOTO G7 Plus 64GB',
+      productImgSrc: 'https://static.claro.com.pe/img/ceq/G7_Plus_Frontal_20350.png',
+      productUrl: '#',
+    },
+  ];
 
   constructor() {}
 }
