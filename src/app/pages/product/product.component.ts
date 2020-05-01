@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 import { OtherProductListModel } from '../../models/other-product-list.model';
 import { ConstantsService } from '../../services/constants.service';
 
@@ -11,6 +12,23 @@ export class ProductComponent implements OnInit {
   public otherProductsList: OtherProductListModel[];
 
   public showMoreProductsDropdown: boolean;
+
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: true,
+    navSpeed: 700,
+    autoplay: true,
+    autoplaySpeed: 400,
+    autoWidth: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+    },
+  };
 
   public showModalityDropdown: boolean;
   public showPaymentTypeDropdown: boolean;

@@ -20,53 +20,34 @@
     </div>
   </div>
 
-  <!--  &lt;!&ndash;  Detalle Equipo&ndash;&gt;-->
-  <!--  <section class="detalle-equipo">-->
-  <!--    <div class="galeria">-->
-  <!--      <div class="tag-soloonline">-->
-  <!--        <img alt="Etiqueta Solo Online Tienda Claro" src="https://static.claro.com.pe/img/ribbons/ribbon-promo.png" width="72">-->
-  <!--      </div>-->
-  <!--      <div class="tag-nuevo">-->
-  <!--        <img alt="Etiqueta Nuevo Tienda Claro" src="https://static.claro.com.pe/img/ribbons/ribbon-new.png" width="72" title="" style="">-->
-  <!--      </div>-->
-  <!--      <div class="owl-carousel owl-theme owl-loaded owl-drag">-->
-  <!--        <div class="owl-stage-outer">-->
-  <!--          <div class="owl-stage" style="transform: translate3d(-1779px, 0px, 0px); transition: all 0.25s ease 0s; width: 6228px;">-->
-  <!--            <div class="owl-item cloned" style="width: 879.583px; margin-right: 10px;">-->
-  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/s20ultra_lateral 220x386.png"></div>-->
-  <!--            </div>-->
-  <!--            <div class="owl-item cloned" style="width: 879.583px; margin-right: 10px;">-->
-  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/s20ultra_trasera 220x386.png"></div>-->
-  <!--            </div>-->
-  <!--            <div class="owl-item active" style="width: 879.583px; margin-right: 10px;">-->
-  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png"></div>-->
-  <!--            </div>-->
-  <!--            <div class="owl-item" style="width: 879.583px; margin-right: 10px;">-->
-  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/s20ultra_lateral 220x386.png"></div>-->
-  <!--            </div>-->
-  <!--            <div class="owl-item" style="width: 879.583px; margin-right: 10px;">-->
-  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/s20ultra_trasera 220x386.png"></div>-->
-  <!--            </div>-->
-  <!--            <div class="owl-item cloned" style="width: 879.583px; margin-right: 10px;">-->
-  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png"></div>-->
-  <!--            </div>-->
-  <!--            <div class="owl-item cloned" style="width: 879.583px; margin-right: 10px;">-->
-  <!--              <div class="item"><img alt="" src="https://static.claro.com.pe/img/ceq/s20ultra_lateral 220x386.png"></div>-->
-  <!--            </div>-->
-  <!--          </div>-->
-  <!--        </div>-->
-  <!--        <div class="owl-nav disabled">-->
-  <!--          <button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button>-->
-  <!--          <button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>-->
-  <!--        </div>-->
-  <!--        <div class="owl-dots">-->
-  <!--          <button role="button" class="owl-dot active"><span></span></button>-->
-  <!--          <button role="button" class="owl-dot"><span></span></button>-->
-  <!--          <button role="button" class="owl-dot"><span></span></button>-->
-  <!--        </div>-->
-  <!--      </div>-->
-  <!--    </div>-->
-  <!--  </section>-->
+  <!-- Product Carousel -->
+  <section class="product-carousel">
+    <div class="product-carousel-content">
+      <div class="tag-online">
+        <img alt="Etiqueta Solo Online Tienda Claro" src="https://static.claro.com.pe/img/ribbons/ribbon-promo.png" width="72" />
+      </div>
+      <div class="tag-new">
+        <img alt="Etiqueta Nuevo Tienda Claro" src="https://static.claro.com.pe/img/ribbons/ribbon-new.png" width="72" />
+      </div>
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+          <div class="slide">
+            <img src="https://static.claro.com.pe/img/ceq/s20ultra_lateral 220x386.png" alt="" />
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="slide">
+            <img src="https://static.claro.com.pe/img/ceq/s20ultra_trasera 220x386.png" alt="" />
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="slide">
+            <img src="https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png" alt="" />
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </section>
 
   <!-- Product Info -->
   <section class="product-info">

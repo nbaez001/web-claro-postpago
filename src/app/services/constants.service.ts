@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { DeviceListModel } from '../models/device-list.model';
 import { FilterListModel } from '../models/filter-list.model';
+import { MenuHeaderListModel } from '../models/menu-header-list.model';
 import { OtherProductListModel } from '../models/other-product-list.model';
 
 @Injectable({
@@ -8,6 +9,50 @@ import { OtherProductListModel } from '../models/other-product-list.model';
 })
 export class ConstantsService {
   // Header Component
+  public HEADER_MENU_LIST_DATA: MenuHeaderListModel[] = [
+    {
+      itemId: 'chipinternet',
+      itemLabel: 'Chips Internet',
+      itemUrl: '/',
+      itemFA: 'fas fa-sim-card',
+    },
+    {
+      itemId: 'hogar',
+      itemLabel: 'Hogar',
+      itemUrl: '/',
+      itemFA: 'fas fa-home',
+    },
+    {
+      itemId: 'prepago',
+      itemLabel: 'Prepagos',
+      itemUrl: '/',
+      itemFA: 'fas fa-mobile-alt',
+    },
+    {
+      itemId: 'celulares',
+      itemLabel: 'Postpagos',
+      itemUrl: '/',
+      itemFA: 'fas fa-mobile-alt',
+    },
+    {
+      itemId: 'accesorios',
+      itemLabel: 'Accesorios',
+      itemUrl: '/',
+      itemFA: 'fas fa-headphones-alt',
+    },
+    {
+      itemId: 'compra_de_paquetes',
+      itemLabel: 'Paquetes',
+      itemUrl: '/',
+      itemFA: 'fas fa-box-open',
+    },
+    {
+      itemId: 'recargas',
+      itemLabel: 'Recargas',
+      itemUrl: '/',
+      itemFA: 'fas fa-mobile-alt',
+    },
+  ];
 
   // Footer Component
 
@@ -140,7 +185,7 @@ export class ConstantsService {
       brand: 'Samsung',
       deviceName: 'Galaxy S20 Ultra + Galaxy Buds+',
       deviceImgSrc: 'https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png',
-      productUrl: '#',
+      productUrl: '/product',
       modality: 'Portabilidad',
       price: {
         paymentValue: 'S/ 4689',
@@ -153,7 +198,7 @@ export class ConstantsService {
       brand: 'Samsung',
       deviceName: 'Galaxy S20 Ultra + Galaxy Buds+',
       deviceImgSrc: 'https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png',
-      productUrl: '#',
+      productUrl: '/product',
       modality: 'Portabilidad',
       price: {
         paymentValue: 'S/ 4689',
@@ -166,7 +211,7 @@ export class ConstantsService {
       brand: 'Samsung',
       deviceName: 'Galaxy S20 Ultra + Galaxy Buds+',
       deviceImgSrc: 'https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png',
-      productUrl: '#',
+      productUrl: '/product',
       modality: 'Portabilidad',
       price: {
         paymentValue: 'S/ 4689',
@@ -179,7 +224,7 @@ export class ConstantsService {
       brand: 'Samsung',
       deviceName: 'Galaxy S20 Ultra + Galaxy Buds+',
       deviceImgSrc: 'https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png',
-      productUrl: '#',
+      productUrl: '/product',
       modality: 'Portabilidad',
       price: {
         paymentValue: 'S/ 4689',
@@ -192,7 +237,7 @@ export class ConstantsService {
       brand: 'Samsung',
       deviceName: 'Galaxy S20 Ultra + Galaxy Buds+',
       deviceImgSrc: 'https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png',
-      productUrl: '#',
+      productUrl: '/product',
       modality: 'Portabilidad',
       price: {
         paymentValue: 'S/ 4689',
@@ -205,7 +250,7 @@ export class ConstantsService {
       brand: 'Samsung',
       deviceName: 'Galaxy S20 Ultra + Galaxy Buds+',
       deviceImgSrc: 'https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png',
-      productUrl: '#',
+      productUrl: '/product',
       modality: 'Portabilidad',
       price: {
         paymentValue: 'S/ 4689',
@@ -218,7 +263,7 @@ export class ConstantsService {
       brand: 'Samsung',
       deviceName: 'Galaxy S20 Ultra + Galaxy Buds+',
       deviceImgSrc: 'https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png',
-      productUrl: '#',
+      productUrl: '/product',
       modality: 'Portabilidad',
       price: {
         paymentValue: 'S/ 4689',
@@ -231,7 +276,7 @@ export class ConstantsService {
       brand: 'Samsung',
       deviceName: 'Galaxy S20 Ultra + Galaxy Buds+',
       deviceImgSrc: 'https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png',
-      productUrl: '#',
+      productUrl: '/product',
       modality: 'Portabilidad',
       price: {
         paymentValue: 'S/ 4689',
@@ -244,7 +289,7 @@ export class ConstantsService {
       brand: 'Samsung',
       deviceName: 'Galaxy S20 Ultra + Galaxy Buds+',
       deviceImgSrc: 'https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png',
-      productUrl: '#',
+      productUrl: '/product',
       modality: 'Portabilidad',
       price: {
         paymentValue: 'S/ 4689',
@@ -257,7 +302,7 @@ export class ConstantsService {
       brand: 'Samsung',
       deviceName: 'Galaxy S20 Ultra + Galaxy Buds+',
       deviceImgSrc: 'https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png',
-      productUrl: '#',
+      productUrl: '/product',
       modality: 'Portabilidad',
       price: {
         paymentValue: 'S/ 4689',
@@ -270,7 +315,7 @@ export class ConstantsService {
       brand: 'Samsung',
       deviceName: 'Galaxy S20 Ultra + Galaxy Buds+',
       deviceImgSrc: 'https://static.claro.com.pe/img/ceq/Frontal_220x386_PostPago_acc_s20ultra.png',
-      productUrl: '#',
+      productUrl: '/product',
       modality: 'Portabilidad',
       price: {
         paymentValue: 'S/ 4689',

@@ -1,1 +1,66 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-danger">Nav</nav>
+<header>
+  <div class="menu-mobile">
+    <div class="hamburger-menu" (click)="toggleMenuMobile()">
+      <i class="fa fa-bars"></i>
+    </div>
+    <div class="menu-mobile-bg" *ngIf="showMenuMobile"></div>
+    <div class="menu-mobile-content" *ngIf="showMenuMobile">
+      <div class="menu-mobile-content_header">
+        <div class="menu-mobile-content_header-lbl">Menú</div>
+        <div class="menu-mobile-content_header-lbl"><i class="fa fa-times" (click)="toggleMenuMobile()"></i></div>
+      </div>
+      <div class="menu-mobile-content_opts">
+        <ul class="menu-mobile-content_opts-item">
+          <li>
+            <a href="/">
+              <i class="fa fa-home"></i>
+              <span>Inicio</span>
+            </a>
+          </li>
+          <ng-container *ngFor="let item of menuList">
+            <li>
+              <a href="/">
+                <i class="{{ item.itemFA }}"></i>
+                <span>{{ item.itemLabel }}</span>
+              </a>
+            </li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="logo">
+    <a href="/">
+      <img src="https://catalogo.claro.com.pe/img/logo-tienda-prepago-blanco.png" alt="Tienda Claro Online Oficial" />
+    </a>
+  </div>
+  <div class="menu-desktop">
+    <section class="menu-desktop-list">
+      <ul>
+        <ng-container *ngFor="let item of menuList">
+          <li>
+            <a href="{{ item.itemUrl }}">{{ item.itemLabel }}</a>
+          </li>
+        </ng-container>
+      </ul>
+    </section>
+  </div>
+  <div class="menu-opts">
+    <div class="menu-opts-item" (click)="toggleInputSearch()">
+      <i class="fa fa-search"> </i>
+    </div>
+    <div class="menu-opts-item_show" *ngIf="showContactNumber"><strong>Pedidos</strong><br />0800 00 334</div>
+    <div class="menu-opts-item" (click)="toggleContactNumber()">
+      <i class="fa fa-phone"></i>
+    </div>
+    <div class="menu-opts-item">
+      <i class="far fa-comment-dots"> </i>
+    </div>
+  </div>
+</header>
+
+<div class="bg-search-postpago" *ngIf="showInputSearch" #clickOutside></div>
+<div class="nav-search-postpago" *ngIf="showInputSearch">
+  <div class="suggested-search"></div>
+  <input type="text" placeholder="Buscar productos" />
+</div>
