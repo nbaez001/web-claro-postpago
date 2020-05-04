@@ -55,16 +55,20 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AppModule-415478c5810250b817d9d88d370e55ff"' : 'data-target="#xs-components-links-module-AppModule-415478c5810250b817d9d88d370e55ff"' }>
+                                            'data-target="#components-links-module-AppModule-c438c6b9cdc2eda169e7df0c3ade35bd"' : 'data-target="#xs-components-links-module-AppModule-c438c6b9cdc2eda169e7df0c3ade35bd"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-415478c5810250b817d9d88d370e55ff"' :
-                                            'id="xs-components-links-module-AppModule-415478c5810250b817d9d88d370e55ff"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-c438c6b9cdc2eda169e7df0c3ade35bd"' :
+                                            'id="xs-components-links-module-AppModule-c438c6b9cdc2eda169e7df0c3ade35bd"' }>
                                             <li class="link">
                                                 <a href="components/AppComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/CatalogComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">CatalogComponent</a>
                                             </li>
                                             <li class="link">
                                                 <a href="components/FooterComponent.html"
@@ -73,10 +77,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             <li class="link">
                                                 <a href="components/HeaderComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">HeaderComponent</a>
-                                            </li>
-                                            <li class="link">
-                                                <a href="components/HomeComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">HomeComponent</a>
                                             </li>
                                             <li class="link">
                                                 <a href="components/ProductComponent.html"
@@ -135,6 +135,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/FilterListOptions.html" data-type="entity-link">FilterListOptions</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/MenuHeaderListModel.html" data-type="entity-link">MenuHeaderListModel</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/OtherProductListModel.html" data-type="entity-link">OtherProductListModel</a>

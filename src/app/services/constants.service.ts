@@ -20,7 +20,7 @@ export class ConstantsService {
       itemId: 'hogar',
       itemLabel: 'Hogar',
       itemUrl: '/',
-      itemFA: 'fas fa-home',
+      itemFA: 'fas fa-catalog',
     },
     {
       itemId: 'prepago',

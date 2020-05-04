@@ -4,11 +4,11 @@ import { FilterListModel } from '../../models/filter-list.model';
 import { ConstantsService } from '../../services/constants.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  selector: 'app-catalog',
+  templateUrl: './catalog.component.html',
+  styleUrls: ['./catalog.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class CatalogComponent implements OnInit {
   // Lista de filtros para el sidebar
   public filterList: FilterListModel[];
 
