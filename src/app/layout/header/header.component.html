@@ -59,8 +59,72 @@
   </div>
 </header>
 
+<!-- Search Input -->
+
 <div class="bg-search-postpago" *ngIf="showInputSearch" #clickOutside></div>
 <div class="nav-search-postpago" *ngIf="showInputSearch">
   <div class="suggested-search"></div>
-  <input type="text" placeholder="Buscar productos" />
+  <input type="text" placeholder="Buscar productos" (keyup)="getSearchResults()" [(ngModel)]="searchInput" />
+  <a class="input-close" (click)="toggleInputSearch()"><i class="fa fa-times"></i></a>
+  <div class="suggested-search-result">
+    <div class="results-content" *ngIf="searchShowResults">
+      <div class="results-not-found" *ngIf="!searchResultsFound">
+        <div>
+          <p><strong>¡Lo sentimos!</strong></p>
+          <br />
+          <p>
+            0 Resultados para <strong>"{{ searchInput }}"</strong>
+          </p>
+        </div>
+        <br />
+        <div>
+          <p class="try-again-msg">Por favor inténtalo de nuevo o busca en nuestro catálogo de productos.</p>
+        </div>
+      </div>
+      <div class="products-list" *ngIf="searchResultsFound">
+        <a class="product-box-item" href="#">
+          <div class="product-box-item_detail">
+            <div class="item-image"><img src="https://static.claro.com.pe/img/ceq/Apple_iPhone_7_frontal.png" alt="" /></div>
+            <div class="item-brand">Apple</div>
+            <div class="item-name">iPhone 7 32GB</div>
+            <div class="item-description"><span class="item-brand">Apple </span><span class="item-name">iPhone 7 32GB</span></div>
+          </div>
+        </a>
+        <a class="product-box-item" href="#">
+          <div class="product-box-item_detail">
+            <div class="item-image">
+              <img src="https://static.claro.com.pe/img/otros/iphone_XR_Frontal_200x350_Postpago_DDM.png" alt="" />
+            </div>
+            <div class="item-brand">Apple</div>
+            <div class="item-name">IPHONE XR 64GB</div>
+            <div class="item-description"><span class="item-brand">Apple </span><span class="item-name">IPHONE XR 64GB</span></div>
+          </div>
+        </a>
+        <a class="product-box-item" href="#">
+          <div class="product-box-item_detail">
+            <div class="item-image"><img src="https://static.claro.com.pe/img/ceq/img-CARGADOR_DE_AUTO_350310.png" alt="" /></div>
+            <div class="item-brand">Huawei</div>
+            <div class="item-name">Cargador de Auto doble puerto USB Gris - Carga Rápida</div>
+            <div class="item-description">
+              <span class="item-brand">Huawei </span><span class="item-name">Cargador de Auto doble puerto USB Gris - Carga Rápida</span>
+            </div>
+          </div>
+        </a>
+        <a class="product-box-item" href="#">
+          <div class="product-box-item_detail">
+            <div class="item-image">
+              <img src="https://static.claro.com.pe/img/otros/Front_EarPodswith_LightningConnector_200x310.png" alt="" />
+            </div>
+            <div class="item-brand">Apple</div>
+            <div class="item-name">EarPods con conector Lightning</div>
+            <div class="item-description">
+              <span class="item-brand">Apple </span><span class="item-name">EarPods con conector Lightning</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
+
+<!-- End Search Input -->

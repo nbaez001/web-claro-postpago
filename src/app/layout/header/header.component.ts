@@ -15,12 +15,19 @@ export class HeaderComponent implements OnInit {
 
   public menuList: MenuHeaderListModel[];
 
+  public searchInput: string;
+  public searchShowResults: boolean;
+  public searchResultsFound: boolean;
+
   constructor(private constants: ConstantsService) {
     this.showMenuMobile = false;
     this.showInputSearch = false;
     this.showContactNumber = false;
 
     this.menuList = constants.HEADER_MENU_LIST_DATA;
+
+    this.searchShowResults = false;
+    this.searchResultsFound = false;
   }
 
   @HostListener('document:click', ['$event.target'])
@@ -48,5 +55,14 @@ export class HeaderComponent implements OnInit {
   public toggleContactNumber() {
     console.log(this.showContactNumber);
     this.showContactNumber = !this.showContactNumber;
+  }
+
+  public getSearchResults() {
+    if (this.searchInput.length >= 2) {
+      this.searchShowResults = true;
+      this.searchResultsFound = 'apple'.includes(this.searchInput);
+    } else {
+      this.searchShowResults = false;
+    }
   }
 }

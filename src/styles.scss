@@ -29,8 +29,6 @@ $webapp-scriptportlettvpostpago-angular-theme: mat-light-theme(
 // that you are using.
 @include angular-material-theme($webapp-scriptportlettvpostpago-angular-theme);
 
-@import '~@fortawesome/fontawesome-free/css/all.min.css';
-@import 'fonts';
 @import 'variables';
 
 html,

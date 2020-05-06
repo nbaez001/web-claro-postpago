@@ -18,9 +18,12 @@ export class CatalogComponent implements OnInit {
   public showFilterList: boolean;
   public innerWidth: any;
 
+  public showTermsDetail: boolean;
+
   constructor(private constants: ConstantsService) {
     this.filterList = constants.HOME_FILTER_LIST_DATA;
     this.deviceList = constants.HOME_DEVICE_LIST_DATA;
+    this.showTermsDetail = false;
   }
 
   ngOnInit(): void {
@@ -30,5 +33,9 @@ export class CatalogComponent implements OnInit {
 
   public toggleFilterList() {
     this.showFilterList = !this.showFilterList;
+  }
+
+  public toggleTermsDetail() {
+    this.showTermsDetail = !this.showTermsDetail;
   }
 }
