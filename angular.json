@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "webapp-scriptportlettvpostpago-angular"
+  "defaultProject": "webapp-scriptportlettvpostpago-angular",
+  "cli": {
+    "analytics": "2b054ce9-9f21-4ac4-9b12-c762135c1b95"
+  }
 }
