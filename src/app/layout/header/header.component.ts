@@ -65,4 +65,9 @@ export class HeaderComponent implements OnInit {
       this.searchShowResults = false;
     }
   }
+
+  public clearSearchInput() {
+    this.searchInput = '';
+    this.getSearchResults();
+  }
 }

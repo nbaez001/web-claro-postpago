@@ -65,7 +65,7 @@
 <div class="nav-search-postpago" *ngIf="showInputSearch">
   <div class="suggested-search"></div>
   <input type="text" placeholder="Buscar productos" (keyup)="getSearchResults()" [(ngModel)]="searchInput" />
-  <a class="input-close" (click)="toggleInputSearch()"><i class="fa fa-times"></i></a>
+  <a class="input-close" (click)="clearSearchInput()" *ngIf="searchShowResults"><i class="fa fa-times"></i></a>
   <div class="suggested-search-result">
     <div class="results-content" *ngIf="searchShowResults">
       <div class="results-not-found" *ngIf="!searchResultsFound">

@@ -340,6 +340,7 @@ header {
     font-size: 24px;
     background-color: transparent;
     color: white;
+    cursor: pointer;
 
     @media only screen and (max-width: 768px) {
       display: flex;
@@ -433,6 +434,10 @@ header {
               padding: 8px;
               box-sizing: border-box;
               border-bottom: 0.1em solid #d8d8d8;
+            }
+
+            &:hover {
+              box-shadow: 0 0 10px rgba(171, 174, 175, 0.8);
             }
 
             > .item-image {
