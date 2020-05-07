@@ -3,6 +3,7 @@ import { DeviceListModel } from '../models/device-list.model';
 import { FilterListModel } from '../models/filter-list.model';
 import { MenuHeaderListModel } from '../models/menu-header-list.model';
 import { OtherProductListModel } from '../models/other-product-list.model';
+import { MarcaModel } from '../models/marca-list.model';
 
 @Injectable({
   providedIn: 'root',
@@ -31,7 +32,7 @@ export class ConstantsService {
     {
       itemId: 'celulares',
       itemLabel: 'Postpagos',
-      itemUrl: '/',
+      itemUrl: '/catalog',
       itemFA: 'fas fa-mobile-alt',
     },
     {
@@ -56,7 +57,174 @@ export class ConstantsService {
 
   // Footer Component
 
-  // Home Component
+  // HOME COMPONENT
+  public HOME_CAROUSEL_LIST_DATA: any[] = [
+    {
+      id: '1',
+      src: 'https://static.claro.com.pe/img/otros/Banner_Catalogo_MAsinnuevo_Desktop_1920x595.jpg',
+      src2: 'https://static.claro.com.pe/img/otros/Banner_Catalogo_MasinnuevoMovil_360x431.jpg',
+      alt: 'imagen1',
+      titulo: 'IMAGEN 1',
+    },
+    {
+      id: '2',
+      src: 'https://static.claro.com.pe/img/otros/Banner_Catalogo_Apple_Watch_Desktop_1920x595.jpg',
+      src2: 'https://static.claro.com.pe/img/otros/Banner_Catalogo_Apple_Watch_Movil_360x431_v3.jpg',
+      alt: 'imagen2',
+      titulo: 'IMAGEN 2',
+    },
+    {
+      id: '3',
+      src: 'https://static.claro.com.pe/img/otros/thumbnail_Banner-Catalogo_Recargas_Desktop_1920x595_v31420 copia.jpg',
+      src2: 'https://static.claro.com.pe/img/otros/Banner Tienda Postpago_360x431.jpg',
+      alt: 'imagen3',
+      titulo: 'IMAGEN 3',
+    },
+    {
+      id: '4',
+      src: 'https://static.claro.com.pe/img/otros/bannerIFI_desk_249.jpg',
+      src2: 'https://static.claro.com.pe/img/otros/bannerIFI_movil_249.jpg',
+      alt: 'imagen4',
+      titulo: 'IMAGEN 4',
+    },
+    {
+      id: '5',
+      src: 'https://static.claro.com.pe/img/otros/banner-chip-desk_1005.jpg',
+      src2: 'https://static.claro.com.pe/img/otros/banner-chip-movibanner0105.jpg',
+      alt: 'imagen5',
+      titulo: 'IMAGEN 5',
+    },
+    {
+      id: '6',
+      src: 'https://static.claro.com.pe/img/otros/Banner-Catalogo_OLO_Desktop_1920x595_v7_2104_v2mayo01.jpg',
+      src2: 'https://static.claro.com.pe/img/otros/Banner-Catalogo_OLO_Mobile_360x431_v6.jpg',
+      alt: 'imagen6',
+      titulo: 'IMAGEN 6',
+    },
+    {
+      id: '7',
+      src: 'https://static.claro.com.pe/img/otros/Banner_Landing_CHIP_Desktop_1920x480_v3_0405.jpg',
+      src2: 'https://static.claro.com.pe/img/otros/banner_Chip_movilOLO.jpg',
+      alt: 'imagen7',
+      titulo: 'IMAGEN 7',
+    },
+    {
+      id: '8',
+      src: 'https://static.claro.com.pe/img/otros/Banner_Catalogo_AirTies_28mayo01.jpg',
+      src2: 'https://static.claro.com.pe/img/otros/IMG-20200424-WA0148.jpg',
+      alt: 'imagen8',
+      titulo: 'IMAGEN 8',
+    },
+  ];
+
+  public HOME_MARCA_LIST_DATA: MarcaModel[] = [
+    { nombre: 'apple', marcaUrl: 'https://static.claro.com.pe/img/otros/logo-apple-claro.jpg' },
+    { nombre: 'huawei', marcaUrl: 'https://static.claro.com.pe/img/otros/logo-huawei-claro.jpg' },
+    { nombre: 'lg', marcaUrl: 'https://static.claro.com.pe/img/otros/logo-lg-claro.jpg' },
+    { nombre: 'motorola', marcaUrl: 'https://static.claro.com.pe/img/otros/logo-motorola-claro.jpg' },
+    { nombre: 'samsung', marcaUrl: 'https://static.claro.com.pe/img/otros/logo-samsung-claro.jpg' },
+    { nombre: 'xiaomi', marcaUrl: 'https://static.claro.com.pe/img/otros/logo-xiaomi_hz-claro.jpg' },
+    { nombre: 'zte', marcaUrl: 'https://static.claro.com.pe/img/otros/logo-zte-claro.jpg' },
+  ];
+
+  public HOME_MAS_BUSCADOS_DATA: DeviceListModel[] = [
+    {
+      brand: '',
+      deviceName: 'Internet Fijo Inalambrico',
+      deviceImgSrc: 'https://static.claro.com.pe/img/otros/vista01_IFI_vEE22804.png',
+      productUrl: '/product',
+      modality: '',
+      price: null,
+      plan: null,
+      onlyOnline: true,
+    },
+    {
+      brand: '',
+      deviceName: 'WiFi 360°',
+      deviceImgSrc: 'https://static.claro.com.pe/img/otros/vista01_AirTies_x2_28.png',
+      productUrl: '/product',
+      modality: '',
+      price: null,
+      plan: null,
+      onlyOnline: true,
+    },
+    {
+      brand: '',
+      deviceName: 'Router OLO Portátil prepago',
+      deviceImgSrc: 'https://static.claro.com.pe/img/otros/vista1_ZTE_RouterMF920V_BONO_2804.png',
+      productUrl: '/product',
+      modality: '',
+      price: null,
+      plan: null,
+      onlyOnline: true,
+    },
+    {
+      brand: '',
+      deviceName: 'Claro Recargas',
+      deviceImgSrc: 'https://static.claro.com.pe/img/otros/img_home_Tienda_01-Recarga.png',
+      productUrl: '/product',
+      modality: '',
+      price: null,
+      plan: null,
+      onlyOnline: true,
+    },
+  ];
+
+  public HOME_TIENDA_HUAWEI_DATA: DeviceListModel[] = [
+    {
+      brand: 'Huawei',
+      deviceName: 'Huawei Balanza Inteligente con Bluetooth',
+      deviceImgSrc: 'https://static.claro.com.pe/img/marketplace/huawei/SCALE/7.png',
+      productUrl: '/product',
+      modality: 'Market Place',
+      price: {
+        paymentValue: 'S/ 129',
+        paymentType: 'Al contado',
+      },
+      plan: null,
+      onlyOnline: false,
+    },
+    {
+      brand: 'Huawei',
+      deviceName: 'Tablet T5 10 3G+32G - Azul',
+      deviceImgSrc: 'https://static.claro.com.pe/img/marketplace/huawei/T510BLUE/4.png',
+      productUrl: '/product',
+      modality: 'Market Place',
+      price: {
+        paymentValue: 'S/ 129',
+        paymentType: 'Al contado',
+      },
+      plan: null,
+      onlyOnline: false,
+    },
+  ];
+
+  public HOME_OPIONES_DATA: any[] = [
+    { nombre: 'Para el Hogar', descripcion: 'Internet + TV + Telefonía Fija', src: 'https://static.claro.com.pe/img/otros/portar.svg' },
+    {
+      nombre: 'Chip Internet',
+      descripcion: 'Conéctate a internet de forma rapida y segura',
+      src: 'https://static.claro.com.pe/img/otros/portar.svg',
+    },
+    {
+      nombre: 'Portar',
+      descripcion: 'Trae tu linea a Claro y mantén tu mismo numero',
+      src: 'https://static.claro.com.pe/img/otros/portar.svg',
+    },
+    { nombre: 'Renovar', descripcion: 'Si ya eres cliente renueva tu equipo', src: 'https://static.claro.com.pe/img/otros/renovar.svg' },
+    {
+      nombre: 'Prepago',
+      descripcion: 'Prepago chévere, Compra tu prepago aquí.',
+      src: 'https://static.claro.com.pe/img/otros/prepagos.svg',
+    },
+    {
+      nombre: 'Accesorios',
+      descripcion: 'Tenemos los accesorios mas cheveres para ti',
+      src: 'https://static.claro.com.pe/img/otros/accesorios.svg',
+    },
+  ];
+
+  // Catalog Component
   public HOME_FILTER_LIST_DATA: FilterListModel[] = [
     {
       listId: 'lista',
