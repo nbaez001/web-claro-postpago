@@ -1,0 +1,227 @@
+<div class="container-fluid">
+  <section>
+    <div class="row">
+      <!-- <div class="col-3"></div> -->
+      <div class="col-sm-12 text-center">
+        <h2>¡JULIO GONZALES, unos datos más!</h2>
+      </div>
+      <!-- <div class="col-3"></div> -->
+    </div>
+  </section>
+
+  <section class="form_registro">
+    <form>
+      <div class="row">
+        <div class="col-sm-12">
+          <h2><i class="fas fa-map-marked-alt"></i> HACIA DÓNDE LLEVAMOS TU EQUIPO</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="departamento">Departamento</label>
+            <select id="departamento" name="form_departamento" required="" class="form-control select_custom">
+              <option value="">Seleccione...</option>
+              <option value="AMAZONAS-01" data-ubigeo="01">AMAZONAS</option>
+              <option value="ANCASH-02" data-ubigeo="02">ANCASH</option>
+              <option value="APURIMAC-03" data-ubigeo="03">APURIMAC</option>
+              <option value="AREQUIPA-04" data-ubigeo="04">AREQUIPA</option>
+              <option value="AYACUCHO-05" data-ubigeo="05">AYACUCHO</option>
+              <option value="CAJAMARCA-06" data-ubigeo="06">CAJAMARCA</option>
+              <option value="CALLAO-07" data-ubigeo="07">CALLAO</option>
+              <option value="CUSCO-08" data-ubigeo="08">CUSCO</option>
+              <option value="HUANCAVELICA-09" data-ubigeo="09">HUANCAVELICA</option>
+              <option value="HUANUCO-10" data-ubigeo="10">HUANUCO</option>
+              <option value="ICA-11" data-ubigeo="11">ICA</option>
+              <option value="JUNIN-12" data-ubigeo="12">JUNIN</option>
+              <option value="LA LIBERTAD-13" data-ubigeo="13">LA LIBERTAD</option>
+              <option value="LAMBAYEQUE-14" data-ubigeo="14">LAMBAYEQUE</option>
+              <option value="LIMA-15" data-ubigeo="15">LIMA</option>
+              <option value="LORETO-16" data-ubigeo="16">LORETO</option>
+              <option value="MADRE DE DIOS-17" data-ubigeo="17">MADRE DE DIOS</option>
+              <option value="MOQUEGUA-18" data-ubigeo="18">MOQUEGUA</option>
+              <option value="PASCO-19" data-ubigeo="19">PASCO</option>
+              <option value="PIURA-20" data-ubigeo="20">PIURA</option>
+              <option value="PUNO-21" data-ubigeo="21">PUNO</option>
+              <option value="SAN MARTIN-22" data-ubigeo="22">SAN MARTIN</option>
+              <option value="TACNA-23" data-ubigeo="23">TACNA</option>
+              <option value="TUMBES-24" data-ubigeo="24">TUMBES</option>
+              <option value="UCAYALI-25" data-ubigeo="25">UCAYALI</option>
+            </select>
+          </div>
+        </div>
+        <!-- <div class="col-3"></div> -->
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="provincia">Provincias</label>
+            <select id="provincia" name="form_provincia" required="" class="form-control select_custom">
+              <option value="">Seleccione...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="distrito">Distrito</label>
+            <select id="distrito" name="form_distrito" required="" class="form-control select_custom">
+              <option value="">Seleccione...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h2><i class="fas fa-truck"></i> ELIGE EL TIPO DE DESPACHO</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <ul class="menu_categorias margincero">
+              <input type="radio" id="del2" name="tipo_despacho" value="48 Horas" data-valor="0" class="form-control radio_custom" />
+              <li class="li-con-border">
+                <label for="del2">
+                  Delivery Regular
+                  <span>
+                    Te llamamos y programamos la fecha y hora de entrega.
+                  </span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h2><i class="fas fa-headset"></i> COORDINAMOS LA ENTREGA</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="txtCelular"> A qué teléfono celular te llamamos.<span class="aviso">Es muy importante.</span></label>
+            <input
+              type="tel"
+              id="txtCelular"
+              name="form_num_tel_1"
+              minlength="9"
+              maxlength="9"
+              value=""
+              placeholder="Escribe tu celular aquí"
+              required=""
+              pattern="[0-9]+"
+              title="Escribe un número de celular"
+              class="form-control"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="txtCorreo"> A qué correo te enviamos la confirmación.</label>
+            <input
+              type="email"
+              id="txtCorreo"
+              name="form_email"
+              id="form_email"
+              value=""
+              placeholder="Escribe tu email aquí"
+              required=""
+              class="form-control"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h2><i class="fas fa-portrait"></i> PARA REGISTRAR LA VENTA</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="txtDocumento"> Necesitamos tu número de documento de identidad</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <div class="form-group">
+            <select id="form_tipo_doc" name="form_tipo_doc" required="" class="form-control select_custom">
+              <option value="">Seleccione...</option>
+              <option value="DNI">D.N.I.</option>
+              <option value="RUC">R.U.C.</option>
+              <option value="C.E">C.E.</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="form-group">
+            <input
+              type="text"
+              id="txtDocumento"
+              name="form_num_doc"
+              id="form_num_doc"
+              placeholder="Número de documento"
+              required=""
+              class="form-control"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h2><i class="far fa-credit-card"></i> PAGO CONTRA ENTREGA CON TARJETA</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <ul class="menu_categorias margincero">
+              <input
+                id="tarj"
+                name="tarj"
+                required=""
+                style="opacity: 0; width: 0; float: left; height: 0px;"
+                type="text"
+                value=""
+                class="form-control input_custom"
+              />
+              <li class="li-con-border">
+                <label for="del2">
+                  Pago Contra entrega <br />
+                  <span>
+                    Paga en casa con tu tarjeta de crédito y débito.
+                  </span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <button type="submit" class="btn_naranja">COMPRAR</button>
+        </div>
+      </div>
+    </form>
+  </section>
+</div>

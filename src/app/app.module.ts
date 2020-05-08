@@ -13,6 +13,9 @@ import { ProductComponent } from './pages/product/product.component';
 import { Page404Component } from './errors/page404/page404.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CarouselComponent } from './pages/home/carousel/carousel.component';
+import { HeaderRegistroComponent } from './layout/registro/header-registro/header-registro.component';
+import { RegistroDetalleComponent } from './pages/registro/registro-detalle/registro-detalle.component';
+import { RegistroNombreComponent } from './pages/registro/registro-nombre/registro-nombre.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { CarouselComponent } from './pages/home/carousel/carousel.component';
     Page404Component,
     HomeComponent,
     CarouselComponent,
+    HeaderRegistroComponent,
+    RegistroDetalleComponent,
+    RegistroNombreComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, CarouselModule, FormsModule],
   providers: [],

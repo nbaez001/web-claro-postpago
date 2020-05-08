@@ -1,0 +1,135 @@
+select.select_custom {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #222222;
+  height: 50px;
+  width: 100%;
+  text-transform: uppercase;
+  background: #ffffff;
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+  padding-left: 10px;
+}
+
+select.select_custom::after {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f078';
+  font-weight: 900;
+  position: absolute;
+  right: 30px;
+  width: 0;
+  height: 0;
+  top: 18px;
+  color: #ee122c;
+}
+
+input.radio_custom {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #222222;
+  height: 46px;
+  width: 95%;
+  text-transform: uppercase;
+  padding-left: 10px;
+  background-color: initial;
+  cursor: default;
+  -webkit-appearance: radio;
+  box-sizing: border-box;
+  margin: 3px 3px 0px 5px;
+  padding: initial;
+  border: initial;
+  display: none;
+}
+
+.menu_categorias {
+  /* margin: 0px; */
+  font-size: 13px;
+  width: 100%;
+}
+
+.menu_categorias li {
+  list-style-type: none;
+}
+
+.menu_categorias label:before {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 15px;
+  background: none;
+  font-family: 'Font Awesome 5 Free';
+  content: '\f111';
+  top: 16px;
+}
+
+.margincero {
+  margin: 0px;
+}
+
+.li-con-border {
+  border: 1px solid #cccccc;
+  width: 100%;
+  border-radius: 10px;
+  /* background: #fff; */
+  margin: 5px 0px 5px 0px;
+}
+
+.menu_categorias input.radio_custom:checked + label {
+  color: #70c473;
+}
+
+.menu_categorias input.radio_custom:checked + label {
+  padding: 15px 10px 10px 40px;
+  border-radius: 2px;
+  color: #ee122c;
+}
+
+.menu_categorias label {
+  display: inline-block;
+  cursor: pointer;
+  color: #222222;
+  position: relative;
+  padding: 15px 10px 10px 40px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.menu_categorias label:before {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 15px;
+  background: none;
+  font-family: 'Font Awesome 5 Free';
+  content: '\f111';
+  top: 16px;
+}
+
+button.btn_naranja {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  background: #f5821f;
+  border-radius: 10px;
+  border: 1px solid #c66613;
+  height: 50px;
+  align-items: center;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.form_registro {
+  width: 100%;
+  display: flex;
+  margin: 40px 0px 50px 0px;
+  justify-content: center;
+  border-radius: 11px;
+  margin: 0px auto;
+  background: #f4f4f4;
+  padding-bottom: 30px;
+}
