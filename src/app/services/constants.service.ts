@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { DeviceListModel } from '../models/device-list.model';
 import { FilterListModel } from '../models/filter-list.model';
+import { MarcaModel } from '../models/marca-list.model';
 import { MenuHeaderListModel } from '../models/menu-header-list.model';
 import { OtherProductListModel } from '../models/other-product-list.model';
-import { MarcaModel } from '../models/marca-list.model';
 
 @Injectable({
   providedIn: 'root',
@@ -20,7 +20,7 @@ export class ConstantsService {
     {
       itemId: 'hogar',
       itemLabel: 'Hogar',
-      itemUrl: '/',
+      itemUrl: '/hogar',
       itemFA: 'fas fa-catalog',
     },
     {
@@ -38,7 +38,7 @@ export class ConstantsService {
     {
       itemId: 'accesorios',
       itemLabel: 'Accesorios',
-      itemUrl: '/',
+      itemUrl: '/accesorios',
       itemFA: 'fas fa-headphones-alt',
     },
     {
@@ -221,6 +221,221 @@ export class ConstantsService {
       nombre: 'Accesorios',
       descripcion: 'Tenemos los accesorios mas cheveres para ti',
       src: 'https://static.claro.com.pe/img/otros/accesorios.svg',
+    },
+  ];
+
+  // Home Component
+  public HOGAR_LIST_DATA: FilterListModel[] = [
+    {
+      listId: 'lista',
+      listName: 'MODALIDAD',
+      options: [
+        {
+          id: 'hogar-inalambrico',
+          label: 'Hogar Inalámbrico',
+        },
+        {
+          id: 'hogar',
+          label: 'Hogar',
+        },
+      ],
+    },
+    {
+      listId: 'subcat',
+      listName: 'CATEGORÍA',
+      options: [
+        {
+          id: 'todos',
+          label: 'Todos',
+        },
+        {
+          id: 'internet-fijo-inalambrico',
+          label: 'Internet Fijo Inalámbrico',
+        },
+        {
+          id: 'router-portatil-olo',
+          label: 'Router Portátil OLO',
+        },
+        {
+          id: 'wiffi-360',
+          label: 'WiFi 360°',
+        },
+        {
+          id: '3-play',
+          label: '3 Play',
+        },
+        {
+          id: '2-play',
+          label: '2 Play',
+        },
+      ],
+    },
+    {
+      listId: 'cuotas',
+      listName: '¿CÓMO LO PAGO?',
+      options: [
+        {
+          id: 'todos',
+          label: 'Todos',
+        },
+        {
+          id: 'al-contado',
+          label: 'Al contado',
+        },
+        {
+          id: 'pago-mensual',
+          label: 'Pago Mensual',
+        },
+      ],
+    },
+    {
+      listId: 'marca',
+      listName: 'MARCAS',
+      options: [
+        {
+          id: 'todos',
+          label: 'Todos',
+        },
+        {
+          id: 'AirTies',
+          label: 'AirTies',
+        },
+        {
+          id: 'Claro',
+          label: 'Claro',
+        },
+        {
+          id: 'Nova',
+          label: 'Nova',
+        },
+        {
+          id: 'ZTE',
+          label: 'ZTE',
+        },
+      ],
+    },
+  ];
+
+  public ACCESORIO_LIST_DATA: FilterListModel[] = [
+    {
+      listId: 'lista',
+      listName: 'MODALIDAD',
+      options: [
+        {
+          id: 'accesorios',
+          label: 'Accesorios',
+        },
+      ],
+    },
+    {
+      listId: 'subcat',
+      listName: 'CATEGORÍA',
+      options: [
+        {
+          id: 'todos',
+          label: 'Todos',
+        },
+        {
+          id: 'internet-fijo-inalambrico',
+          label: 'Apple Watch Series 5',
+        },
+        {
+          id: 'router-portatil-olo',
+          label: 'Audífonos',
+        },
+        {
+          id: 'wiffi-360',
+          label: 'Baterias Externas',
+        },
+        {
+          id: '3-play',
+          label: 'Cargadores de Auto',
+        },
+        {
+          id: '2-play',
+          label: 'Cargadores de Pared',
+        },
+        {
+          id: '2-play',
+          label: 'Fundas',
+        },
+        {
+          id: '2-play',
+          label: 'Parlantes Bluetooth',
+        },
+        {
+          id: '2-play',
+          label: 'Smartwatch y Bandas',
+        },
+        {
+          id: '2-play',
+          label: 'Tablets',
+        },
+        {
+          id: '2-play',
+          label: 'Otros Accesorios',
+        },
+      ],
+    },
+    {
+      listId: 'cuotas',
+      listName: '¿CÓMO LO PAGO?',
+      options: [
+        {
+          id: 'todos',
+          label: 'Todos',
+        },
+        {
+          id: 'al-contado',
+          label: 'Al contado',
+        },
+      ],
+    },
+    {
+      listId: 'marca',
+      listName: 'MARCAS',
+      options: [
+        {
+          id: 'todos',
+          label: 'Todos',
+        },
+        {
+          id: 'AirTies',
+          label: 'Apple',
+        },
+        {
+          id: 'Claro',
+          label: 'EKS',
+        },
+        {
+          id: 'Nova',
+          label: 'Huawei',
+        },
+        {
+          id: 'ZTE',
+          label: 'Marley',
+        },
+        {
+          id: 'ZTE',
+          label: 'Logic',
+        },
+        {
+          id: 'ZTE',
+          label: 'Samsung',
+        },
+        {
+          id: 'ZTE',
+          label: 'Skullcandy',
+        },
+        {
+          id: 'ZTE',
+          label: 'SMK',
+        },
+        {
+          id: 'ZTE',
+          label: 'Urbano',
+        },
+      ],
     },
   ];
 
