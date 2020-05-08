@@ -19,8 +19,8 @@ export class HomeComponent implements OnInit {
 
   customOptions: OwlOptions = {
     loop: true,
-    autoplay: true,
-    autoplayHoverPause: true,
+    autoplay: false,
+    autoplayHoverPause: false,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: false,

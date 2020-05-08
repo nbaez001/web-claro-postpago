@@ -16,34 +16,35 @@
     margin: 10px auto;
     display: none;
     @media only screen and (min-width: 1280px) {
-      display: grid;
-      grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
+      width: 85%;
+      margin: 20px auto 40px;
+      display: flex;
+      height: 100px;
+      border-radius: 10px;
     }
 
     .marcas {
       width: 90%;
-      border-radius: 15px;
       position: relative;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.26);
-      background: #ffffff;
 
       @media only screen and (min-width: 1280px) {
-        margin: 20px auto;
+        margin: auto;
         max-width: 347px;
-        box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
 
         &:hover {
           cursor: pointer;
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
         }
       }
 
       img {
-        height: 60px;
-        width: 80%;
+        width: 85%;
         margin: 0 auto;
+        padding: 0 10px;
         justify-content: center;
         display: block;
+        border-radius: 20px;
+        box-shadow: 2px 2px 10px #ccc;
+        background: #ffffff;
       }
     }
   }

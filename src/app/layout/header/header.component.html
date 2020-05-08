@@ -30,7 +30,7 @@
     </div>
   </div>
   <div class="logo">
-    <a href="/home">
+    <a routerLink="/">
       <img src="https://catalogo.claro.com.pe/img/logo-tienda-prepago-blanco.png" alt="Tienda Claro Online Oficial" />
     </a>
   </div>
@@ -39,7 +39,7 @@
       <ul>
         <ng-container *ngFor="let item of menuList">
           <li>
-            <a href="{{ item.itemUrl }}">{{ item.itemLabel }}</a>
+            <a routerLink="{{ item.itemUrl }}">{{ item.itemLabel }}</a>
           </li>
         </ng-container>
       </ul>

@@ -3,7 +3,7 @@
   <main>
     <section class="marcas-list">
       <ng-container *ngFor="let marc of marcas">
-        <a [routerLink]="marc.productUrl">
+        <a routerLink="/catalog">
           <div class="marcas">
             <img alt="{{ marc.deviceName }}" src="{{ marc.marcaUrl }}" />
           </div>
