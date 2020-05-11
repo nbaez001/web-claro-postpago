@@ -44,7 +44,7 @@ export class ConstantsService {
     {
       itemId: 'chipinternet',
       itemLabel: 'Chips Claro',
-      itemUrl: '/',
+      itemUrl: '/chips-claro',
       itemFA: 'fas fa-sim-card',
     },
     {
@@ -137,7 +137,7 @@ export class ConstantsService {
     {
       brand: '',
       deviceName: 'Internet Fijo Inalambrico',
-      deviceImgSrc: 'https://static.claro.com.pe/img/otros/vista01_IFI_vEE22804.png',
+      deviceImgSrc: 'https://static.claro.com.pe/img/otros/img_home_Tienda_02-IFI.png',
       productUrl: '/product',
       modality: '',
       price: null,
@@ -147,7 +147,7 @@ export class ConstantsService {
     {
       brand: '',
       deviceName: 'WiFi 360°',
-      deviceImgSrc: 'https://static.claro.com.pe/img/otros/vista01_AirTies_x2_28.png',
+      deviceImgSrc: 'https://static.claro.com.pe/img/otros/img_home_Tienda_03-AirTiesx2_28.png',
       productUrl: '/product',
       modality: '',
       price: null,
@@ -157,7 +157,7 @@ export class ConstantsService {
     {
       brand: '',
       deviceName: 'Router OLO Portátil prepago',
-      deviceImgSrc: 'https://static.claro.com.pe/img/otros/vista1_ZTE_RouterMF920V_BONO_2804.png',
+      deviceImgSrc: 'https://static.claro.com.pe/img/otros/img_home_Tienda_02-OLOHOME_28.png',
       productUrl: '/product',
       modality: '',
       price: null,
@@ -179,12 +179,12 @@ export class ConstantsService {
   public HOME_TIENDA_HUAWEI_DATA: DeviceListModel[] = [
     {
       brand: 'Huawei',
-      deviceName: 'Huawei Balanza Inteligente con Bluetooth',
-      deviceImgSrc: 'https://static.claro.com.pe/img/marketplace/huawei/SCALE/7.png',
+      deviceName: 'Audífonos Freebuds Lite - Negro',
+      deviceImgSrc: 'https://static.claro.com.pe/img/marketplace/huawei/FBLITENEGRO/1.png',
       productUrl: '/product',
       modality: 'Market Place',
       price: {
-        paymentValue: 'S/ 129',
+        paymentValue: 'S/ 369',
         paymentType: 'Al contado',
       },
       plan: null,
@@ -192,12 +192,90 @@ export class ConstantsService {
     },
     {
       brand: 'Huawei',
-      deviceName: 'Tablet T5 10 3G+32G - Azul',
-      deviceImgSrc: 'https://static.claro.com.pe/img/marketplace/huawei/T510BLUE/4.png',
+      deviceName: 'Smartwatch Huawei Watch GT2 - Elite 46mm - Titanium Gray',
+      deviceImgSrc: 'https://static.claro.com.pe/img/marketplace/huawei/LATONAMETAL/5.png',
       productUrl: '/product',
       modality: 'Market Place',
       price: {
-        paymentValue: 'S/ 129',
+        paymentValue: 'S/ 899',
+        paymentType: 'Al contado',
+      },
+      plan: null,
+      onlyOnline: false,
+    },
+    {
+      brand: 'Huawei',
+      deviceName: 'Sport Bluetooh Headphones Lite - Rojo',
+      deviceImgSrc: 'https://static.claro.com.pe/img/marketplace/huawei/AM61ROJO/2.png',
+      productUrl: '/product',
+      modality: 'Market Place',
+      price: {
+        paymentValue: 'S/ 139',
+        paymentType: 'Al contado',
+      },
+      plan: null,
+      onlyOnline: false,
+    },
+    {
+      brand: 'Huawei',
+      deviceName: 'Audifonos Clasicos Tipo C - Negro',
+      deviceImgSrc: 'https://static.claro.com.pe/img/marketplace/huawei/CM33NEGRO/3.png',
+      productUrl: '/product',
+      modality: 'Market Place',
+      price: {
+        paymentValue: 'S/ 69',
+        paymentType: 'Al contado',
+      },
+      plan: null,
+      onlyOnline: false,
+    },
+    {
+      brand: 'Huawei',
+      deviceName: 'SuperCharge Car Charger',
+      deviceImgSrc: 'https://static.claro.com.pe/img/marketplace/huawei/AP38/2.png',
+      productUrl: '/product',
+      modality: 'Market Place',
+      price: {
+        paymentValue: 'S/ 109',
+        paymentType: 'Al contado',
+      },
+      plan: null,
+      onlyOnline: false,
+    },
+    {
+      brand: 'Huawei',
+      deviceName: 'Talkband B5 Watch Smartband - Mocha Brown',
+      deviceImgSrc: 'https://static.claro.com.pe/img/marketplace/huawei/TALKBANDB5MARRON/4.png',
+      productUrl: '/product',
+      modality: 'Market Place',
+      price: {
+        paymentValue: 'S/ 499',
+        paymentType: 'Al contado',
+      },
+      plan: null,
+      onlyOnline: false,
+    },
+    {
+      brand: 'Huawei',
+      deviceName: 'Smartwatch Huawei Watch GT2 - 42mm - Refined Gold',
+      deviceImgSrc: 'https://static.claro.com.pe/img/marketplace/huawei/DIANAMETAL/5.png',
+      productUrl: '/product',
+      modality: 'Market Place',
+      price: {
+        paymentValue: 'S/ 849',
+        paymentType: 'Al contado',
+      },
+      plan: null,
+      onlyOnline: false,
+    },
+    {
+      brand: 'Huawei',
+      deviceName: 'Audífonos Freebuds Lite - Negro',
+      deviceImgSrc: 'https://static.claro.com.pe/img/marketplace/huawei/FBLITENEGRO/1.png',
+      productUrl: '/product',
+      modality: 'Market Place',
+      price: {
+        paymentValue: 'S/ 369',
         paymentType: 'Al contado',
       },
       plan: null,
@@ -745,6 +823,125 @@ export class ConstantsService {
     {
       productName: 'MOTO G7 Plus 64GB',
       productImgSrc: 'https://static.claro.com.pe/img/ceq/G7_Plus_Frontal_20350.png',
+      productUrl: '#',
+    },
+  ];
+
+  // CHIPS CLARO
+  public CHIPS_SIDEBAR_LIST_DATA: FilterListModel[] = [
+    {
+      listId: 'lista',
+      listName: 'MODALIDAD',
+      options: [
+        {
+          id: 'portabilidad',
+          label: 'Portabilidad',
+        },
+        {
+          id: 'linea-nueva',
+          label: 'Línea nueva',
+        },
+      ],
+    },
+    {
+      listId: 'subcat',
+      listName: 'CATEGORÍA',
+      options: [
+        {
+          id: 'chips-claro',
+          label: 'Chips Claro',
+        },
+      ],
+    },
+    {
+      listId: 'cuotas',
+      listName: '¿CÓMO LO PAGO?',
+      options: [
+        {
+          id: 'todos',
+          label: 'Todos',
+        },
+        {
+          id: 'al-contado',
+          label: 'Al contado',
+        },
+      ],
+    },
+    {
+      listId: 'marca',
+      listName: 'MARCAS',
+      options: [
+        {
+          id: 'todos',
+          label: 'Todos',
+        },
+        {
+          id: 'Claro',
+          label: 'Claro',
+        },
+      ],
+    },
+  ];
+
+  public CHIPS_LIST_DATA: DeviceListModel[] = [
+    {
+      brand: '',
+      deviceName: 'Chip Claro Postpago',
+      deviceImgSrc: 'https://static.claro.com.pe/img/otros/chica.png',
+      productUrl: '/product/chips',
+      modality: 'Portabilidad',
+      price: {
+        paymentValue: 'S/ 16',
+        paymentType: 'Al contado',
+      },
+      plan: '189.90',
+      onlyOnline: false,
+    },
+    {
+      brand: '',
+      deviceName: 'Chip Claro Prepago',
+      deviceImgSrc: 'https://static.claro.com.pe/img/otros/img_chip_02_02050.png',
+      productUrl: '/product/chips',
+      modality: 'Portabilidad',
+      price: {
+        paymentValue: 'S/ 20',
+        paymentType: 'Al contado',
+      },
+      plan: 'Chévere',
+      onlyOnline: false,
+    },
+  ];
+
+  // PRODUCT CHIPS
+  public PRODUCT_CHIPS_OTHER_PRODUCTS_LIST_DATA: OtherProductListModel[] = [
+    {
+      productName: 'Moto G8 Plus 64GB',
+      productImgSrc: 'https://static.claro.com.pe/img/otros/img_front_moto_G8Plus_postpago_220x386_DDM.png',
+      productUrl: '#',
+    },
+    {
+      productName: 'Chip Claro Postpago',
+      productImgSrc: 'https://static.claro.com.pe/img/otros/chica.png',
+      productUrl: '#',
+    },
+    {
+      productName: 'iPhone 11 64GB',
+      productImgSrc: 'https://static.claro.com.pe/img/otros/iphone-11-Frontal_220x386_PostPago_DDM.png',
+      productUrl: '#',
+    },
+    {
+      productName: 'Moto G8 Plus 32GB',
+      productImgSrc: 'https://static.claro.com.pe/img/ceq/Motorola_Moto_G8_Play_Frontal_220x386.png',
+      productUrl: '#',
+    },
+    {
+      productName: 'Y9 Prime 2019',
+      productImgSrc: 'https://static.claro.com.pe/img/otros/Huawei_Y9_Prime_2019_Frontal_220x386_DDM.png',
+      productUrl: '#',
+    },
+    {
+      productName: 'Chip Claro Prepago',
+      productImgSrc: 'https://static.claro.com.pe/img/otros/img_chip_02_02050.png',
       productUrl: '#',
     },
   ];

@@ -19,6 +19,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductComponent } from './pages/product/product.component';
 import { RegistroDetalleComponent } from './pages/registro/registro-detalle/registro-detalle.component';
 import { RegistroNombreComponent } from './pages/registro/registro-nombre/registro-nombre.component';
+import { ChipsClaroComponent } from './pages/chips-claro/chips-claro.component';
+import { ChipsComponent } from './pages/chips/chips.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { RegistroNombreComponent } from './pages/registro/registro-nombre/regist
     SidebarComponent,
     AccesorioComponent,
     HogarComponent,
+    ChipsClaroComponent,
+    ChipsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, CarouselModule, FormsModule],
   providers: [],

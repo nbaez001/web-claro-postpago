@@ -11,12 +11,34 @@
 
   /* ---------- Main Catalog ---------- */
 
+  .titulo {
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+
+    h1 {
+      font-weight: 500;
+      font-size: 28px;
+    }
+    a {
+      color: #0fbddf;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    .ocultar {
+      display: none !important;
+    }
+  }
+
   .marcas-list {
-    width: 90%;
+    width: 85%;
     margin: 10px auto;
     display: none;
     @media only screen and (min-width: 1280px) {
-      width: 85%;
       margin: 20px auto 40px;
       display: flex;
       height: 100px;
@@ -49,20 +71,6 @@
     }
   }
 
-  .mas-buscado-title {
-    margin: 20px auto;
-    text-align: center;
-    width: 80%;
-
-    h1 {
-      font-weight: 500;
-      font-size: 20px;
-      @media only screen and (min-width: 1280px) {
-        font-size: 24px;
-      }
-    }
-  }
-
   .mas-buscado-list {
     width: 90%;
     margin: 0 auto;
@@ -78,11 +86,15 @@
       border-radius: 10px;
       position: relative;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.26);
-      background: #ffffff;
+      //background: #ffffff;
       margin: auto auto 30px auto;
       border-top: solid 2px red;
+      height: 260px;
+      background-size: 100%;
+      background-position: bottom;
+      background-repeat: no-repeat;
 
-      @media only screen and (min-width: 1280px) {
+      @media only screen and (min-width: 640px) {
         margin: 20px auto;
         max-width: 347px;
         box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
@@ -112,114 +124,6 @@
           }
         }
       }
-
-      .device-image {
-        display: flex;
-        padding: 10px 0 10px 0;
-        height: 200px;
-
-        .image {
-          width: 60%;
-          margin: 0 auto;
-          display: flex;
-          justify-content: center;
-
-          img {
-            height: 185px;
-            margin: auto;
-            display: block;
-          }
-        }
-      }
-
-      //     .price {
-      //       align-items: center;
-      //       border-radius: 10px;
-      //       justify-content: center;
-      //       margin: auto;
-      //       width: 30%;
-
-      //       .modality {
-      //         align-items: center;
-      //         background: #ee122c;
-      //         display: flex;
-      //         flex-wrap: wrap;
-      //         width: 100%;
-      //         height: 20px;
-      //         border-radius: 10px 10px 0 0;
-
-      //         span {
-      //           font-size: 10px;
-      //           color: #ffffff;
-      //           margin: auto;
-      //         }
-      //       }
-
-      //       .value {
-      //         align-items: center;
-      //         background: #f4f4f4;
-      //         display: flex;
-      //         width: 100%;
-      //         height: 68px;
-      //         border-radius: 0 0 10px 10px;
-      //         flex-flow: column;
-      //         justify-content: center;
-
-      //         span {
-      //           font-size: 16px;
-      //           font-weight: 400;
-      //         }
-
-      //         .payment-value {
-      //           color: #222222;
-      //           font-size: 24px;
-      //           font-weight: 500;
-      //           width: 100%;
-      //           text-align: center;
-      //         }
-
-      //         .payment-type {
-      //           font-size: 10px;
-      //           font-weight: 300;
-      //           width: 100%;
-      //           text-align: center;
-      //         }
-      //       }
-      //     }
-      //   }
-
-      //   .device-plan {
-      //     border-top: 1px dotted #ccc;
-      //     border-radius: 0 0 8px 8px;
-      //     display: flex;
-      //     font-size: 12px;
-      //     width: 100%;
-      //     height: 40px;
-      //     align-items: center;
-      //     background: #f4f4f4;
-
-      //     span {
-      //       width: 25%;
-      //       margin: auto;
-      //       font-weight: 300;
-      //       font-size: 10px;
-      //       color: #666666;
-      //       text-align: center;
-
-      //       strong {
-      //         font-weight: 500;
-      //         font-size: 13px;
-      //         color: #666666;
-      //         display: block;
-      //         width: 100%;
-      //       }
-      //     }
-
-      //     i {
-      //       margin: 0 5px 0 10px;
-      //       font-size: 11px;
-      //     }
-      //   }
     }
   }
 
@@ -253,173 +157,6 @@
       display: grid;
       grid-template-columns: 33.3% 33.3% 33.3%;
     }
-  }
-
-  .devices {
-    width: 95%;
-    border-radius: 10px;
-    position: relative;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.26);
-    background: #ffffff;
-    margin: auto auto 30px auto;
-
-    @media only screen and (min-width: 1280px) {
-      border-radius: 10px;
-      width: 90%;
-      margin: 20px auto;
-      max-width: 347px;
-      background: #ffffff;
-      box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
-      border: none;
-
-      &:hover {
-        cursor: pointer;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-      }
-    }
-
-    .device-title {
-      display: flex;
-      padding: 10px 10px 0 10px;
-      height: 60px;
-      border-radius: 10px 10px 0 0;
-
-      .info {
-        font-size: 18px;
-        width: 90%;
-
-        span {
-          float: left;
-        }
-
-        .brand {
-          width: 100%;
-        }
-
-        .item-name {
-          height: 40px;
-          width: 100%;
-          font-weight: 400;
-        }
-      }
-    }
-
-    .device-image {
-      display: flex;
-      padding: 10px 0 10px 0;
-      height: 200px;
-
-      .image {
-        width: 60%;
-        display: flex;
-        justify-content: center;
-
-        img {
-          height: 185px;
-          margin: auto;
-          display: block;
-        }
-      }
-
-      .price {
-        align-items: center;
-        border-radius: 10px;
-        justify-content: center;
-        margin: auto;
-        width: 30%;
-
-        .modality {
-          align-items: center;
-          background: #ee122c;
-          display: flex;
-          flex-wrap: wrap;
-          width: 100%;
-          height: 20px;
-          border-radius: 10px 10px 0 0;
-
-          span {
-            font-size: 10px;
-            color: #ffffff;
-            margin: auto;
-          }
-        }
-
-        .value {
-          align-items: center;
-          background: #f4f4f4;
-          display: flex;
-          width: 100%;
-          height: 68px;
-          border-radius: 0 0 10px 10px;
-          flex-flow: column;
-          justify-content: center;
-
-          span {
-            font-size: 16px;
-            font-weight: 400;
-          }
-
-          .payment-value {
-            color: #222222;
-            font-size: 24px;
-            font-weight: 500;
-            width: 100%;
-            text-align: center;
-          }
-
-          .payment-type {
-            font-size: 10px;
-            font-weight: 300;
-            width: 100%;
-            text-align: center;
-          }
-        }
-      }
-    }
-
-    .device-plan {
-      border-top: 1px dotted #ccc;
-      border-radius: 0 0 8px 8px;
-      display: flex;
-      font-size: 12px;
-      width: 100%;
-      height: 40px;
-      align-items: center;
-      background: #f4f4f4;
-
-      span {
-        width: 25%;
-        margin: auto;
-        font-weight: 300;
-        font-size: 10px;
-        color: #666666;
-        text-align: center;
-
-        strong {
-          font-weight: 500;
-          font-size: 13px;
-          color: #666666;
-          display: block;
-          width: 100%;
-        }
-      }
-
-      i {
-        margin: 0 5px 0 10px;
-        font-size: 11px;
-      }
-    }
-  }
-
-  .huawei-list {
-    width: 90%;
-    margin: 10px auto;
-
-    // @media only screen and (min-width: 1280px) {
-    //   display: grid;
-    //   grid-template-columns: 25% 25% 25% 25%;
-    //   width: 95%;
-    // }
 
     .devices {
       width: 95%;
@@ -473,15 +210,183 @@
       .device-image {
         display: flex;
         padding: 10px 0 10px 0;
-        height: 230px;
+        height: 200px;
 
         .image {
-          width: 50%;
+          width: 60%;
           display: flex;
           justify-content: center;
 
           img {
             height: 185px;
+            margin: auto;
+            display: block;
+          }
+        }
+
+        .price {
+          align-items: center;
+          border-radius: 10px;
+          justify-content: center;
+          margin: auto;
+          width: 30%;
+
+          .modality {
+            align-items: center;
+            background: #ee122c;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 20px;
+            border-radius: 10px 10px 0 0;
+
+            span {
+              font-size: 10px;
+              color: #ffffff;
+              margin: auto;
+            }
+          }
+
+          .value {
+            align-items: center;
+            background: #f4f4f4;
+            display: flex;
+            width: 100%;
+            height: 68px;
+            border-radius: 0 0 10px 10px;
+            flex-flow: column;
+            justify-content: center;
+
+            span {
+              font-size: 16px;
+              font-weight: 400;
+            }
+
+            .payment-value {
+              color: #222222;
+              font-size: 24px;
+              font-weight: 500;
+              width: 100%;
+              text-align: center;
+            }
+
+            .payment-type {
+              font-size: 10px;
+              font-weight: 300;
+              width: 100%;
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      .device-plan {
+        border-top: 1px dotted #ccc;
+        border-radius: 0 0 8px 8px;
+        display: flex;
+        font-size: 12px;
+        width: 100%;
+        height: 40px;
+        align-items: center;
+        background: #f4f4f4;
+
+        span {
+          width: 25%;
+          margin: auto;
+          font-weight: 300;
+          font-size: 10px;
+          color: #666666;
+          text-align: center;
+
+          strong {
+            font-weight: 500;
+            font-size: 13px;
+            color: #666666;
+            display: block;
+            width: 100%;
+          }
+        }
+
+        i {
+          margin: 0 5px 0 10px;
+          font-size: 11px;
+        }
+      }
+    }
+  }
+
+  .huawei-list {
+    width: 90%;
+    margin: 10px auto;
+
+    // @media only screen and (min-width: 1280px) {
+    //   display: grid;
+    //   grid-template-columns: 25% 25% 25% 25%;
+    //   width: 95%;
+    // }
+
+    .devices {
+      width: 88%;
+      border-radius: 10px;
+      position: relative;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.26);
+      background: #ffffff;
+      margin: 20px auto 30px auto;
+      max-width: 347px;
+
+      @media only screen and (min-width: 1280px) {
+        border-radius: 10px;
+        width: 88%;
+        max-width: 347px;
+        margin: 20px auto;
+        background: #ffffff;
+        box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+        border: none;
+
+        &:hover {
+          cursor: pointer;
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        }
+      }
+
+      .device-title {
+        display: flex;
+        padding: 10px 10px 0 10px;
+        height: 60px;
+        border-radius: 10px 10px 0 0;
+
+        .info {
+          font-size: 18px;
+          width: 90%;
+
+          span {
+            float: left;
+          }
+
+          .brand {
+            width: 100%;
+          }
+
+          .item-name {
+            height: 40px;
+            width: 100%;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .device-image {
+        display: flex;
+        padding: 30px 0 30px 0;
+        height: 230px;
+
+        .image {
+          width: 55%;
+          display: flex;
+          margin: auto;
+
+          img {
+            height: auto;
             margin: auto;
             display: block;
           }
@@ -767,138 +672,83 @@
     }
   }
 
-  // .opciones-list {
-  //   width: 80%;
-  //   margin: 10px auto;
-  //   display: none;
-
-  //   @media only screen and (min-width: 1250px) {
-  //     display: grid;
-  //     grid-template-columns: 50% 50%;
-  //   }
-  //   .opciones {
-  //     width: 95%;
-  //     border-radius: 10px;
-  //     position: relative;
-  //     box-shadow: 0 0 10px rgba(0, 0, 0, 0.26);
-  //     background: #ffffff;
-  //     margin: auto auto 30px auto;
-
-  //     @media only screen and (min-width: 1280px) {
-  //       border-radius: 10px;
-  //       width: 90%;
-  //       margin: 20px auto;
-  //       max-width: 347px;
-  //       background: #ffffff;
-  //       box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
-  //       border: none;
-
-  //       &:hover {
-  //         cursor: pointer;
-  //         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  //       }
-  //     }
-
-  //     .opciones-title {
-  //       display: flex;
-  //       padding: 10px 10px 0 10px;
-  //       height: 60px;
-  //       border-radius: 10px 10px 0 0;
-
-  //       .info {
-  //         font-size: 18px;
-  //         width: 90%;
-
-  //         span {
-  //           float: left;
-  //         }
-
-  //         .brand {
-  //           width: 100%;
-  //         }
-
-  //         .item-name {
-  //           height: 40px;
-  //           width: 100%;
-  //           font-weight: 400;
-  //         }
-  //       }
-  //     }
-
-  //     .opciones-image {
-  //       display: flex;
-  //       padding: 10px 0 10px 0;
-  //       height: 200px;
-
-  //       .image {
-  //         width: 60%;
-  //         display: flex;
-  //         justify-content: center;
-
-  //         img {
-  //           height: 185px;
-  //           margin: auto;
-  //           display: block;
-  //         }
-  //       }
-
-  //       .price {
-  //         align-items: center;
-  //         border-radius: 10px;
-  //         justify-content: center;
-  //         margin: auto;
-  //         width: 30%;
-
-  //         .modality {
-  //           align-items: center;
-  //           background: #ee122c;
-  //           display: flex;
-  //           flex-wrap: wrap;
-  //           width: 100%;
-  //           height: 20px;
-  //           border-radius: 10px 10px 0 0;
-
-  //           span {
-  //             font-size: 10px;
-  //             color: #ffffff;
-  //             margin: auto;
-  //           }
-  //         }
-
-  //         .value {
-  //           align-items: center;
-  //           background: #f4f4f4;
-  //           display: flex;
-  //           width: 100%;
-  //           height: 68px;
-  //           border-radius: 0 0 10px 10px;
-  //           flex-flow: column;
-  //           justify-content: center;
-
-  //           span {
-  //             font-size: 16px;
-  //             font-weight: 400;
-  //           }
-
-  //           .payment-value {
-  //             color: #222222;
-  //             font-size: 24px;
-  //             font-weight: 500;
-  //             width: 100%;
-  //             text-align: center;
-  //           }
-
-  //           .payment-type {
-  //             font-size: 10px;
-  //             font-weight: 300;
-  //             width: 100%;
-  //             text-align: center;
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-
   /* ---------- End Catalog ---------- */
+
+  .terminos {
+    display: block;
+    margin: 0px;
+
+    .terms {
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+      margin-left: 20px;
+
+      i {
+        color: #ee122c;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .terms-detail {
+      margin-left: 20px;
+
+      a {
+        font-size: 12px;
+      }
+
+      p {
+        color: #999999;
+        font-size: 12px;
+        padding: 0 0 10px 0;
+        margin: 0;
+      }
+    }
+
+    .table-condiciones {
+      width: 372px;
+      height: 228px;
+      border-collapse: collapse;
+      th,
+      td {
+        border: 1px solid #cccccc;
+      }
+      td {
+        text-align: center;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    }
+
+    .tabla-velocidad {
+      width: 497.118px;
+
+      tr {
+        td:nth-child(1) {
+          width: 166px;
+        }
+        td:nth-child(2) {
+          text-align: center;
+          width: 65px;
+        }
+        td:nth-child(3) {
+          text-align: center;
+          width: 113px;
+        }
+        td:nth-child(4) {
+          text-align: center;
+          width: 133.118px;
+        }
+      }
+      td {
+        border: 1px solid #cccccc;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    }
+  }
 }

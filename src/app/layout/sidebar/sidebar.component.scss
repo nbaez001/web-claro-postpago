@@ -27,12 +27,17 @@
 /* ---------- End Filter List Mobile  ---------- */
 
 /* ---------- Sidebar ---------- */
+aside {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
 .filter-list {
   margin: 0;
   padding: 20px 0 20px 6px;
 
   @media only screen and (min-width: 1280px) {
-    margin: 20px 0 -45px 30px;
+    margin: 0 0 0 30px;
     border-radius: 5px;
     background: #f4f4f4;
   }
