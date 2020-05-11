@@ -1,31 +1,23 @@
-<div class="container">
-  <section>
+<div class="container-fluid">
+  <section class="titular">
+    <h1>Hola! antes de continuar queremos conocerte</h1>
+  </section>
+
+  <section class="form_registro">
     <form>
       <div class="row">
-        <div class="col-3"></div>
-        <div class="col-6">
-          <h2>Hola! antes de continuar queremos conocerte</h2>
-        </div>
-        <div class="col-3"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-3"></div>
-        <div class="col-6">
+        <div class="col-sm-12">
           <div class="form-group">
             <label for="txtNombre">Escribe tu nombre y apellido</label>
-            <input type="text" class="form-control" id="txtNombre" name="name" placeholder="Escribe aqui" />
+            <input type="text" class="form-control input_custom" id="txtNombre" name="name" placeholder="Escribe aqui" />
           </div>
         </div>
-        <div class="col-3"></div>
       </div>
 
       <div class="row">
-        <div class="col-3"></div>
-        <div class="col-6">
+        <div class="col-sm-12">
           <button type="submit" (click)="registroDetalle()" class="btn_naranja">CONTINUAR</button>
         </div>
-        <div class="col-3"></div>
       </div>
     </form>
   </section>

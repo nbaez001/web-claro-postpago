@@ -1,5 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -13,14 +14,16 @@ import { HeaderRegistroComponent } from './layout/registro/header-registro/heade
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { AccesorioComponent } from './pages/accesorio/accesorio.component';
 import { CatalogComponent } from './pages/catalog/catalog.component';
+import { ChipsClaroComponent } from './pages/chips-claro/chips-claro.component';
+import { ChipsComponent } from './pages/chips/chips.component';
 import { HogarComponent } from './pages/hogar/hogar.component';
 import { CarouselComponent } from './pages/home/carousel/carousel.component';
 import { HomeComponent } from './pages/home/home.component';
+import { LayoutPasosComponent } from './pages/layout-pasos/layout-pasos.component';
+import { LayoutComponent } from './pages/layout/layout.component';
 import { ProductComponent } from './pages/product/product.component';
 import { RegistroDetalleComponent } from './pages/registro/registro-detalle/registro-detalle.component';
 import { RegistroNombreComponent } from './pages/registro/registro-nombre/registro-nombre.component';
-import { ChipsClaroComponent } from './pages/chips-claro/chips-claro.component';
-import { ChipsComponent } from './pages/chips/chips.component';
 
 @NgModule({
   declarations: [
@@ -40,8 +43,10 @@ import { ChipsComponent } from './pages/chips/chips.component';
     HogarComponent,
     ChipsClaroComponent,
     ChipsComponent,
+    LayoutPasosComponent,
+    LayoutComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, CarouselModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, CarouselModule, FormsModule, HttpClientModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

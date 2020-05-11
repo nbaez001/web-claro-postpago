@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { ConstantsService } from 'src/app/services/constants.service';
-import { MarcaModel } from 'src/app/models/marca-list.model';
 
 @Component({
   selector: 'app-carousel',
