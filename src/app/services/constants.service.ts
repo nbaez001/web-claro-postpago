@@ -26,7 +26,7 @@ export class ConstantsService {
     {
       itemId: 'prepago',
       itemLabel: 'Prepagos',
-      itemUrl: '/',
+      itemUrl: 'http://200.108.99.46/wps/portal/tiendavirtual/prepago',
       itemFA: 'fas fa-mobile-alt',
     },
     {
@@ -50,13 +50,13 @@ export class ConstantsService {
     {
       itemId: 'compra_de_paquetes',
       itemLabel: 'Paquetes',
-      itemUrl: '/',
+      itemUrl: 'http://www.internetclaro.com.pe/portalcorp',
       itemFA: 'fas fa-box-open',
     },
     {
       itemId: 'recargas',
       itemLabel: 'Recargas',
-      itemUrl: '/',
+      itemUrl: 'https://compras.miclaro.com.pe/wps/portal/rootcompras?cn=8&rec=1',
       itemFA: 'fas fa-mobile-alt',
     },
   ];

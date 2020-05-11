@@ -18,13 +18,11 @@ import { RegistroDetalleComponent } from './pages/registro/registro-detalle/regi
 import { RegistroNombreComponent } from './pages/registro/registro-nombre/registro-nombre.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/', pathMatch: 'full' },
   {
-    // NO POMGAS NADA DELANTE DE ESTA RUTA
     path: '',
-    component: LayoutComponent, // ESTE ES OTRO LAYOUT
+    component: LayoutComponent,
     children: [
-      { path: '', component: HomeComponent },
+      { path: 'home', component: HomeComponent },
       { path: 'catalog', component: CatalogComponent },
       { path: 'product', component: ProductComponent },
       { path: 'product/chips', component: ChipsComponent },
@@ -36,17 +34,19 @@ const routes: Routes = [
       { path: 'hogar-detalle', component: DetalleHogarComponent },
       { path: 'accesorio-detalle', component: DetalleAccesorioComponent },
       { path: 'olo-detalle', component: DetalleOloComponent },
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
     ],
   },
   {
-    path: '',
-    component: LayoutPasosComponent, // ESTE ES UN LAYOUT
+    path: 'registro',
+    component: LayoutPasosComponent,
     children: [
       { path: 'paso-1', component: RegistroNombreComponent },
       { path: 'paso-2', component: RegistroDetalleComponent },
+      { path: '', redirectTo: 'paso-1', pathMatch: 'full' },
     ],
   },
-  { path: '**', component: HomeComponent },
+  { path: '**', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({

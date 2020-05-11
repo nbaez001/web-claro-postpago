@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuHeaderListModel } from '../../models/menu-header-list.model';
 import { ConstantsService } from '../../services/constants.service';
 import { WindowScrollingService } from '../../services/window-scrolling.service';
@@ -20,7 +21,7 @@ export class HeaderComponent implements OnInit {
   public searchShowResults: boolean;
   public searchResultsFound: boolean;
 
-  constructor(private constants: ConstantsService, private windowScrollingService: WindowScrollingService) {
+  constructor(private constants: ConstantsService, private windowScrollingService: WindowScrollingService, private router: Router) {
     this.showMenuMobile = false;
     this.showInputSearch = false;
     this.showContactNumber = false;
@@ -73,5 +74,13 @@ export class HeaderComponent implements OnInit {
   public clearSearchInput() {
     this.searchInput = '';
     this.getSearchResults();
+  }
+
+  public redirectTo(url: string) {
+    if (url.includes('http')) {
+      window.location.href = url;
+    } else {
+      this.router.navigate([url]);
+    }
   }
 }
