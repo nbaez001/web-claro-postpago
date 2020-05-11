@@ -1,0 +1,183 @@
+<main>
+  <!--  Dropdown-->
+  <div class="dropdown-product">
+    <div class="dropdown-product-name" (click)="toggleProductsDropdown()" [ngClass]="{ 'dropdown-product-dark': showMoreProductsDropdown }">
+      <p>Huawei Parlante Bluetooth Mini CM510 Negro</p>
+      <i class="fas fa-chevron-down" [ngClass]="{ 'fa-rotate-180': showMoreProductsDropdown }"></i>
+    </div>
+    <div class="dropdown-product-opts" *ngIf="showMoreProductsDropdown">
+      <div class="dropdown-product-opts_list">
+        <p>Los más pedidos</p>
+        <div class="box-other-products">
+          <div class="product-info-detail" *ngFor="let product of otherProductsList">
+            <a href="{{ product.productUrl }}">
+              <img src="{{ product.productImgSrc }}" alt="" />
+              <p>{{ product.productName }}</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Carousel -->
+  <section class="product-carousel">
+    <div class="product-carousel-content">
+      <div class="tag-online">
+        <img alt="Etiqueta Solo Online Tienda Claro" src="https://static.claro.com.pe/img/ribbons/ribbon-promo.png" width="72" />
+      </div>
+
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+          <div class="slide">
+            <img src="https://static.claro.com.pe/img/ceq/img02-parlante-bluetooth-CM510-black-postpago-220x386.png" alt="" />
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="slide">
+            <img src="https://static.claro.com.pe/img/ceq/img01-parlante-bluetooth-CM510-black-postpago-220x386.png" alt="" />
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="slide">
+            <img src="https://static.claro.com.pe/img/ceq/img02-parlante-bluetooth-CM510-black-postpago-220x386.png" alt="" />
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </section>
+
+  <!-- Product Info -->
+  <section class="product-info">
+    <h2>
+      Arma tu internet fijo inalámbrico
+    </h2>
+    <div class="dropdown-list dropdown-two-cols">
+      <div class="dropdown-list-content" (click)="toggleModalityDropdown()">
+        <div class="dropdown-list-info">
+          <span class="dropdown-list-info_description">Modalidad</span>
+          <span class="dropdown-list-info_option">Accesorios</span>
+        </div>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div *ngIf="showModalityDropdown">
+        <ul>
+          <li>
+            <input type="radio" id="lista4" name="lista" checked="checked" value="4" />
+            <label for="lista4">Accesorios </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="dropdown-list dropdown-two-cols dropdown-two-cols_right">
+      <div class="dropdown-list-content" (click)="togglePaymentTypeDropdown()">
+        <div class="dropdown-list-info">
+          <span class="dropdown-list-info_description">¿Cómo lo pago?</span>
+          <span class="dropdown-list-info_option"> Al contado </span>
+        </div>
+        <i class="fas fa-chevron-down"> </i>
+      </div>
+      <div *ngIf="showPaymentTypeDropdown">
+        <ul>
+          <li>
+            <input type="radio" id="pagomensual" name="mensual" checked="checked" value="1" />
+            <label for="pagomensual"> Al contado</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="product-price">
+      <div class="product-price-content">
+        <div class="product-price-info">
+          <span class="product-price-info_payment-value"> S/ 109 </span>
+          <span class="product-price-info_payment-type"> Al Contado </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-buy-content">
+      <button type="submit"><i class="fas fa-shopping-cart"></i> COMPRAR</button>
+    </section>
+  </section>
+  <!-- End Product Info -->
+
+  <!-- Delivery Desktop -->
+  <section class="delivery-desktop">
+    <div class="delivery-desktop-box">
+      <div class="delivery-desktop-info">
+        <span><i class="fas fa-clock"></i></span><span>Delivery Regular</span>
+        <br />
+        <span class="legal">Coordinamos la fecha y hora de entrega.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- End Delivery Desktop -->
+
+  <!-- Delivery Mobile -->
+  <section class="delivery-mobile">
+    <div class="delivery-mobile-box">
+      <span class="black">Despacho a domicilio</span>
+      <div class="delivery-mobile-info">
+        <i class="fas fa-truck"></i>
+        <div class="ml-2">
+          <span> Disponible</span>
+          <p>es gratis</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Delivery Mobile -->
+
+  <!-- Product Detail -->
+  <section class="product-detail">
+    <h2>Huawei Parlante Bluetooth Mini CM510 Negro</h2>
+    <h3>
+      Cuerpo compacto para fácil portabilidad
+    </h3>
+    <h3>
+      Cuerpo ligero y compacto con un cordón trenzado para un fácil transporte donde sea que vayas. 101 g de peso, 50 x 56 mm de tamaño. Con
+      clasificación IPX4 para la resistencia al agua y al sudor
+    </h3>
+    <div class="product-detail-features justify-content-center align-items-center">
+      <div class="product-detail-features_list">
+        <ul>
+          <li>
+            <i class="fab fa-bluetooth"></i>
+            <span>
+              <strong>Bluetooth</strong>
+              <br />
+              Si
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-battery-three-quarters"></i>
+            <span>
+              <strong>Baterí­a</strong>
+              <br />
+              660 mAh
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-palette"></i>
+            <span>
+              <strong>Color </strong>
+              <br />
+              Graphite black
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-weight-hanging"></i>
+            <span>
+              <strong>Peso </strong>
+              <br />
+              101g
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- End Product Detail -->
+</main>

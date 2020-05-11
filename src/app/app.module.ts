@@ -24,6 +24,10 @@ import { LayoutComponent } from './pages/layout/layout.component';
 import { ProductComponent } from './pages/product/product.component';
 import { RegistroDetalleComponent } from './pages/registro/registro-detalle/registro-detalle.component';
 import { RegistroNombreComponent } from './pages/registro/registro-nombre/registro-nombre.component';
+import { OloComponent } from './pages/olo/olo.component';
+import { DetalleOloComponent } from './pages/olo/detalle-olo/detalle-olo.component';
+import { DetalleHogarComponent } from './pages/hogar/detalle-hogar/detalle-hogar.component';
+import { DetalleAccesorioComponent } from './pages/accesorio/detalle-accesorio/detalle-accesorio.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +49,10 @@ import { RegistroNombreComponent } from './pages/registro/registro-nombre/regist
     ChipsComponent,
     LayoutPasosComponent,
     LayoutComponent,
+    OloComponent,
+    DetalleOloComponent,
+    DetalleHogarComponent,
+    DetalleAccesorioComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, CarouselModule, FormsModule, HttpClientModule, ReactiveFormsModule],
   providers: [],

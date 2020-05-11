@@ -64,7 +64,7 @@
         border-radius: 10px;
         width: 90%;
         display: flex;
-        // margin: 20px auto; // si pongo como arriba se acorta pero queda bajo
+        margin: 20px auto; // si pongo como arriba se acorta pero queda bajo
         max-width: 347px;
         box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
         border: none;
@@ -74,6 +74,10 @@
           box-shadow: 0 0 15px #ffffff;
         }
       }
+      a {
+        width: 100%;
+      }
+
       .card {
         border-radius: 10px;
         width: 100%;
@@ -176,21 +180,31 @@
               }
             }
           }
+        }
 
-          .content-footer .footer-zona {
-            border-top: 1px dotted #ccc;
-            font-size: 11px;
-            height: 70px;
-            display: flex;
+        .card-footer {
+          display: flex;
+          padding: 0rem 0rem;
+          border-top: 0px;
+          background: #f4f4f4;
+          .bloque {
+            margin: auto;
+            width: 30%;
+            text-align: center;
+            height: 40px;
+
             span {
-              width: 42%;
-              margin: auto;
-              strong {
-                font-weight: 500;
-              }
+              font-size: 12px;
+              font-weight: 500;
+              color: #666666;
+            }
+            p {
+              font-size: 10px;
+              margin: 0rem;
             }
           }
         }
+
         .tag-online {
           position: absolute;
           top: 0px;

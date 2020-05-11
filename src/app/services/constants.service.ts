@@ -14,7 +14,7 @@ export class ConstantsService {
     {
       itemId: 'internetolo',
       itemLabel: 'Internet OLO',
-      itemUrl: '/',
+      itemUrl: '/olo',
       itemFA: 'fas fa-sim-card',
     },
     {
@@ -395,6 +395,65 @@ export class ConstantsService {
         {
           id: 'ZTE',
           label: 'ZTE',
+        },
+      ],
+    },
+  ];
+
+  public OLO_LIST_DATA: FilterListModel[] = [
+    {
+      listId: 'lista',
+      listName: 'MODALIDAD',
+      options: [
+        {
+          id: 'accesorios',
+          label: 'Portabilidad',
+        },
+        {
+          id: 'accesorios',
+          label: 'Linea Nueva',
+        },
+      ],
+    },
+    {
+      listId: 'subcat',
+      listName: 'CATEGORÍA',
+      options: [
+        {
+          id: 'chips',
+          label: 'Chips Internet OLO',
+        },
+        {
+          id: 'router',
+          label: 'Router Portátil OLO',
+        },
+      ],
+    },
+    {
+      listId: 'cuotas',
+      listName: '¿CÓMO LO PAGO?',
+      options: [
+        {
+          id: 'todos',
+          label: 'Todos',
+        },
+        {
+          id: 'al-contado',
+          label: 'Al contado',
+        },
+      ],
+    },
+    {
+      listId: 'marca',
+      listName: 'MARCAS',
+      options: [
+        {
+          id: 'todos',
+          label: 'Todos',
+        },
+        {
+          id: 'olo',
+          label: 'OLO',
         },
       ],
     },

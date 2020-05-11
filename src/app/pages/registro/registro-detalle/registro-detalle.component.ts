@@ -45,7 +45,7 @@ export class RegistroDetalleComponent implements OnInit {
     });
 
     this.form.controls.departamento.valueChanges.subscribe((idDep) => {
-      if (idDep != undefined) {
+      if (idDep !== undefined) {
         this.provinciaList = this.buscarProvincia(idDep);
         this.form.controls.provincia.setValue('');
         this.form.controls.distrito.setValue('');
@@ -53,8 +53,8 @@ export class RegistroDetalleComponent implements OnInit {
     });
 
     this.form.controls.provincia.valueChanges.subscribe((idPro) => {
-      let idDep = this.form.controls.departamento.value;
-      if (idPro != undefined && idDep != undefined) {
+      const idDep = this.form.controls.departamento.value;
+      if (idPro !== undefined && idDep !== undefined) {
         this.distritoList = this.buscarDistrito(idDep, idPro);
         console.log(this.distritoList);
       }
@@ -63,14 +63,14 @@ export class RegistroDetalleComponent implements OnInit {
 
   buscarProvincia(idDep: string) {
     return this.provinciaStore.filter((element) => {
-      return element.codest == idDep;
+      return element.codest === idDep;
     });
   }
 
   buscarDistrito(idDep: string, idPro: string) {
     console.log(idDep + ' ' + idPro);
     return this.distritoStore.filter((element) => {
-      return element.codest == idDep && element.codpvc == idPro;
+      return element.codest === idDep && element.codpvc === idPro;
     });
   }
 }
