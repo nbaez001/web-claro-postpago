@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { MenuHeaderListModel } from '../../models/menu-header-list.model';
 import { ConstantsService } from '../../services/constants.service';
+import { WindowScrollingService } from '../../services/window-scrolling.service';
 
 @Component({
   selector: 'app-header',
@@ -19,7 +20,7 @@ export class HeaderComponent implements OnInit {
   public searchShowResults: boolean;
   public searchResultsFound: boolean;
 
-  constructor(private constants: ConstantsService) {
+  constructor(private constants: ConstantsService, private windowScrollingService: WindowScrollingService) {
     this.showMenuMobile = false;
     this.showInputSearch = false;
     this.showContactNumber = false;
@@ -33,10 +34,12 @@ export class HeaderComponent implements OnInit {
   @HostListener('document:click', ['$event.target'])
   public onClick(targetElement) {
     if (this.showInputSearch === true) {
+      this.windowScrollingService.disable();
       if (this.outsideSearch?.nativeElement.contains(targetElement) !== undefined) {
         const clickedOutside = this.outsideSearch.nativeElement.contains(targetElement);
         if (clickedOutside) {
           this.showInputSearch = false;
+          this.windowScrollingService.enable();
         }
       }
     }
@@ -53,14 +56,15 @@ export class HeaderComponent implements OnInit {
   }
 
   public toggleContactNumber() {
-    console.log(this.showContactNumber);
-    this.showContactNumber = !this.showContactNumber;
+    if (window.innerWidth >= 640) {
+      this.showContactNumber = !this.showContactNumber;
+    }
   }
 
   public getSearchResults() {
     if (this.searchInput.length >= 2) {
       this.searchShowResults = true;
-      this.searchResultsFound = 'apple'.includes(this.searchInput);
+      this.searchResultsFound = 'apple'.includes(this.searchInput.toLowerCase());
     } else {
       this.searchShowResults = false;
     }

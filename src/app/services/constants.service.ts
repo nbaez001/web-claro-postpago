@@ -12,8 +12,8 @@ export class ConstantsService {
   // Header Component
   public HEADER_MENU_LIST_DATA: MenuHeaderListModel[] = [
     {
-      itemId: 'chipinternet',
-      itemLabel: 'Chips Internet',
+      itemId: 'internetolo',
+      itemLabel: 'Internet OLO',
       itemUrl: '/',
       itemFA: 'fas fa-sim-card',
     },
@@ -40,6 +40,12 @@ export class ConstantsService {
       itemLabel: 'Accesorios',
       itemUrl: '/accesorios',
       itemFA: 'fas fa-headphones-alt',
+    },
+    {
+      itemId: 'chipinternet',
+      itemLabel: 'Chips Claro',
+      itemUrl: '/',
+      itemFA: 'fas fa-sim-card',
     },
     {
       itemId: 'compra_de_paquetes',

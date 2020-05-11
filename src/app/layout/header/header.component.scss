@@ -112,11 +112,13 @@ header {
 
   .logo {
     margin-left: 10px;
+    margin-right: inherit;
     display: flex;
     align-items: center;
 
     @media only screen and (min-width: 1280px) {
       margin-left: 6%;
+      margin-right: 0;
     }
 
     img {
@@ -196,6 +198,7 @@ header {
     width: 130px;
     height: 38px;
     color: #222222;
+    font-size: 16px;
 
     strong {
       color: #222222;
@@ -328,6 +331,11 @@ header {
       text-rendering: auto;
       text-transform: uppercase;
     }
+
+    &::placeholder {
+      color: #ccc;
+      font-size: 13px;
+    }
   }
 
   .input-close {
@@ -376,10 +384,11 @@ header {
 
       .results-not-found {
         padding: 38px;
-        width: 260px;
+        width: 335px;
         margin: auto;
         text-align: center;
         clear: both;
+        font-size: 16px;
 
         @media only screen and (max-width: 768px) {
           padding: 38px 15px;
@@ -389,7 +398,11 @@ header {
         }
 
         .try-again-msg {
-          font-size: 82%;
+          font-size: 13px;
+        }
+
+        p {
+          margin: 0;
         }
       }
 
