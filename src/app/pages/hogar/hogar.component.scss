@@ -8,7 +8,7 @@
 
 .main-content {
   display: grid;
-  grid-template-columns: 17% auto;
+  grid-template-columns: 18% auto;
 
   @media screen and (max-width: 1279px) {
     display: grid;
@@ -46,7 +46,7 @@
   .container-fluid {
     width: 95%;
     //margin: 10px auto;
-    @media only screen and (min-width: 1280px) {
+    @media only screen and (min-width: 1000px) {
       display: grid;
       grid-template-columns: 33.33% 33.33% 33.33%;
       width: 100%;

@@ -10,7 +10,6 @@
 <!-- Sidebar -->
 <aside *ngIf="showFilterList">
   <div class="filter-list" *ngFor="let list of filterList">
-    {{ vtexto }}
     <h2>{{ list.listName }}</h2>
     <ul class="menu-list">
       <li *ngFor="let opts of list.options; let i = index">

@@ -14,9 +14,7 @@ export class SidebarComponent implements OnInit {
   item: number;
   vtexto: string;
 
-  constructor(private dataservice: DataService) {
-    this.vtexto = 'Fernando';
-  }
+  constructor(private dataservice: DataService) {}
 
   ngOnInit() {
     this.innerWidth = window.innerWidth;

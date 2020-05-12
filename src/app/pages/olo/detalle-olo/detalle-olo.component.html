@@ -1,1 +1,211 @@
-<p>detalle-olo works!</p>
+<main>
+  <!--  Dropdown-->
+  <div class="dropdown-product">
+    <div class="dropdown-product-name" (click)="toggleProductsDropdown()" [ngClass]="{ 'dropdown-product-dark': showMoreProductsDropdown }">
+      <p>Chip Internet OLO Postpago</p>
+      <i class="fas fa-chevron-down" [ngClass]="{ 'fa-rotate-180': showMoreProductsDropdown }"></i>
+    </div>
+    <div class="dropdown-product-opts" *ngIf="showMoreProductsDropdown">
+      <div class="dropdown-product-opts_list">
+        <p>Los más pedidos</p>
+        <div class="box-other-products">
+          <div class="product-info-detail" *ngFor="let product of otherProductsList">
+            <a href="{{ product.productUrl }}">
+              <img src="{{ product.productImgSrc }}" alt="" />
+              <p>{{ product.productName }}</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Carousel -->
+  <section class="product-carousel">
+    <div class="product-carousel-content">
+      <div class="tag-new">
+        <img alt="Etiqueta Nuevo Tienda Claro" src="https://static.claro.com.pe/img/ribbons/ribbon-new.png" width="72" />
+      </div>
+
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide>
+          <div class="slide">
+            <img src="https://static.claro.com.pe/img/otros/img_chipolo_05.png" alt="" />
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="slide">
+            <img src="https://static.claro.com.pe/img/otros/img_chipolo_06.png" alt="" />
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="slide">
+            <img src="https://static.claro.com.pe/img/otros/img_chipolo_9.png" alt="" />
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </section>
+
+  <!-- Product Info -->
+  <section class="product-info">
+    <h2>
+      ARMA TU CHIP
+    </h2>
+    <div class="dropdown-list dropdown-two-cols">
+      <div class="dropdown-list-content" (click)="toggleModalityDropdown()">
+        <div class="dropdown-list-info">
+          <span class="dropdown-list-info_description">Modalidad</span>
+          <span class="dropdown-list-info_option">Línea nueva</span>
+        </div>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div *ngIf="showModalityDropdown">
+        <ul>
+          <li>
+            <input type="radio" id="lista4" name="lista" checked="checked" value="1" />
+            <label for="lista4">Línea nueva </label>
+          </li>
+          <li>
+            <input type="radio" id="lista4" name="lista" value="2" />
+            <label for="lista4">Portabilidad </label>
+          </li>
+          <li>
+            <input type="radio" id="lista4" name="lista" value="3" />
+            <label for="lista4">Renovación </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="dropdown-list dropdown-two-cols dropdown-two-cols_right">
+      <div class="dropdown-list-content" (click)="togglePaymentTypeDropdown()">
+        <div class="dropdown-list-info">
+          <span class="dropdown-list-info_description">¿Cómo lo pago?</span>
+          <span class="dropdown-list-info_option"> Al contado </span>
+        </div>
+        <i class="fas fa-chevron-down"> </i>
+      </div>
+      <div *ngIf="showPaymentTypeDropdown">
+        <ul>
+          <li>
+            <input type="radio" id="pagomensual" name="mensual" checked="checked" value="1" />
+            <label for="pagomensual"> Al contado</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="dropdown-list dropdown-one-col">
+      <div class="dropdown-list-content" (click)="togglePlanDropdown()">
+        <div class="dropdown-list-info">
+          <span class="dropdown-list-info_description">Plan</span>
+          <span class="dropdown-list-info_option"> Internet OLO 50 GB por S/.150 al mes </span>
+        </div>
+        <i class="fas fa-chevron-down"> </i>
+      </div>
+      <div *ngIf="showPlanDropdown">
+        <ul>
+          <li class="dropdown-list_two-cols">
+            <input type="radio" id="plan1" name="plan" checked="checked" value="1" />
+            <label for="plan1"> Internet OLO 2.5 GB por S/.20 al mes </label>
+          </li>
+          <li class="dropdown-list_two-cols">
+            <input type="radio" id="plan1" name="plan" value="2" />
+            <label for="plan1"> Internet OLO 6 GB por S/.30 al mes </label>
+          </li>
+          <li class="dropdown-list_two-cols">
+            <input type="radio" id="plan1" name="plan" value="2" />
+            <label for="plan1"> Internet OLO 11 GB por S/.50 al mes </label>
+          </li>
+          <li class="dropdown-list_two-cols">
+            <input type="radio" id="plan1" name="plan" value="2" />
+            <label for="plan1"> Internet OLO 25 GB por S/.100 al mes </label>
+          </li>
+          <li class="dropdown-list_two-cols">
+            <input type="radio" id="plan1" name="plan" value="2" />
+            <label for="plan1"> Internet OLO 50 GB por S/.150 al mes </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="product-plan-detail">
+      <div class="product-plan-detail_info">
+        <span> Redes Sociales </span>
+      </div>
+    </div>
+    <section class="product-price">
+      <div class="product-price-content">
+        <div class="product-price-info">
+          <span class="product-price-info_payment-value"> S/ 16 </span>
+          <span class="product-price-info_payment-type"> Al Contado </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-buy-content">
+      <button type="submit"><i class="fas fa-shopping-cart"></i> COMPRAR</button>
+    </section>
+  </section>
+  <!-- End Product Info -->
+
+  <!-- Delivery Desktop -->
+  <section class="delivery-desktop">
+    <div class="delivery-desktop-box">
+      <div class="delivery-desktop-info">
+        <span><i class="fas fa-clock"></i></span><span>Delivery Regular</span>
+        <br />
+        <span class="legal">Coordinamos la fecha y hora de entrega.</span>
+      </div>
+
+      <div class="delivery-desktop-info">
+        <span><i class="fas fa-store"></i></span><span>Recojo en tienda</span>
+        <br />
+        <span class="legal">Disponible a nivel nacional.</span>
+      </div>
+    </div>
+  </section>
+  <section class="legal2">
+    <p>*Delivery gratis, sujeto a stock y cobertura</p>
+  </section>
+  <!-- End Delivery Desktop -->
+
+  <!-- Delivery Mobile -->
+  <section class="delivery-mobile">
+    <div class="delivery-mobile-box">
+      <span class="black">Despacho a domicilio</span>
+      <div class="delivery-mobile-info">
+        <i class="fas fa-truck"></i>
+        <div class="ml-2">
+          <span> Disponible</span>
+          <p>es gratis</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Delivery Mobile -->
+
+  <!-- Product Detail -->
+  <section class="product-detail">
+    <h2>OLO Chip Internet OLO Postpago</h2>
+    <div class="product-detail-features justify-content-center align-items-center">
+      <iframe
+        width="100%"
+        height="500px"
+        src="https://www.youtube.com/embed/7x-NJZQ4ImU"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen=""
+      ></iframe>
+    </div>
+  </section>
+  <!-- End Product Detail -->
+
+  <!-- Footer para producto -->
+  <div class="footer-product">
+    <div class="footer-product-content">
+      <span> Consideraciones </span>
+      <i class="fas fa-chevron-right"> </i>
+    </div>
+  </div>
+  <!-- Fin Footer para producto -->
+</main>

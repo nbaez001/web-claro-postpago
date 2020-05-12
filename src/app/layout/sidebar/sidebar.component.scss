@@ -29,10 +29,11 @@
 /* ---------- Sidebar ---------- */
 .filter-list {
   margin: 0;
-  padding: 20px 0 20px 6px;
-
+  background: #ffffff;
+  padding: 5px 0 5px 6px;
   @media only screen and (min-width: 1280px) {
     margin: 20px 0 -45px 30px;
+    padding: 20px 0 20px 6px;
     border-radius: 5px;
     background: #f4f4f4;
   }
@@ -40,24 +41,25 @@
   h2 {
     font-size: 16px;
     font-weight: 500;
-    margin: 0 10px 10px 10px;
+    margin: 0 10px 0px 10px;
 
     @media only screen and (min-width: 1280px) {
       font-size: 13px;
       font-weight: 500;
-      padding: 10px;
+      padding: 0px 10px;
       border-bottom: 1px solid #ffffff;
     }
   }
 }
 
 .menu-list {
-  margin: 0 0 20px 0;
+  margin: auto;
 
   @media only screen and (min-width: 1280px) {
     margin: 0;
     font-size: 13px;
     width: 100%;
+    margin: 0 0 15px 0;
   }
 
   li {
