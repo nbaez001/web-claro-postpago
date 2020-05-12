@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { ConstantsService } from 'src/app/services/constants.service';
-import { MarcaModel } from 'src/app/models/marca-list.model';
+import { BannerPostpaid } from '../../../models/banner-postpaid';
 
 @Component({
   selector: 'app-carousel',
@@ -10,6 +10,10 @@ import { MarcaModel } from 'src/app/models/marca-list.model';
 })
 export class CarouselComponent implements OnInit {
   slidesStore: any[];
+  private bannerWCM: string =
+    '[Plugin:RequestAttribute key="BannerPostpago" value="tienda virtual library/SA.BannerPostpago" compute="once"]\n' +
+    '[Component name="tienda virtual library/bannerpostpago"]';
+  public bannerPostpaid: Array<BannerPostpaid>;
 
   customOptions: OwlOptions = {
     loop: true,
@@ -43,5 +47,7 @@ export class CarouselComponent implements OnInit {
     this.slidesStore = constants.HOME_CAROUSEL_LIST_DATA;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.bannerPostpaid = JSON.parse(this.bannerWCM);
+  }
 }
