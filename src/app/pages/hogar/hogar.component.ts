@@ -20,13 +20,12 @@ export class HogarComponent implements OnInit {
   ngOnInit() {
     this.filterList = this.constants.HOGAR_LIST_DATA;
     this.dataservice.data$.emit(this.filterList);
-    // this.emitir();
-    this.dataservice.texto$.emit('FERBUS');
+    // this.dataservice.texto$.emit("FERBUS");
   }
 
   emitir() {
-    console.log('Emitiendo...');
-    this.dataservice.texto$.emit('FERBUS');
-    this.dataservice.data$.emit(this.filterList);
+    // console.log("Emitiendo...");
+    // this.dataservice.texto$.emit("FERBUS");
+    // this.dataservice.data$.emit(this.filterList);
   }
 }

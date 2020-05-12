@@ -15,7 +15,7 @@ export class SidebarComponent implements OnInit {
   vtexto: string;
 
   constructor(private dataservice: DataService) {
-    this.vtexto = 'Fernando';
+    this.vtexto = '';
   }
 
   ngOnInit() {
