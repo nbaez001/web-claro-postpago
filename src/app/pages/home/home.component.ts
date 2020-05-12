@@ -17,6 +17,8 @@ export class HomeComponent implements OnInit {
   public hogar: DeviceListModel[];
   public opciones: any[];
 
+  public showTermsDetail: boolean;
+
   customOptions: OwlOptions = {
     loop: true,
     autoplay: false,
@@ -26,7 +28,7 @@ export class HomeComponent implements OnInit {
     pullDrag: false,
     dots: true,
     navSpeed: 1500,
-    smartSpeed: 1500,
+    smartSpeed: 400,
     navText: ['', ''],
     nav: false,
     responsive: {
@@ -46,8 +48,9 @@ export class HomeComponent implements OnInit {
   };
 
   constructor(private constants: ConstantsService) {
+    this.showTermsDetail = false;
     this.masBuscados = constants.HOME_MAS_BUSCADOS_DATA;
-    this.tiendaHuawei = constants.HOME_DEVICE_LIST_DATA.slice(1, 7);
+    this.tiendaHuawei = constants.HOME_TIENDA_HUAWEI_DATA;
     this.marcas = constants.HOME_MARCA_LIST_DATA;
     this.nuevosLanzamientos = constants.HOME_DEVICE_LIST_DATA.slice(1, 4);
     this.hogar = constants.HOME_DEVICE_LIST_DATA.slice(1, 4);

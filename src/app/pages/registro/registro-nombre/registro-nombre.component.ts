@@ -16,6 +16,6 @@ export class RegistroNombreComponent implements OnInit {
    *
    */
   public registroDetalle() {
-    this.router.navigateByUrl('paso-2');
+    this.router.navigateByUrl('/registro/paso-2');
   }
 }

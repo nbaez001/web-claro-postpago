@@ -24,7 +24,7 @@ export class CarouselComponent implements OnInit {
     pullDrag: false,
     dots: true,
     navSpeed: 1500,
-    smartSpeed: 1500,
+    smartSpeed: 500,
     navText: ['', ''],
     nav: false,
     responsive: {

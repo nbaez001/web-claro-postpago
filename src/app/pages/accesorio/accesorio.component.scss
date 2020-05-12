@@ -8,7 +8,7 @@
 
 .main-content {
   display: grid;
-  grid-template-columns: 15% auto;
+  grid-template-columns: 17% auto;
 
   @media screen and (max-width: 1279px) {
     display: grid;
@@ -68,10 +68,19 @@
         max-width: 347px;
         box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
         border: none;
+        a:hover {
+          border-radius: 10px;
+          background-color: transparent;
+          box-shadow: 0 0 15px #ffffff;
+        }
+      }
+      a {
+        width: 100%;
       }
       .card {
         border-radius: 10px;
         width: 100%;
+
         .card-header .bold-negro-1 {
           width: 100%;
           float: left;

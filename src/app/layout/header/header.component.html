@@ -39,7 +39,7 @@
       <ul>
         <ng-container *ngFor="let item of menuList">
           <li>
-            <a routerLink="{{ item.itemUrl }}">{{ item.itemLabel }}</a>
+            <a (click)="redirectTo(item.itemUrl)">{{ item.itemLabel }}</a>
           </li>
         </ng-container>
       </ul>
