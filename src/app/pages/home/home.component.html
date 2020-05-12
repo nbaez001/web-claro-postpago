@@ -1,43 +1,34 @@
 <div class="main-content">
   <app-carousel></app-carousel>
   <main>
-    <section class="marcas-list">
+    <section class="marcas-list ocultar">
       <ng-container *ngFor="let marc of marcas">
-        <a routerLink="/catalog">
-          <div class="marcas">
+        <div class="item">
+          <a routerLink="/catalog">
             <img alt="{{ marc.deviceName }}" src="{{ marc.marcaUrl }}" />
-          </div>
-        </a>
+          </a>
+        </div>
       </ng-container>
     </section>
 
-    <section class="titulo">
+    <div class="titulo">
       <h1>Lo más buscado</h1>
-    </section>
+    </div>
 
     <section class="mas-buscado-list">
       <ng-container *ngFor="let device of masBuscados">
-        <a class="devices" [routerLink]="device.productUrl" [ngStyle]="{ 'background-image': 'url(' + device.deviceImgSrc + ')' }">
+        <a class="item" [routerLink]="device.productUrl" [ngStyle]="{ 'background-image': 'url(' + device.deviceImgSrc + ')' }">
           <div>
-            <div class="device-title">
-              <div class="info">
-                <span class="item-name">{{ device.deviceName }}</span>
-              </div>
-            </div>
-            <!--<div class="device-image">
-              <div class="image">
-                <img alt="{{ device.deviceName }}" src="{{ device.deviceImgSrc }}"/>
-              </div>
-            </div>-->
+            <h4>{{ device.deviceName }}</h4>
           </div>
         </a>
       </ng-container>
     </section>
 
-    <section class="titulo">
+    <div class="titulo">
       <h1>Tienda Oficial Huawei</h1>
       <a [routerLink]="['/catalog']">ver más</a>
-    </section>
+    </div>
 
     <section class="huawei-list">
       <owl-carousel-o [options]="customOptions">
@@ -65,29 +56,18 @@
                     </div>
                   </div>
                 </div>
-                <div class="device-plan">
-                  <!-- <span><strong>{{ device.price.paymentValue }}</strong>Precio del equipo</span>
-                  <span>Plan Max Ilimitado {{ device.plan }}</span> -->
-                </div>
+                <div class="device-plan"></div>
               </div>
             </a>
           </ng-template>
         </ng-container>
       </owl-carousel-o>
-
-      <!-- <owl-carousel-o [options]="customOptions">
-        <ng-container *ngFor="let slide of slidesStore">
-          <ng-template carouselSlide [id]="slide.id">
-            <img [src]="slide.src" [alt]="slide.alt" [title]="slide.titulo" />
-          </ng-template>
-        </ng-container>
-      </owl-carousel-o> -->
     </section>
 
-    <section class="titulo ocultar">
+    <div class="titulo ocultar">
       <h1>Nuevos lanzamientos</h1>
       <a [routerLink]="['/catalog']">ver todos</a>
-    </section>
+    </div>
 
     <section class="catalog-list">
       <ng-container *ngFor="let device of nuevosLanzamientos">
@@ -128,10 +108,10 @@
       </ng-container>
     </section>
 
-    <section class="titulo ocultar">
+    <div class="titulo ocultar">
       <h1>Hogar</h1>
       <a [routerLink]="['/catalog']">ver todos</a>
-    </section>
+    </div>
 
     <section class="catalog-list">
       <ng-container *ngFor="let device of hogar">
@@ -172,382 +152,444 @@
       </ng-container>
     </section>
 
-    <div class="content_pag404">
-      <section class="title_404">
-        <h1>También tenemos estas opciones</h1>
-      </section>
+    <section class="opciones-home mobile">
+      <div class="opciones-titulo">
+        También tenemos estas opciones
+      </div>
+    </section>
 
-      <section class="opciones_desktop">
-        <a href="/catalogo/personas/portabilidad/acuerdo-18/celulares/todos/todos" class="opcion">
-          <div>
-            <p class="icon">
-              <img src="https://static.claro.com.pe/img/otros/portar.svg" />
-            </p>
-            <span class="barrita"></span>
-            <p class="titulo">Portar</p>
-            <p class="mensaje">Trae tu línea a Claro y mantén tu mismo número</p>
-          </div>
-        </a>
+    <section class="opciones mobile">
+      <!-- empty section -->
+      <a href="/catalogo/personas/hogar-inalambrico/todos/hogar/todos/todos" class="opcion">
+        <div>
+          <p class="icon">
+            <img src="https://static.claro.com.pe/img/otros/portar.svg" />
+          </p>
+          <span class="barrita"></span>
+          <p class="titulo">
+            Para el Hogar
+          </p>
 
-        <a href="/catalogo/personas/renovacion/acuerdo-18/celulares/todos/todos" class="opcion">
-          <div>
-            <p class="icon">
-              <img src="https://static.claro.com.pe/img/otros/renovar.svg" />
-            </p>
-            <span class="barrita"></span>
-            <p class="titulo">Renovar</p>
-            <p class="mensaje">Si ya eres cliente renueva tu equipo</p>
-          </div>
-        </a>
-        <a href="https://tienda.claro.com.pe" class="opcion">
-          <div>
-            <p class="icon">
-              <img src="https://static.claro.com.pe/img/otros/prepagos.svg" />
-            </p>
-            <span class="barrita"></span>
-            <p class="titulo">Prepago</p>
-            <p class="mensaje">Prepago chévere, Compra tu prepago aquí.</p>
-          </div>
-        </a>
-        <a href="/catalogo/personas/accesorios/acuerdo-18/accesorios/todos/todos" class="opcion">
-          <div>
-            <p class="icon">
-              <img src="https://static.claro.com.pe/img/otros/accesorios.svg" />
-            </p>
-            <span class="barrita"></span>
-            <p class="titulo">Accesorios</p>
-            <p class="mensaje">Tenemos los accesorios más chéveres para ti</p>
-          </div>
-        </a>
-      </section>
-
-      <section class="contactos_desktop">
-        <div class="opcion">
-          <p><i class="fas fa-comment-dots"></i></p>
-          <p class="text_chat">Chatear</p>
-          <p class="text_ingresa">
-            <!-- a href="https://claroperu.s1gateway.com/webchat/chat_embed.php?cpgid=10002&amp;nw=1" target="_blank" -->
-            <a href="">Ingresa aquí</a>
+          <p class="des">
+            Internet + TV + Telefonía Fija
           </p>
         </div>
-        <div class="opcion">
-          <p><i class="fas fa-phone"></i></p>
-          <p class="text_chat">Llámanos</p>
-          <p class="text_telf"><a href="">0800 00334</a></p>
+      </a>
+      <a href="/catalogo/personas/linea-nueva/acuerdo-18/chipinternet/chipinternetpostpago/todos" class="opcion">
+        <div>
+          <p class="icon">
+            <img src="https://static.claro.com.pe/img/otros/portar.svg" />
+          </p>
+          <span class="barrita"></span>
+          <p class="titulo">
+            Chip Internet
+          </p>
+
+          <p class="des">
+            Conéctate a internet de forma rápida y segura.
+          </p>
         </div>
-      </section>
-    </div>
+      </a>
+      <a href="/catalogo/personas/portabilidad/acuerdo-18/celulares/todos/todos" class="opcion">
+        <div>
+          <p class="icon">
+            <img src="https://static.claro.com.pe/img/otros/portar.svg" />
+          </p>
+          <span class="barrita"></span>
+          <p class="titulo">
+            Portar
+          </p>
+
+          <p class="des">
+            Trae tu línea a Claro y mantén tu mismo número
+          </p>
+        </div>
+      </a>
+      <a href="/catalogo/personas/renovacion/acuerdo-18/celulares/todos/todos" class="opcion">
+        <div>
+          <p class="icon">
+            <img src="https://static.claro.com.pe/img/otros/renovar.svg" />
+          </p>
+          <span class="barrita"></span>
+          <p class="titulo">
+            Renovar
+          </p>
+          <p class="des">
+            Si ya eres cliente renueva tu equipo
+          </p>
+        </div>
+      </a>
+      <a href="https://tienda.claro.com.pe" class="opcion">
+        <div>
+          <p class="icon">
+            <img src="https://static.claro.com.pe/img/otros/prepagos.svg" />
+          </p>
+          <span class="barrita"></span>
+          <p class="titulo">
+            Prepago
+          </p>
+          <p class="des">
+            Prepago chévere, Compra tu prepago aquí.
+          </p>
+        </div>
+      </a>
+      <a href="/catalogo/personas/accesorios/acuerdo-18/accesorios/todos/todos" class="opcion">
+        <div>
+          <p class="icon">
+            <img src="https://static.claro.com.pe/img/otros/accesorios.svg" />
+          </p>
+          <span class="barrita"></span>
+          <p class="titulo">
+            Accesorios
+          </p>
+          <p class="des">
+            Tenemos los accesorios más chéveres para ti
+          </p>
+        </div>
+      </a>
+    </section>
+
+    <section class="opciones-contacto mobile">
+      <div class="opcion">
+        <p>
+          <i class="fas fa-comment-dots"> </i>
+        </p>
+        <p>
+          Chatear
+        </p>
+        <p>
+          <a href="https://claroperu.s1gateway.com/webchat/chat_embed.php?cpgid=10002&amp;nw=1" target="_blank">
+            Ingresa aquí
+          </a>
+        </p>
+      </div>
+      <div class="opcion">
+        <p>
+          <i class="fas fa-phone"> </i>
+        </p>
+        <p>
+          Llámanos
+        </p>
+        <p>
+          <a class="bold" href="tel:0800 00334">
+            0800 00334
+          </a>
+        </p>
+      </div>
+    </section>
   </main>
-</div>
 
-<div class="terminos">
-  <div class="terms" (click)="showTermsDetail = !showTermsDetail">
-    <i class="fas fa-file-alt"></i>
-    Ver términos y condiciones
-  </div>
-  <div class="terms-detail" *ngIf="showTermsDetail">
-    <p><strong>Consideraciones generales de los planes móviles Internet OLO postpago;</strong></p>
-    <p>
-      Válido del: 01/05/2020 al 31/05/2020 y/o hasta agotar stock. Los planes INTERNET OLO aplican para Altas Nuevas, Renovación y Cambios
-      de plan (de Prepago a Postpago y Postpago a Postpago). Los megabytes (MB) no consumidos en el ciclo de facturación no se acumularán al
-      siguiente ciclo, es decir, se perderán una vez culminado el ciclo de facturación del cliente en el cual fueron entregados. Los MB
-      otorgados por los Planes INTERNET OLO sólo podrán ser utilizados en territorio nacional y siempre que CLARO cuente con cobertura en la
-      zona en la que se encuentre EL CLIENTE. Conoce mas de los planes OLO
-      <a title="aquí" href="https://www.claro.com.pe/personas/movil/internet-movil/" target="_blank">aquí</a>
-    </p>
-    <p>
-      Cuando el cliente se encuentre en una zona de cobertura 4.5G, 4G, 3G o 2G y realizar la navegación por internet a través de un equipo
-      móvil, la velocidad será:
-    </p>
-    <table class="table-condiciones">
-      <tbody>
-        <tr style="height: 42.7327px;">
-          <td style="width: 73.8194px; height: 123.733px;" rowspan="2">
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>
-              <strong><em>Tecnología</em></strong>
-            </p>
-          </td>
-          <td style="width: 139.375px; height: 42.7327px;" colspan="2">
-            <p>
-              <strong><em>Bajada</em></strong>
-            </p>
-            <p><em>(Descarga)</em></p>
-          </td>
-          <td style="width: 141.597px; height: 42.7327px;" colspan="2">
-            <p>
-              <strong><em>Subida</em></strong>
-            </p>
-            <p><em>(Carga)</em></p>
-          </td>
-        </tr>
-        <tr style="height: 81px;">
-          <td style="width: 52.7083px; height: 81px;">
-            <p>
-              <strong><em>Máxima </em></strong>
-            </p>
-            <p><em>&nbsp;(Mbps)</em></p>
-          </td>
-          <td style="width: 81.5972px; height: 81px;">
-            <p>
-              <strong><em>Mínima </em></strong>
-            </p>
-            <p>
-              <strong><em>garantizada</em></strong>
-            </p>
-            <p><em>(Mbps)</em></p>
-          </td>
-          <td style="width: 53.8194px; height: 81px;">
-            <p>
-              <strong><em>Máxima</em></strong>
-            </p>
-            <p><em>&nbsp;(Mbps)</em></p>
-          </td>
-          <td style="width: 82.7083px; height: 81px;">
-            <p>
-              <strong><em>Mínima </em></strong>
-            </p>
-            <p>
-              <strong><em>garantizada</em></strong>
-            </p>
-            <p><em>(Mbps)</em></p>
-          </td>
-        </tr>
-        <tr style="height: 27px;">
-          <td style="width: 73.8194px; height: 27px;">
-            <p><em>4.5G (*)</em></p>
-          </td>
-          <td style="width: 52.7083px; height: 27px;">
-            <p><em>10</em></p>
-          </td>
-          <td style="width: 81.5972px; height: 27px;">
-            <p><em>4</em></p>
-          </td>
-          <td style="width: 53.8194px; height: 27px;">
-            <p><em>2</em></p>
-          </td>
-          <td style="width: 82.7083px; height: 27px;">
-            <p><em>1</em></p>
-          </td>
-        </tr>
-        <tr style="height: 22px;">
-          <td style="width: 73.8194px; height: 22px;">
-            <p><em>4G </em></p>
-          </td>
-          <td style="width: 52.7083px; height: 22px;">
-            <p><em>5</em></p>
-          </td>
-          <td style="width: 81.5972px; height: 22px;">
-            <p><em>2</em></p>
-          </td>
-          <td style="width: 53.8194px; height: 22px;">
-            <p><em>1</em></p>
-          </td>
-          <td style="width: 82.7083px; height: 22px;">
-            <p><em>0.4</em></p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <p>
-      La comunicación, velocidad y transmisión de datos a través del servicio Banda Ancha Móvil se encuentra sujeto a la aptitud, correcta
-      configuración del terminal, velocidad máxima de transmisión de datos del terminal, así como a la disponibilidad, restricciones de uso,
-      limitaciones, contingencias, eventos extraordinarios (ejm: un sismo), la congestión de Internet nacional o internacional, las
-      condiciones y capacidades de la PC del usuario, las aplicaciones del servicio que use el cliente, entre otros factores externos a
-      Claro. Los únicos APN (Access Point Network) sobre el cual se aplica el servicio de banda ancha móvil por defecto es: claro.pe Cuando
-      el cliente se encuentre en una zona de cobertura 4G (LTE), cuente con un chip 4G (LTE) y la navegación por internet sea efectuada a
-      través de un terminal que soporte la tecnología 4G (LTE), la velocidad de bajada (downlink) será de hasta 5Mbps y velocidad de subida
-      (uplink) de hasta 1 Mbps. La velocidad mínima garantizada de bajada (downlink) será de 2 Mbps y de subida (uplink) será de 0.4 Mbps.
-      Ver mas consideraciones aquí
-    </p>
-    <p><strong>Sobre Claro video</strong></p>
-    <p>
-      Claro video no se encuentra disponible para líneas corporativas. La descarga y uso de la aplicación requiere equipo compatible con
-      sistema operativo Android 3.1 en adelante o iOS 5.0 en adelante y conexión Wi-Fi o uso de datos a tarifas del plan. Los clientes que
-      contraten (alta nueva, portabilidad, migración y renovación) uno de los planes Internet OLO 5GB, 10GB, 20GB y 40GB podrán activar
-      Claro video y acceder al contenido de la sección Catalogo sin costo por 24 MESES (Información Comercial). Costo de suscripción mensual
-      es de S/ 22.00. Puedes afiliar hasta 5 dispositivos compatibles, y para una reproducción óptima de los contenidos del servicio, se
-      recomienda tener una conexión de Internet de una velocidad mínima de 4 Mb. Conoce más consideraciones y restricciones en
-      <a href="http://www.clarovideo.com" target="_blank">http://www.clarovideo.com.</a>
-      consultar costo por delivery y sujeto a evaluación crediticia.
-    </p>
-    <p><strong> Consideraciones - Router OLO Portatil MF920V:</strong></p>
-    <p>
-      Requisitos del Sistema: Windows XP SP3 / Vista / 7 / 8 Mac OS X 10.5 / 10.6 / 10.7 / 10.8. Frecuencia: 2.5 – 2.6 GHz, BW: 10Mhz.
-      Alcance de WIFI: de 10 a 15 metros como máximo en ambientes exteriores. El alcance de WIFI se ve reducido en interiores. Cargador USB.
-      Wi-Fi inalámbrico de 300Mbps. La señal WIFI atraviesa hasta 1 pared, dentro de un mismo domicilio. No se puede garantizar alcance de
-      señal WIFI de un piso a otro. Recuerda que a mayores conexiones en simultáneo puede disminuir el rendimiento de tu router.
-    </p>
-    <p><strong>Consideraciones generales Internet Fijo Inalámbrico</strong></p>
-    <p>
-      Válido del: 01/05/2020 al 31/05/2020 y/o hasta agotar stock. Todas las tarifas se encuentran expresadas en soles e incluyen IGV.
-      1Play, implica la contratación de un servicio. El servicio se contratará a plazo indeterminado. Los días de servicio recibido durante
-      el mes de venta serán facturados (prorrateo) en el último mes del servicio del cliente. La presente tarifa también será de aplicación
-      para todas aquellas personas naturales o jurídicas que califiquen como “clientes comerciales”. Los criterios para calificar como tales
-      son (i) contar con un RUC activo; y, (ii) realizar actividades económicas, usando el servicio para fines comerciales o de negocio.
-      Para el caso de venta de 1 Play de Internet, se deberá asignar un número disponible en el rango de numeración ficticia disponible para
-      este producto. En caso el cliente solicite el servicio de Internet Inalámbrico sin la compra de equipo, el cliente deberá contar con
-      un equipo homologado por CLARO. Todos los servicio para el hogar, están sujetos a cobertura y facilidades técnicas. La información
-      actualizada de nuestra cobertura se encuentra en
-      <a href="http://cobertura.claro.com.pe/" target="_blank">http://cobertura.claro.com.pe/</a>
-    </p>
-    <p><strong>Consideraciones del Servicio de Internet</strong></p>
-    <p>
-      La velocidad mínima garantizada asciende al 40% de la velocidad contratada por el cliente. Esta velocidad debe ser medida mediante
-      cable Ethernet. El internet será ilimitado para todos los planes y la velocidad de descarga y subida se reducirá a 0.5 Mbps de acuerdo
-      al consumo indicado:
-    </p>
+  <div class="terminos">
+    <div class="terms" (click)="showTermsDetail = !showTermsDetail">
+      <i class="fas fa-file-alt"></i>
+      Ver términos y condiciones
+    </div>
+    <div class="terms-detail" *ngIf="showTermsDetail">
+      <p><strong>Consideraciones generales de los planes móviles Internet OLO postpago;</strong></p>
+      <p>
+        Válido del: 01/05/2020 al 31/05/2020 y/o hasta agotar stock. Los planes INTERNET OLO aplican para Altas Nuevas, Renovación y Cambios
+        de plan (de Prepago a Postpago y Postpago a Postpago). Los megabytes (MB) no consumidos en el ciclo de facturación no se acumularán
+        al siguiente ciclo, es decir, se perderán una vez culminado el ciclo de facturación del cliente en el cual fueron entregados. Los MB
+        otorgados por los Planes INTERNET OLO sólo podrán ser utilizados en territorio nacional y siempre que CLARO cuente con cobertura en
+        la zona en la que se encuentre EL CLIENTE. Conoce mas de los planes OLO
+        <a title="aquí" href="https://www.claro.com.pe/personas/movil/internet-movil/" target="_blank">aquí</a>
+      </p>
+      <p>
+        Cuando el cliente se encuentre en una zona de cobertura 4.5G, 4G, 3G o 2G y realizar la navegación por internet a través de un
+        equipo móvil, la velocidad será:
+      </p>
+      <table class="table-condiciones">
+        <tbody>
+          <tr style="height: 42.7327px;">
+            <td style="width: 73.8194px; height: 123.733px;" rowspan="2">
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>
+                <strong><em>Tecnología</em></strong>
+              </p>
+            </td>
+            <td style="width: 139.375px; height: 42.7327px;" colspan="2">
+              <p>
+                <strong><em>Bajada</em></strong>
+              </p>
+              <p><em>(Descarga)</em></p>
+            </td>
+            <td style="width: 141.597px; height: 42.7327px;" colspan="2">
+              <p>
+                <strong><em>Subida</em></strong>
+              </p>
+              <p><em>(Carga)</em></p>
+            </td>
+          </tr>
+          <tr style="height: 81px;">
+            <td style="width: 52.7083px; height: 81px;">
+              <p>
+                <strong><em>Máxima </em></strong>
+              </p>
+              <p><em>&nbsp;(Mbps)</em></p>
+            </td>
+            <td style="width: 81.5972px; height: 81px;">
+              <p>
+                <strong><em>Mínima </em></strong>
+              </p>
+              <p>
+                <strong><em>garantizada</em></strong>
+              </p>
+              <p><em>(Mbps)</em></p>
+            </td>
+            <td style="width: 53.8194px; height: 81px;">
+              <p>
+                <strong><em>Máxima</em></strong>
+              </p>
+              <p><em>&nbsp;(Mbps)</em></p>
+            </td>
+            <td style="width: 82.7083px; height: 81px;">
+              <p>
+                <strong><em>Mínima </em></strong>
+              </p>
+              <p>
+                <strong><em>garantizada</em></strong>
+              </p>
+              <p><em>(Mbps)</em></p>
+            </td>
+          </tr>
+          <tr style="height: 27px;">
+            <td style="width: 73.8194px; height: 27px;">
+              <p><em>4.5G (*)</em></p>
+            </td>
+            <td style="width: 52.7083px; height: 27px;">
+              <p><em>10</em></p>
+            </td>
+            <td style="width: 81.5972px; height: 27px;">
+              <p><em>4</em></p>
+            </td>
+            <td style="width: 53.8194px; height: 27px;">
+              <p><em>2</em></p>
+            </td>
+            <td style="width: 82.7083px; height: 27px;">
+              <p><em>1</em></p>
+            </td>
+          </tr>
+          <tr style="height: 22px;">
+            <td style="width: 73.8194px; height: 22px;">
+              <p><em>4G </em></p>
+            </td>
+            <td style="width: 52.7083px; height: 22px;">
+              <p><em>5</em></p>
+            </td>
+            <td style="width: 81.5972px; height: 22px;">
+              <p><em>2</em></p>
+            </td>
+            <td style="width: 53.8194px; height: 22px;">
+              <p><em>1</em></p>
+            </td>
+            <td style="width: 82.7083px; height: 22px;">
+              <p><em>0.4</em></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        La comunicación, velocidad y transmisión de datos a través del servicio Banda Ancha Móvil se encuentra sujeto a la aptitud, correcta
+        configuración del terminal, velocidad máxima de transmisión de datos del terminal, así como a la disponibilidad, restricciones de
+        uso, limitaciones, contingencias, eventos extraordinarios (ejm: un sismo), la congestión de Internet nacional o internacional, las
+        condiciones y capacidades de la PC del usuario, las aplicaciones del servicio que use el cliente, entre otros factores externos a
+        Claro. Los únicos APN (Access Point Network) sobre el cual se aplica el servicio de banda ancha móvil por defecto es: claro.pe
+        Cuando el cliente se encuentre en una zona de cobertura 4G (LTE), cuente con un chip 4G (LTE) y la navegación por internet sea
+        efectuada a través de un terminal que soporte la tecnología 4G (LTE), la velocidad de bajada (downlink) será de hasta 5Mbps y
+        velocidad de subida (uplink) de hasta 1 Mbps. La velocidad mínima garantizada de bajada (downlink) será de 2 Mbps y de subida
+        (uplink) será de 0.4 Mbps. Ver mas consideraciones aquí
+      </p>
+      <p><strong>Sobre Claro video</strong></p>
+      <p>
+        Claro video no se encuentra disponible para líneas corporativas. La descarga y uso de la aplicación requiere equipo compatible con
+        sistema operativo Android 3.1 en adelante o iOS 5.0 en adelante y conexión Wi-Fi o uso de datos a tarifas del plan. Los clientes que
+        contraten (alta nueva, portabilidad, migración y renovación) uno de los planes Internet OLO 5GB, 10GB, 20GB y 40GB podrán activar
+        Claro video y acceder al contenido de la sección Catalogo sin costo por 24 MESES (Información Comercial). Costo de suscripción
+        mensual es de S/ 22.00. Puedes afiliar hasta 5 dispositivos compatibles, y para una reproducción óptima de los contenidos del
+        servicio, se recomienda tener una conexión de Internet de una velocidad mínima de 4 Mb. Conoce más consideraciones y restricciones
+        en
+        <a href="http://www.clarovideo.com" target="_blank">http://www.clarovideo.com.</a>
+        consultar costo por delivery y sujeto a evaluación crediticia.
+      </p>
+      <p><strong> Consideraciones - Router OLO Portatil MF920V:</strong></p>
+      <p>
+        Requisitos del Sistema: Windows XP SP3 / Vista / 7 / 8 Mac OS X 10.5 / 10.6 / 10.7 / 10.8. Frecuencia: 2.5 – 2.6 GHz, BW: 10Mhz.
+        Alcance de WIFI: de 10 a 15 metros como máximo en ambientes exteriores. El alcance de WIFI se ve reducido en interiores. Cargador
+        USB. Wi-Fi inalámbrico de 300Mbps. La señal WIFI atraviesa hasta 1 pared, dentro de un mismo domicilio. No se puede garantizar
+        alcance de señal WIFI de un piso a otro. Recuerda que a mayores conexiones en simultáneo puede disminuir el rendimiento de tu
+        router.
+      </p>
+      <p><strong>Consideraciones generales Internet Fijo Inalámbrico</strong></p>
+      <p>
+        Válido del: 01/05/2020 al 31/05/2020 y/o hasta agotar stock. Todas las tarifas se encuentran expresadas en soles e incluyen IGV.
+        1Play, implica la contratación de un servicio. El servicio se contratará a plazo indeterminado. Los días de servicio recibido
+        durante el mes de venta serán facturados (prorrateo) en el último mes del servicio del cliente. La presente tarifa también será de
+        aplicación para todas aquellas personas naturales o jurídicas que califiquen como “clientes comerciales”. Los criterios para
+        calificar como tales son (i) contar con un RUC activo; y, (ii) realizar actividades económicas, usando el servicio para fines
+        comerciales o de negocio. Para el caso de venta de 1 Play de Internet, se deberá asignar un número disponible en el rango de
+        numeración ficticia disponible para este producto. En caso el cliente solicite el servicio de Internet Inalámbrico sin la compra de
+        equipo, el cliente deberá contar con un equipo homologado por CLARO. Todos los servicio para el hogar, están sujetos a cobertura y
+        facilidades técnicas. La información actualizada de nuestra cobertura se encuentra en
+        <a href="http://cobertura.claro.com.pe/" target="_blank">http://cobertura.claro.com.pe/</a>
+      </p>
+      <p><strong>Consideraciones del Servicio de Internet</strong></p>
+      <p>
+        La velocidad mínima garantizada asciende al 40% de la velocidad contratada por el cliente. Esta velocidad debe ser medida mediante
+        cable Ethernet. El internet será ilimitado para todos los planes y la velocidad de descarga y subida se reducirá a 0.5 Mbps de
+        acuerdo al consumo indicado:
+      </p>
 
-    <table class="tabla-velocidad">
-      <tbody>
-        <tr>
-          <td>
-            <p>&nbsp;</p>
-            <p><strong>Velocidad contratada</strong></p>
-          </td>
-          <td>
-            <p>&nbsp;</p>
-            <p><strong>GB libres sin degradación*</strong></p>
-          </td>
-          <td>
-            <p>&nbsp;</p>
-            <p><strong>Velocidad Máxima de Bajada/Subida</strong></p>
-          </td>
-          <td>
-            <p>&nbsp;</p>
-            <p><strong>Velocidad Mínima Asegurada de Bajada/Subida</strong></p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>Internet Fijo 15 Mbps</p>
-          </td>
-          <td>
-            <p>220 GB</p>
-          </td>
-          <td>
-            <p>0.5 Mbps</p>
-          </td>
-          <td>
-            <p>0.2 Mbps</p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>Internet Fijo 20 Mbps</p>
-          </td>
-          <td>
-            <p>270 GB</p>
-          </td>
-          <td>
-            <p>0.5 Mbps</p>
-          </td>
-          <td>
-            <p>0.2 Mbps</p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>Internet Fijo 15 Mbps UP</p>
-          </td>
-          <td>
-            <p>350 GB</p>
-          </td>
-          <td>
-            <p>0.5 Mbps</p>
-          </td>
-          <td>
-            <p>0.2 Mbps</p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>Internet Fijo 20 Mbps UP</p>
-          </td>
-          <td>
-            <p>550 GB</p>
-          </td>
-          <td>
-            <p>0.5 Mbps</p>
-          </td>
-          <td>
-            <p>0.2 Mbps</p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+      <table class="tabla-velocidad">
+        <tbody>
+          <tr>
+            <td>
+              <p>&nbsp;</p>
+              <p><strong>Velocidad contratada</strong></p>
+            </td>
+            <td>
+              <p>&nbsp;</p>
+              <p><strong>GB libres sin degradación*</strong></p>
+            </td>
+            <td>
+              <p>&nbsp;</p>
+              <p><strong>Velocidad Máxima de Bajada/Subida</strong></p>
+            </td>
+            <td>
+              <p>&nbsp;</p>
+              <p><strong>Velocidad Mínima Asegurada de Bajada/Subida</strong></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Internet Fijo 15 Mbps</p>
+            </td>
+            <td>
+              <p>220 GB</p>
+            </td>
+            <td>
+              <p>0.5 Mbps</p>
+            </td>
+            <td>
+              <p>0.2 Mbps</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Internet Fijo 20 Mbps</p>
+            </td>
+            <td>
+              <p>270 GB</p>
+            </td>
+            <td>
+              <p>0.5 Mbps</p>
+            </td>
+            <td>
+              <p>0.2 Mbps</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Internet Fijo 15 Mbps UP</p>
+            </td>
+            <td>
+              <p>350 GB</p>
+            </td>
+            <td>
+              <p>0.5 Mbps</p>
+            </td>
+            <td>
+              <p>0.2 Mbps</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Internet Fijo 20 Mbps UP</p>
+            </td>
+            <td>
+              <p>550 GB</p>
+            </td>
+            <td>
+              <p>0.5 Mbps</p>
+            </td>
+            <td>
+              <p>0.2 Mbps</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-    <p><strong>Condiciones aplicables a los planes Max Ilimitados:</strong></p>
-    <p>
-      Los planes MAX Ilimitados 65.00, 75.00, 85.00, 105.00, 125.00, 159.90, 189.90 y 289.90 son para uso personal del cliente, siendo
-      condición esencial que los minutos, SMS y datos ilimitados no sean utilizados para comercialización, reventa, uso que no sean en otros
-      dispositivos celulares móviles, y que no se desnaturalice el uso personal del servicio.
-    </p>
-    <p>
-      El internet ilimitado no podrá ser utilizado para realizar telemetría, proxys, Peer2Peer, aplicaciones informativas, o similares. En
-      cualquier caso, América Móvil Perú S.A.C. se reserva el derecho de tomar las acciones regulatorias contempladas en la normativa
-      vigente, por el incumplimiento de las condiciones pactadas con el cliente. Si el cliente requiere utilizar algunos de los servicios
-      antes descritos, podrá hacer uso de ellos contratando de paquetes adicionales de la oferta vigente. Ver consideraciones
-      <a href="https://www.claro.com.pe/personas/movil/postpago/planes-max/consideraciones/">aquí</a>
-    </p>
-    <p><strong>Consideraciones generales de la Tienda</strong></p>
-    <p>
-      Precio válido del: 01/05/2020 al 19/05/2020 y/o hasta agotar stock y no incluyen cargo fijo mensual de Plan Postpago. Sujeto a
-      evaluación crediticia que podría requerir el pago de rentas adelantadas. Stock mínimo en web: 15 equipos por modelo. Máximo 1
-      accesorio por cada equipo. El color del accesorio es al azar. Claro no se responsabiliza por el funcionamiento de los accesorios.
-      Sujeto a cobertura de entrega.
-    </p>
-    <p>
-      Precios para renovación Postpago: aplica con acuerdo de equipos vencido. Precios válidos solo en catalogo.claro.com.pe. Pago
-      únicamente con tarjeta Visa o Mastercard, no se acepta efectivo. Entrega de equipos sólo vía delivery en algunas zonas de Lima
-      Metropolitana, sujeto a cobertura de entregas. Equipos con tecnología 4GLTE: Velocidad mínima en cobertura 4G LTE: 1.2Mbps de bajada.
-      Requiere chip 4G LTE y plan compatible. Consulta mapa de cobertura y restricciones en
-      <a href="http://www.claro.com.pe/personas/movil/4g-lte/" target="_blank">http://www.claro.com.pe/personas/movil/4g-lte/.</a>
-      Color mostrado en la página es referencial. Válido para personas naturales y personas con RUC 10 y RUC 20 que solo posean un
-      representante legal. Precios para Portabilidad Postpago: Válidos para líneas con más de 9 meses en el operador cedente.
-    </p>
-    <p><strong>Consideraciones Promoción Accesorios:</strong></p>
-    <p>
-      Vigencia: Desde el 01.05.2020 al 31.05.2020 y/o hasta agotar stock. Válido para Alta, Renovación, Migración y Portabilidad. Válido en
-      Venta al Contado con acuerdo de equipos a 12 o 18 meses; como en Venta en Cuotas a 12 o 18 cuotas mensuales. Máximo 2 equipos por
-      cliente. El cliente recibirá sólo 1 accesorio por equipo comprado. No aplica para cliente Corporativos. Delivery de equipo válido sólo
-      en Lima Metropolitana y sujeto a cobertura. Sujeto a evaluación crediticia. Claro no se responsabiliza por el funcionamiento de los
-      accesorios. Accesorios de la promoción Audifonos Freebuds 3, Wacht GT2 Latona, Wacht GT2 Diana y Parlante CM51. Por la compra de los
-      siguientes equipos Huawei P30 Lite, Huawei P30, Huawei P30 Pro y Huawei Nova 5T en cualquier plan Prepago o Postpago
-    </p>
-    <p><strong>Delivery de equipo sujeto a cobertura*</strong></p>
-    <p>
-      Revisa las condiciones de garantía de equipos comercializados por Claro&nbsp;<a
-        href="http://www.claro.com.pe/personas/movil/garantia_equipos/"
-        >aquí</a
-      >&nbsp;
-    </p>
-    <p>
-      Revisa las condiciones de los planes Max ilimitados&nbsp;<a
-        title="aquí"
-        href="https://www.claro.com.pe/personas/movil/postpago/planes-max/"
-        >aquí</a
-      >&nbsp;
-    </p>
-    <p><strong>Consideraciones Portabilidad y Renovación Exclusiva (sin cuotas y con cuotas)</strong></p>
-    <p>
-      Portabilidad Exclusiva: Precio válido del 01/05/2020 hasta el 31/05/2020. Válido para clientes que tengan más de 9 meses en el
-      operador cedente y sujeto a evaluación crediticia.
-    </p>
-    <p>
-      Renovación Exclusiva: Precio válido del 01/05/2020 hasta el 31/05/2020. Válido para clientes con más de 18 meses o más de antigüedad y
-      sujeto a evaluación crediticia. Solo aplica si el cliente mantiene su cargo fijo o lo incrementa.
-    </p>
-    <p>&nbsp;</p>
-    <p>&nbsp;<strong>Condiciones Apple TV+&nbsp;</strong></p>
-    <p>
-      <a href="https://static.claro.com.pe/img/otros/terminos-y-condiciones-apple-tv.pdf" target="_blank"
-        >Revisa aquí las condiciones generales</a
-      >
-    </p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
+      <p><strong>Condiciones aplicables a los planes Max Ilimitados:</strong></p>
+      <p>
+        Los planes MAX Ilimitados 65.00, 75.00, 85.00, 105.00, 125.00, 159.90, 189.90 y 289.90 son para uso personal del cliente, siendo
+        condición esencial que los minutos, SMS y datos ilimitados no sean utilizados para comercialización, reventa, uso que no sean en
+        otros dispositivos celulares móviles, y que no se desnaturalice el uso personal del servicio.
+      </p>
+      <p>
+        El internet ilimitado no podrá ser utilizado para realizar telemetría, proxys, Peer2Peer, aplicaciones informativas, o similares. En
+        cualquier caso, América Móvil Perú S.A.C. se reserva el derecho de tomar las acciones regulatorias contempladas en la normativa
+        vigente, por el incumplimiento de las condiciones pactadas con el cliente. Si el cliente requiere utilizar algunos de los servicios
+        antes descritos, podrá hacer uso de ellos contratando de paquetes adicionales de la oferta vigente. Ver consideraciones
+        <a href="https://www.claro.com.pe/personas/movil/postpago/planes-max/consideraciones/">aquí</a>
+      </p>
+      <p><strong>Consideraciones generales de la Tienda</strong></p>
+      <p>
+        Precio válido del: 01/05/2020 al 19/05/2020 y/o hasta agotar stock y no incluyen cargo fijo mensual de Plan Postpago. Sujeto a
+        evaluación crediticia que podría requerir el pago de rentas adelantadas. Stock mínimo en web: 15 equipos por modelo. Máximo 1
+        accesorio por cada equipo. El color del accesorio es al azar. Claro no se responsabiliza por el funcionamiento de los accesorios.
+        Sujeto a cobertura de entrega.
+      </p>
+      <p>
+        Precios para renovación Postpago: aplica con acuerdo de equipos vencido. Precios válidos solo en catalogo.claro.com.pe. Pago
+        únicamente con tarjeta Visa o Mastercard, no se acepta efectivo. Entrega de equipos sólo vía delivery en algunas zonas de Lima
+        Metropolitana, sujeto a cobertura de entregas. Equipos con tecnología 4GLTE: Velocidad mínima en cobertura 4G LTE: 1.2Mbps de
+        bajada. Requiere chip 4G LTE y plan compatible. Consulta mapa de cobertura y restricciones en
+        <a href="http://www.claro.com.pe/personas/movil/4g-lte/" target="_blank">http://www.claro.com.pe/personas/movil/4g-lte/.</a>
+        Color mostrado en la página es referencial. Válido para personas naturales y personas con RUC 10 y RUC 20 que solo posean un
+        representante legal. Precios para Portabilidad Postpago: Válidos para líneas con más de 9 meses en el operador cedente.
+      </p>
+      <p><strong>Consideraciones Promoción Accesorios:</strong></p>
+      <p>
+        Vigencia: Desde el 01.05.2020 al 31.05.2020 y/o hasta agotar stock. Válido para Alta, Renovación, Migración y Portabilidad. Válido
+        en Venta al Contado con acuerdo de equipos a 12 o 18 meses; como en Venta en Cuotas a 12 o 18 cuotas mensuales. Máximo 2 equipos por
+        cliente. El cliente recibirá sólo 1 accesorio por equipo comprado. No aplica para cliente Corporativos. Delivery de equipo válido
+        sólo en Lima Metropolitana y sujeto a cobertura. Sujeto a evaluación crediticia. Claro no se responsabiliza por el funcionamiento de
+        los accesorios. Accesorios de la promoción Audifonos Freebuds 3, Wacht GT2 Latona, Wacht GT2 Diana y Parlante CM51. Por la compra de
+        los siguientes equipos Huawei P30 Lite, Huawei P30, Huawei P30 Pro y Huawei Nova 5T en cualquier plan Prepago o Postpago
+      </p>
+      <p><strong>Delivery de equipo sujeto a cobertura*</strong></p>
+      <p>
+        Revisa las condiciones de garantía de equipos comercializados por Claro&nbsp;<a
+          href="http://www.claro.com.pe/personas/movil/garantia_equipos/"
+          >aquí</a
+        >&nbsp;
+      </p>
+      <p>
+        Revisa las condiciones de los planes Max ilimitados&nbsp;<a
+          title="aquí"
+          href="https://www.claro.com.pe/personas/movil/postpago/planes-max/"
+          >aquí</a
+        >&nbsp;
+      </p>
+      <p><strong>Consideraciones Portabilidad y Renovación Exclusiva (sin cuotas y con cuotas)</strong></p>
+      <p>
+        Portabilidad Exclusiva: Precio válido del 01/05/2020 hasta el 31/05/2020. Válido para clientes que tengan más de 9 meses en el
+        operador cedente y sujeto a evaluación crediticia.
+      </p>
+      <p>
+        Renovación Exclusiva: Precio válido del 01/05/2020 hasta el 31/05/2020. Válido para clientes con más de 18 meses o más de antigüedad
+        y sujeto a evaluación crediticia. Solo aplica si el cliente mantiene su cargo fijo o lo incrementa.
+      </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;<strong>Condiciones Apple TV+&nbsp;</strong></p>
+      <p>
+        <a href="https://static.claro.com.pe/img/otros/terminos-y-condiciones-apple-tv.pdf" target="_blank"
+          >Revisa aquí las condiciones generales</a
+        >
+      </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </div>
   </div>
 </div>
