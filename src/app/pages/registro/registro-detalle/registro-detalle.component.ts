@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
@@ -8,12 +8,19 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./registro-detalle.component.scss'],
 })
 export class RegistroDetalleComponent implements OnInit {
+  /*
   URL_DEPARTAMENTOS =
-    'https://cors-anywhere.herokuapp.com/200.108.99.46/wps/wcm/connect/tienda%20virtual%20library/servicios%20json/departamentos.json';
+  'https://cors-anywhere.herokuapp.com/200.108.99.46/wps/wcm/connect/tienda%20virtual%20library/servicios%20json/departamentos.json';
   URL_PROVINCIAS =
-    'https://cors-anywhere.herokuapp.com/200.108.99.46/wps/wcm/connect/tienda%20virtual%20library/servicios%20json/provincias.json';
+  'https://cors-anywhere.herokuapp.com/200.108.99.46/wps/wcm/connect/tienda%20virtual%20library/servicios%20json/provincias.json';
   URL_DISTRITOS =
-    'https://cors-anywhere.herokuapp.com/200.108.99.46/wps/wcm/connect/tienda%20virtual%20library/servicios%20json/distritos.json';
+  'https://cors-anywhere.herokuapp.com/200.108.99.46/wps/wcm/connect/tienda%20virtual%20library/servicios%20json/distritos.json';
+  */
+
+  URL_DEPARTAMENTOS = 'http://200.108.99.46/wps/wcm/connect/tienda%20virtual%20library/servicios%20json/departamentos.json';
+  URL_PROVINCIAS = 'http://200.108.99.46/wps/wcm/connect/tienda%20virtual%20library/servicios%20json/provincias.json';
+  URL_DISTRITOS = 'http://200.108.99.46/wps/wcm/connect/tienda%20virtual%20library/servicios%20json/distritos.json';
+
   header: HttpHeaders;
   departamentoList;
   provinciaStore;
