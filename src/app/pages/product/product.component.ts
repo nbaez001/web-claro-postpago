@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { OtherProductListModel } from '../../models/other-product-list.model';
 import { ConstantsService } from '../../services/constants.service';
+import { UtilService } from '../../services/util.service';
 
 @Component({
   selector: 'app-product',
@@ -35,7 +36,7 @@ export class ProductComponent implements OnInit {
   public showPaymentTypeDropdown: boolean;
   public showPlanDropdown: boolean;
 
-  constructor(private constants: ConstantsService, private router: Router) {
+  constructor(private constants: ConstantsService, private router: Router, private util: UtilService) {
     this.otherProductsList =
       window.innerWidth >= 1280 ? constants.PRODUCT_OTHER_PRODUCTS_LIST_DATA : constants.PRODUCT_OTHER_PRODUCTS_LIST_DATA.slice(0, 3);
 
@@ -66,5 +67,9 @@ export class ProductComponent implements OnInit {
 
   public registroPersona() {
     this.router.navigateByUrl('/registro/paso-1');
+  }
+
+  public redirectToUrl(url: string) {
+    this.util.redirectToUrl(url);
   }
 }
