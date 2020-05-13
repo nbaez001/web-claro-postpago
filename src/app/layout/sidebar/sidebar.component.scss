@@ -30,9 +30,34 @@
 .filter-list {
   margin: 0;
   background: #ffffff;
+  padding: 15px 0 5px 6px;
+  @media only screen and (min-width: 1280px) {
+    margin: -11px 0 0 30px; // SE QUITO EL -40PX DEBIDO A QUE AFECTA A LOS TERMINOS, SE QUITO TOP 20PX
+    padding: 0 0 20px 6px; //PADDING TOP 20=>0
+    border-radius: 5px;
+    background: #f4f4f4;
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 10px 0px 10px;
+
+    @media only screen and (min-width: 1280px) {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 0px 10px;
+      border-bottom: 1px solid #ffffff;
+    }
+  }
+}
+
+.filter-list:nth-child(1) {
+  margin: 0;
+  background: #ffffff;
   padding: 5px 0 5px 6px;
   @media only screen and (min-width: 1280px) {
-    margin: 20px 0 -45px 30px;
+    margin: 20px 0 0 30px; // SE QUITO EL -40PX DEBIDO A QUE AFECTA A LOS TERMINOS, SE QUITO TOP 20PX
     padding: 20px 0 20px 6px;
     border-radius: 5px;
     background: #f4f4f4;
@@ -56,10 +81,10 @@
   margin: auto;
 
   @media only screen and (min-width: 1280px) {
-    margin: 0;
+    // margin: 0;
     font-size: 13px;
     width: 100%;
-    margin: 0 0 15px 0;
+    margin: 10px 0 15px 0;
   }
 
   li {

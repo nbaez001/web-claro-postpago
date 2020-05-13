@@ -8,7 +8,7 @@
 
 .main-content {
   display: grid;
-  grid-template-columns: 15% auto;
+  grid-template-columns: 17.7% auto;
 
   @media screen and (max-width: 1279px) {
     display: grid;
@@ -19,26 +19,53 @@
   //   margin-bottom: 60px;
   // }
 
-  .catalog-title {
-    margin: 20px auto;
-    text-align: center;
-    width: 80%;
+  // .catalog-title {
+  //   margin: 20px auto;
+  //   text-align: center;
+  //   width: 80%;
 
+  //   h1 {
+  //     font-weight: 500;
+  //     margin: 5px;
+  //     font-size: 24px;
+
+  //     @media only screen and (min-width: 1280px) {
+  //       font-size: 30px;
+  //     }
+  //   }
+
+  //   h6 {
+  //     font-weight: 300;
+  //     font-size: 16px;
+
+  //     @media only screen and (min-width: 1280px) {
+  //       padding: 5px;
+  //     }
+  //   }
+  // }
+
+  .titulo_categoria {
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
     h1 {
       font-weight: 500;
       margin: 5px;
       font-size: 24px;
-
-      @media only screen and (min-width: 1280px) {
-        font-size: 30px;
-      }
     }
-
     h6 {
       font-weight: 300;
       font-size: 16px;
+    }
+  }
 
-      @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 640px) {
+    .titulo_categoria {
+      h1 {
+        font-size: 30px;
+      }
+      h6 {
+        font-size: 20px;
         padding: 5px;
       }
     }
@@ -214,8 +241,9 @@
 }
 
 .terminos {
-  display: block;
-  margin: 0px;
+  width: 100%;
+  margin: 20px auto 0px;
+  // float: left;
 
   .terms {
     font-size: 16px;
