@@ -19,7 +19,7 @@
           </li>
           <ng-container *ngFor="let item of menuList">
             <li>
-              <a (click)="redirectTo(item.itemUrl)">
+              <a (click)="redirectToUrl(item.itemUrl)">
                 <i class="{{ item.itemFA }}"></i>
                 <span>{{ item.itemLabel }}</span>
               </a>
