@@ -34,8 +34,8 @@
       <owl-carousel-o [options]="customOptions">
         <ng-container *ngFor="let device of tiendaHuawei">
           <ng-template carouselSlide>
-            <a [routerLink]="device.productUrl">
-              <div class="devices">
+            <div class="devices">
+              <a [routerLink]="device.productUrl">
                 <div class="device-title">
                   <div class="info">
                     <span class="brand">{{ device.brand }}</span>
@@ -57,8 +57,8 @@
                   </div>
                 </div>
                 <div class="device-plan"></div>
-              </div>
-            </a>
+              </a>
+            </div>
           </ng-template>
         </ng-container>
       </owl-carousel-o>
@@ -71,8 +71,8 @@
 
     <section class="catalog-list">
       <ng-container *ngFor="let device of nuevosLanzamientos">
-        <a [routerLink]="device.productUrl">
-          <div class="devices">
+        <div class="devices">
+          <a [routerLink]="device.productUrl">
             <div class="device-title">
               <div class="info">
                 <span class="brand">{{ device.brand }}</span>
@@ -103,8 +103,8 @@
             <div class="tag-online" *ngIf="device.onlyOnline">
               <img src="https://static.claro.com.pe/img/otros/EtiquetaSoloOnline.png" width="72" />
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </ng-container>
     </section>
 
@@ -115,8 +115,8 @@
 
     <section class="catalog-list">
       <ng-container *ngFor="let device of hogar">
-        <a [routerLink]="device.productUrl">
-          <div class="devices">
+        <div class="devices">
+          <a [routerLink]="device.productUrl">
             <div class="device-title">
               <div class="info">
                 <span class="brand">{{ device.brand }}</span>
@@ -147,8 +147,8 @@
             <div class="tag-online" *ngIf="device.onlyOnline">
               <img src="https://static.claro.com.pe/img/otros/EtiquetaSoloOnline.png" width="72" />
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </ng-container>
     </section>
 
