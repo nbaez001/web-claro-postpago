@@ -12,14 +12,14 @@
       <div class="menu-mobile-content_opts">
         <ul class="menu-mobile-content_opts-item">
           <li>
-            <a href="/">
+            <a routerLink="/">
               <i class="fa fa-home"></i>
               <span>Inicio</span>
             </a>
           </li>
           <ng-container *ngFor="let item of menuList">
             <li>
-              <a href="/">
+              <a (click)="redirectTo(item.itemUrl)">
                 <i class="{{ item.itemFA }}"></i>
                 <span>{{ item.itemLabel }}</span>
               </a>
@@ -39,7 +39,7 @@
       <ul>
         <ng-container *ngFor="let item of menuList">
           <li>
-            <a (click)="redirectTo(item.itemUrl)">{{ item.itemLabel }}</a>
+            <a (click)="redirectToUrl(item.itemUrl)">{{ item.itemLabel }}</a>
           </li>
         </ng-container>
       </ul>
@@ -49,7 +49,9 @@
     <div class="menu-opts-item" (click)="toggleInputSearch()">
       <i class="fa fa-search"> </i>
     </div>
-    <div class="menu-opts-item_show" *ngIf="showContactNumber"><strong>Pedidos</strong><br />0800 00 334</div>
+    <div class="menu-opts-item_show" *ngIf="showContactNumber">
+      <div class="menu-opts-item_show-slide"><strong>Pedidos</strong><br />0800 00 334</div>
+    </div>
     <div class="menu-opts-item" (click)="toggleContactNumber()">
       <i class="fa fa-phone"></i>
     </div>

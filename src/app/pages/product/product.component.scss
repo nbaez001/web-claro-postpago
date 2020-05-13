@@ -55,7 +55,7 @@
 
   .dropdown-product-opts {
     background: #f4f4f4 0 0 no-repeat padding-box;
-    box-shadow: 0 3px 6px #000029;
+    box-shadow: 0 3px 6px #00000029;
     opacity: 1;
     display: flex;
     flex-direction: column;
@@ -73,11 +73,12 @@
     .dropdown-product-opts_list {
       width: 100%;
 
-      p {
+      > p {
         margin-left: 20px;
         margin-top: 15px;
         margin-bottom: 15px;
         font-weight: 500;
+        font-size: 16px;
       }
 
       .box-other-products {
@@ -199,7 +200,7 @@
   height: auto;
 
   @media only screen and (min-width: 1280px) {
-    width: 30%;
+    width: 34%;
     margin: 50px 0;
     float: left;
     min-height: 430px;
@@ -417,7 +418,7 @@
           text-align: center;
         }
 
-        .product-price-info_payment-value {
+        .product-price-info_payment-type {
           font-size: 13px;
           font-weight: 300;
           text-align: center;
@@ -594,8 +595,7 @@
   h3 {
     text-align: center;
     margin: 10px auto 20px;
-    font-size: 14px;
-    font-weight: 300;
+    font: inherit;
 
     @media only screen and (min-width: 1280px) {
       font-size: 16px;
@@ -663,7 +663,7 @@
       border-radius: 10px;
       display: flex;
       flex-direction: column;
-      min-height: 364px;
+      min-height: 420px;
       align-items: center;
       justify-content: center;
 
@@ -719,7 +719,7 @@
 
 .footer-product {
   background: #ffffff;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16);
   border-radius: 5px;
   cursor: pointer;
   position: relative;
