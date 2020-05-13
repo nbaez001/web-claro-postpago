@@ -129,7 +129,7 @@ button.btn_naranja {
 }
 
 .form_registro {
-  width: 80%;
+  width: 95%;
   display: flex;
   /* margin: 40px 0px 50px 0px; */
   justify-content: center;
@@ -137,12 +137,20 @@ button.btn_naranja {
   margin: 0px auto;
   background: #f4f4f4;
   padding-bottom: 30px;
+
+  @media only screen and (min-width: 640px) {
+    width: 95%;
+  }
 }
 
 .form-check-uno {
   width: 60%;
   margin: auto;
   padding-top: 27px;
+
+  @media only screen and (min-width: 640px) {
+    width: 60%;
+  }
 }
 
 .titular h1 {
@@ -152,10 +160,15 @@ button.btn_naranja {
   margin-bottom: 40px;
 
   @media only screen and (min-width: 640px) {
-    width: 30%;
+    width: 60%;
     margin: 40px auto;
     /* margin-bottom: 30px; */
   }
+}
+
+.div_custom {
+  padding-top: 20px;
+  margin-top: 20px;
 }
 
 .aviso {
