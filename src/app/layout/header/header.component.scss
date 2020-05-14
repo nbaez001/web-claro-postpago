@@ -202,17 +202,17 @@ header {
     color: #222222;
     font-size: 16px;
 
-    .menu-opts-item_show-slide {
-      position: absolute;
-      //top: 35px;
-      top: 0;
-      right: 0;
-      transition: 1s;
+    // .menu-opts-item_show-slide {
+    //   position: absolute;
+    //   //top: 35px;
+    //   top: 0;
+    //   right: 0;
+    //   transition: 1s;
 
-      strong {
-        color: #222222;
-      }
-    }
+    //   strong {
+    //     color: #222222;
+    //   }
+    // }
 
     //&: .menu-opts-item_show-slide {
     //  transition: 1s;
@@ -510,6 +510,10 @@ header {
       }
     }
   }
+}
+
+.mostrar {
+  display: block !important;
 }
 
 /* ---------- End Search Input ---------- */

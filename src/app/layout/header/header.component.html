@@ -49,10 +49,10 @@
     <div class="menu-opts-item" (click)="toggleInputSearch()">
       <i class="fa fa-search"> </i>
     </div>
-    <div class="menu-opts-item_show" *ngIf="showContactNumber">
+    <div class="menu-opts-item_show" [@toggleHeight]="navigationSubState.Profile" [ngClass]="{ mostrar: activoPhone }">
       <div class="menu-opts-item_show-slide"><strong>Pedidos</strong><br />0800 00 334</div>
     </div>
-    <div class="menu-opts-item" (click)="toggleContactNumber()">
+    <div class="menu-opts-item" (click)="toggleContactNumber('Profile', $event)">
       <i class="fa fa-phone"></i>
     </div>
     <div class="menu-opts-item">

@@ -67,6 +67,6 @@ export class ChipsComponent implements OnInit {
   }
 
   public registroPersona() {
-    this.router.navigateByUrl('paso-1');
+    this.router.navigateByUrl('registro/paso-1');
   }
 }
